@@ -10,7 +10,7 @@ The HFT Multi-factor strategy generates market-neutral returns by combining high
 
 The strategy focuses on major liquid assets and perpetual futures, validated under market stress conditions, with institutional-scale trading volume supported by in-house execution infrastructure.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/nexus-usdc-bundle">https://www.neutral.trade/strategies/nexus-usdc-bundle</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/hft-multi-factor">https://www.neutral.trade/strategies/hft-multi-factor</a></td></tr></tbody></table>
 
 ## How it works
 
