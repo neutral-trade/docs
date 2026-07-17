@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Origin node (left, centered vertically) -->
+  <circle cx="180" cy="240" r="36" fill="#FE5A19" opacity="0.12"/>
+  <circle cx="180" cy="240" r="18" fill="#FE5A19" opacity="0.28"/>
+  <circle cx="180" cy="240" r="9" fill="#FE5A19"/>
+
+  <!-- Generation 1: 2 branches from origin -->
+  <g stroke="#FE5A19" stroke-width="1" opacity="0.5" fill="none">
+    <line x1="189" y1="240" x2="640" y2="120"/>
+    <line x1="189" y1="240" x2="640" y2="360"/>
+  </g>
+  <g fill="#FE5A19">
+    <circle cx="640" cy="120" r="6"/>
+    <circle cx="640" cy="360" r="6"/>
+  </g>
+
+  <!-- Generation 2: 4 branches (2 per gen-1 node) -->
+  <g stroke="#FE5A19" stroke-width="0.7" opacity="0.4" fill="none">
+    <line x1="646" y1="120" x2="1100" y2="60"/>
+    <line x1="646" y1="120" x2="1100" y2="170"/>
+    <line x1="646" y1="360" x2="1100" y2="310"/>
+    <line x1="646" y1="360" x2="1100" y2="420"/>
+  </g>
+  <g fill="#FE5A19" opacity="0.85">
+    <circle cx="1100" cy="60" r="4"/>
+    <circle cx="1100" cy="170" r="4"/>
+    <circle cx="1100" cy="310" r="4"/>
+    <circle cx="1100" cy="420" r="4"/>
+  </g>
+
+  <!-- Generation 3: 8 branches (2 per gen-2 node), faint, suggesting continued propagation -->
+  <g stroke="#FE5A19" stroke-width="0.5" opacity="0.3" fill="none">
+    <line x1="1104" y1="60" x2="1500" y2="30"/>
+    <line x1="1104" y1="60" x2="1500" y2="90"/>
+    <line x1="1104" y1="170" x2="1500" y2="140"/>
+    <line x1="1104" y1="170" x2="1500" y2="200"/>
+    <line x1="1104" y1="310" x2="1500" y2="280"/>
+    <line x1="1104" y1="310" x2="1500" y2="340"/>
+    <line x1="1104" y1="420" x2="1500" y2="390"/>
+    <line x1="1104" y1="420" x2="1500" y2="450"/>
+  </g>
+  <g fill="#FE5A19" opacity="0.65">
+    <circle cx="1500" cy="30" r="3"/>
+    <circle cx="1500" cy="90" r="3"/>
+    <circle cx="1500" cy="140" r="3"/>
+    <circle cx="1500" cy="200" r="3"/>
+    <circle cx="1500" cy="280" r="3"/>
+    <circle cx="1500" cy="340" r="3"/>
+    <circle cx="1500" cy="390" r="3"/>
+    <circle cx="1500" cy="450" r="3"/>
+  </g>
+
+  <!-- Generation 4 hint: very faint trails continuing to the right edge -->
+  <g stroke="#FE5A19" stroke-width="0.4" opacity="0.2" fill="none">
+    <line x1="1503" y1="30" x2="1820" y2="20"/>
+    <line x1="1503" y1="30" x2="1820" y2="50"/>
+    <line x1="1503" y1="90" x2="1820" y2="80"/>
+    <line x1="1503" y1="90" x2="1820" y2="110"/>
+    <line x1="1503" y1="140" x2="1820" y2="130"/>
+    <line x1="1503" y1="140" x2="1820" y2="160"/>
+    <line x1="1503" y1="200" x2="1820" y2="190"/>
+    <line x1="1503" y1="200" x2="1820" y2="220"/>
+    <line x1="1503" y1="280" x2="1820" y2="270"/>
+    <line x1="1503" y1="280" x2="1820" y2="300"/>
+    <line x1="1503" y1="340" x2="1820" y2="330"/>
+    <line x1="1503" y1="340" x2="1820" y2="360"/>
+    <line x1="1503" y1="390" x2="1820" y2="380"/>
+    <line x1="1503" y1="390" x2="1820" y2="410"/>
+    <line x1="1503" y1="450" x2="1820" y2="430"/>
+    <line x1="1503" y1="450" x2="1820" y2="460"/>
+  </g>
+  <g fill="#FE5A19" opacity="0.4">
+    <circle cx="1820" cy="20" r="2"/>
+    <circle cx="1820" cy="50" r="2"/>
+    <circle cx="1820" cy="80" r="2"/>
+    <circle cx="1820" cy="110" r="2"/>
+    <circle cx="1820" cy="130" r="2"/>
+    <circle cx="1820" cy="160" r="2"/>
+    <circle cx="1820" cy="190" r="2"/>
+    <circle cx="1820" cy="220" r="2"/>
+    <circle cx="1820" cy="270" r="2"/>
+    <circle cx="1820" cy="300" r="2"/>
+    <circle cx="1820" cy="330" r="2"/>
+    <circle cx="1820" cy="360" r="2"/>
+    <circle cx="1820" cy="380" r="2"/>
+    <circle cx="1820" cy="410" r="2"/>
+    <circle cx="1820" cy="430" r="2"/>
+    <circle cx="1820" cy="460" r="2"/>
+  </g>
+</svg>

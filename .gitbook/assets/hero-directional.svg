@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Baseline -->
+  <line x1="120" y1="320" x2="1870" y2="320" stroke="#FFFFFF" stroke-width="0.8" opacity="0.30"/>
+
+  <!-- Tick marks along baseline (matching Earn + Market Neutral) -->
+  <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.20">
+    <line x1="360" y1="316" x2="360" y2="324"/>
+    <line x1="600" y1="316" x2="600" y2="324"/>
+    <line x1="840" y1="316" x2="840" y2="324"/>
+    <line x1="1080" y1="316" x2="1080" y2="324"/>
+    <line x1="1320" y1="316" x2="1320" y2="324"/>
+    <line x1="1560" y1="316" x2="1560" y2="324"/>
+    <line x1="1800" y1="316" x2="1800" y2="324"/>
+  </g>
+
+  <!-- Market noise: realistic amplitude variance, irregular spacing, oscillating around the signal mean -->
+  <polyline points="200,336 271,299 317,368 373,283 427,264 501,312 573,302 654,312 702,297 764,214 810,273 864,209 929,206 975,276 1028,251 1099,268 1166,177 1220,223 1288,162 1366,222 1411,217 1488,149 1561,194 1620,100 1671,185 1754,70 1790,148" fill="none" stroke="#888888" stroke-width="1.2" opacity="0.45"/>
+
+  <!-- Clean signal line cutting through the noise -->
+  <line x1="200" y1="345" x2="1790" y2="115" stroke="#FE5A19" stroke-width="2.5"/>
+
+  <!-- Endpoints on the signal -->
+  <circle cx="200" cy="345" r="5" fill="#FE5A19"/>
+  <circle cx="1790" cy="115" r="5" fill="#FE5A19"/>
+</svg>

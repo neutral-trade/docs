@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- STAGE 1: Dense candidate universe (6 columns × 7 rows = 42 candidates) -->
+  <g fill="#666666">
+    <!-- Row 1 (y=80) -->
+    <circle cx="180" cy="80" r="3.5"/>
+    <circle cx="240" cy="80" r="3.5"/>
+    <circle cx="300" cy="80" r="3.5"/>
+    <circle cx="360" cy="80" r="3.5"/>
+    <circle cx="420" cy="80" r="3.5"/>
+    <circle cx="480" cy="80" r="3.5"/>
+    <!-- Row 2 (y=133) -->
+    <circle cx="180" cy="133" r="3.5"/>
+    <circle cx="240" cy="133" r="3.5"/>
+    <circle cx="300" cy="133" r="3.5"/>
+    <circle cx="360" cy="133" r="3.5"/>
+    <circle cx="420" cy="133" r="3.5"/>
+    <circle cx="480" cy="133" r="3.5"/>
+    <!-- Row 3 (y=186) -->
+    <circle cx="180" cy="186" r="3.5"/>
+    <circle cx="240" cy="186" r="3.5"/>
+    <circle cx="300" cy="186" r="3.5"/>
+    <circle cx="360" cy="186" r="3.5"/>
+    <circle cx="420" cy="186" r="3.5"/>
+    <circle cx="480" cy="186" r="3.5"/>
+    <!-- Row 4 (y=240) - canvas vertical center -->
+    <circle cx="180" cy="240" r="3.5"/>
+    <circle cx="240" cy="240" r="3.5"/>
+    <circle cx="300" cy="240" r="3.5"/>
+    <circle cx="360" cy="240" r="3.5"/>
+    <circle cx="420" cy="240" r="3.5"/>
+    <circle cx="480" cy="240" r="3.5"/>
+    <!-- Row 5 (y=294) -->
+    <circle cx="180" cy="294" r="3.5"/>
+    <circle cx="240" cy="294" r="3.5"/>
+    <circle cx="300" cy="294" r="3.5"/>
+    <circle cx="360" cy="294" r="3.5"/>
+    <circle cx="420" cy="294" r="3.5"/>
+    <circle cx="480" cy="294" r="3.5"/>
+    <!-- Row 6 (y=347) -->
+    <circle cx="180" cy="347" r="3.5"/>
+    <circle cx="240" cy="347" r="3.5"/>
+    <circle cx="300" cy="347" r="3.5"/>
+    <circle cx="360" cy="347" r="3.5"/>
+    <circle cx="420" cy="347" r="3.5"/>
+    <circle cx="480" cy="347" r="3.5"/>
+    <!-- Row 7 (y=400) -->
+    <circle cx="180" cy="400" r="3.5"/>
+    <circle cx="240" cy="400" r="3.5"/>
+    <circle cx="300" cy="400" r="3.5"/>
+    <circle cx="360" cy="400" r="3.5"/>
+    <circle cx="420" cy="400" r="3.5"/>
+    <circle cx="480" cy="400" r="3.5"/>
+  </g>
+
+  <!-- GATE 1 -->
+  <line x1="600" y1="60" x2="600" y2="420" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" stroke-dasharray="4 7"/>
+
+  <!-- STAGE 2: First-filter survivors (~12 candidates, partial opacity orange) -->
+  <g fill="#FE5A19" opacity="0.55">
+    <!-- 3 columns x 4 rows, vertically centered y=140 to y=340 -->
+    <circle cx="700" cy="140" r="4"/>
+    <circle cx="700" cy="200" r="4"/>
+    <circle cx="700" cy="280" r="4"/>
+    <circle cx="700" cy="340" r="4"/>
+    <circle cx="780" cy="170" r="4"/>
+    <circle cx="780" cy="240" r="4"/>
+    <circle cx="780" cy="310" r="4"/>
+    <circle cx="860" cy="140" r="4"/>
+    <circle cx="860" cy="210" r="4"/>
+    <circle cx="860" cy="280" r="4"/>
+    <circle cx="860" cy="340" r="4"/>
+    <circle cx="780" cy="380" r="4"/>
+  </g>
+
+  <!-- GATE 2 -->
+  <line x1="1000" y1="100" x2="1000" y2="380" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" stroke-dasharray="4 7"/>
+
+  <!-- STAGE 3: Second-filter survivors (~5 candidates, higher opacity orange) -->
+  <g fill="#FE5A19" opacity="0.85">
+    <circle cx="1100" cy="180" r="4.5"/>
+    <circle cx="1100" cy="240" r="4.5"/>
+    <circle cx="1100" cy="300" r="4.5"/>
+    <circle cx="1180" cy="210" r="4.5"/>
+    <circle cx="1180" cy="270" r="4.5"/>
+  </g>
+
+  <!-- GATE 3 -->
+  <line x1="1400" y1="140" x2="1400" y2="340" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" stroke-dasharray="4 7"/>
+
+  <!-- STAGE 4: Qualified curator (final endpoint with glow treatment) -->
+  <circle cx="1750" cy="240" r="32" fill="#FE5A19" opacity="0.12"/>
+  <circle cx="1750" cy="240" r="16" fill="#FE5A19" opacity="0.28"/>
+  <circle cx="1750" cy="240" r="8" fill="#FE5A19"/>
+</svg>

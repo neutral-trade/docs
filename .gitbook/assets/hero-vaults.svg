@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- INPUT SIDE: Deposit nodes on the left, vertically distributed -->
+  <g fill="#888888">
+    <circle cx="180" cy="140" r="5"/>
+    <circle cx="180" cy="200" r="5"/>
+    <circle cx="180" cy="260" r="5"/>
+    <circle cx="180" cy="320" r="5"/>
+  </g>
+
+  <!-- Flow lines from deposits into the vault left edge -->
+  <g stroke="#888888" stroke-width="0.8" opacity="0.4" fill="none">
+    <path d="M 188 140 Q 400 200, 660 220"/>
+    <path d="M 188 200 Q 400 220, 660 235"/>
+    <path d="M 188 260 Q 400 245, 660 250"/>
+    <path d="M 188 320 Q 400 280, 660 265"/>
+  </g>
+
+  <!-- VAULT CONTAINER: large rectangle in the center, holding the strategy execution -->
+  <rect x="660" y="140" width="660" height="200" fill="none" stroke="#FE5A19" stroke-width="1.5" rx="3"/>
+
+  <!-- Subtle interior shading to suggest "contained space" -->
+  <rect x="660" y="140" width="660" height="200" fill="#FE5A19" opacity="0.025" rx="3"/>
+
+  <!-- INTERNAL STRATEGY ACTIVITY: irregular network of nodes and connections inside the vault.
+       Represents computation/execution happening within the contained vault. -->
+  <g opacity="0.65">
+    <!-- Strategy node positions (deliberately irregular, like a real computation graph) -->
+    <circle cx="730" cy="200" r="4" fill="#FE5A19"/>
+    <circle cx="800" cy="260" r="4" fill="#FE5A19"/>
+    <circle cx="870" cy="190" r="4" fill="#FE5A19"/>
+    <circle cx="930" cy="280" r="4" fill="#FE5A19"/>
+    <circle cx="990" cy="220" r="4" fill="#FE5A19"/>
+    <circle cx="1050" cy="170" r="4" fill="#FE5A19"/>
+    <circle cx="1110" cy="270" r="4" fill="#FE5A19"/>
+    <circle cx="1170" cy="210" r="4" fill="#FE5A19"/>
+    <circle cx="1230" cy="285" r="4" fill="#FE5A19"/>
+    <circle cx="1270" cy="200" r="4" fill="#FE5A19"/>
+
+    <!-- Irregular connections — not all nodes connect, varied path lengths -->
+    <g stroke="#FE5A19" stroke-width="0.7" fill="none">
+      <line x1="730" y1="200" x2="800" y2="260"/>
+      <line x1="800" y1="260" x2="870" y2="190"/>
+      <line x1="870" y1="190" x2="930" y2="280"/>
+      <line x1="730" y1="200" x2="870" y2="190"/>
+      <line x1="930" y1="280" x2="990" y2="220"/>
+      <line x1="990" y1="220" x2="1050" y2="170"/>
+      <line x1="990" y1="220" x2="1110" y2="270"/>
+      <line x1="1050" y1="170" x2="1170" y2="210"/>
+      <line x1="1110" y1="270" x2="1170" y2="210"/>
+      <line x1="1170" y1="210" x2="1230" y2="285"/>
+      <line x1="1170" y1="210" x2="1270" y2="200"/>
+      <line x1="1230" y1="285" x2="1270" y2="200"/>
+    </g>
+  </g>
+
+  <!-- OUTPUT SIDE: Single return flow exiting the vault on the right -->
+  <line x1="1320" y1="240" x2="1770" y2="240" stroke="#FE5A19" stroke-width="2.5"/>
+
+  <!-- Return destination: prominent endpoint -->
+  <circle cx="1790" cy="240" r="22" fill="#FE5A19" opacity="0.12"/>
+  <circle cx="1790" cy="240" r="11" fill="#FE5A19" opacity="0.28"/>
+  <circle cx="1790" cy="240" r="6" fill="#FE5A19"/>
+</svg>

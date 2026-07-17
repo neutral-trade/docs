@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Baseline -->
+  <line x1="120" y1="320" x2="1870" y2="320" stroke="#FFFFFF" stroke-width="0.8" opacity="0.30"/>
+
+  <!-- Tick marks along baseline -->
+  <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.20">
+    <line x1="360" y1="316" x2="360" y2="324"/>
+    <line x1="600" y1="316" x2="600" y2="324"/>
+    <line x1="840" y1="316" x2="840" y2="324"/>
+    <line x1="1080" y1="316" x2="1080" y2="324"/>
+    <line x1="1320" y1="316" x2="1320" y2="324"/>
+    <line x1="1560" y1="316" x2="1560" y2="324"/>
+    <line x1="1800" y1="316" x2="1800" y2="324"/>
+  </g>
+
+  <!-- Subtle accumulation area beneath the curve -->
+  <path d="M 200 320 Q 700 310, 1100 220 T 1790 60 L 1790 320 Z" fill="#FE5A19" opacity="0.06"/>
+
+  <!-- Smooth growth curve -->
+  <path d="M 200 320 Q 700 310, 1100 220 T 1790 60" fill="none" stroke="#FE5A19" stroke-width="2.5"/>
+
+  <!-- Endpoints -->
+  <circle cx="200" cy="320" r="5" fill="#FE5A19"/>
+  <circle cx="1790" cy="60" r="5" fill="#FE5A19"/>
+</svg>
