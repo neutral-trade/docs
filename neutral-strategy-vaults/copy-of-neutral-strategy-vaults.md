@@ -74,7 +74,7 @@ coverY: 0
 * All requests are typically processed within 24 hours
 * Deposits must meet the minimum required amount
 * Requests may be rejected if the NV’s TVL cap has been reached
-* Once a deposit request is submitted, users cannot submit another deposit or withdrawal request until the current request is processed. Deposit requests cannot be cancelled after submission
+* While a deposit request is pending it can be topped up with additional deposits, but a withdrawal cannot be requested until the pending deposit has been processed. Deposit requests cannot be cancelled after submission
 
 **3. Deposit processing and share issuance**
 
@@ -93,7 +93,7 @@ coverY: 0
 * Users can request to withdraw their share of the NV’s assets
 * Requests may be subject to a cooldown period, which can vary depending on the strategy
 * During this cooldown period, the NV manager prepares the necessary assets by unwinding positions as needed
-* Once a withdrawal request is submitted, users cannot submit another deposit or withdrawal request until the current request is processed. Withdrawal requests cannot be cancelled after submission
+* Only one withdrawal request can be in flight at a time, so another cannot be submitted until the current request is processed — though a deposit can still be made while a withdrawal is pending. Withdrawal requests cannot be cancelled after submission
 
 **6. Withdrawal processing and share redemption**
 

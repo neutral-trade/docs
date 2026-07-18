@@ -77,7 +77,7 @@ Autopilot is primarily market-neutral, but it is not risk-free. As a multi-strat
 
 Curators cannot withdraw client assets. Every movement is restricted, programmatically, to pre-approved contracts and venues.
 
-On-chain operations run through Fordefi, which includes its MPC workspace, policy engine, admin quorum, and a 24-hour timelock on material changes.&#x20;
+On-chain operations run through Fordefi, which includes its MPC workspace, policy engine, admin quorum, and a 12-hour timelock on smart contract changes.&#x20;
 
 Centralized-exchange positions settle off-exchange via Copper (ClearLoop) and Ceffu (MirrorX), reducing exposure to exchange insolvency.
 

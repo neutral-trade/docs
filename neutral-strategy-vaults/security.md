@@ -64,7 +64,7 @@ Copper and Ceffu custody applies only to strategies with centralised exchange ex
 
 ### Vault-Level Protections
 
-Beyond custody and audits, the vault smart contracts themselves include several built-in protections. NAV manipulation controls, transaction batching to prevent MEV exploitation, a 24-hour timelock on parameter changes, and an emergency circuit breaker. These are explained in plain language on the [Vault Protections](https://docs.neutral.trade/vault-infrastructure/vault-protections) page.
+Beyond custody and audits, the vault smart contracts themselves include several built-in protections: bounded NAV updates to resist price manipulation, transaction batching to prevent MEV exploitation, hard caps on every fee parameter, a 12-hour timelock on parameter changes, and a pause (circuit breaker) on deposits and withdrawals. Parameter changes are additionally subject to multi-party approval (see Operational Security above). These are explained in plain language on the [Vault Protections](vault-protections.md) page.
 
 ***
 

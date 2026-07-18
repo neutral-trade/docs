@@ -46,7 +46,7 @@ For a full breakdown of the protections in place: [Vault Protections](vault-prot
 
 > ⚠️ **If the vault has reached its TVL cap, your request will be rejected.** Check the vault's current capacity on the app before submitting.
 
-Minimum deposit amounts vary by vault. Once a request is pending, you cannot submit another deposit or withdrawal until it is processed.
+Minimum deposit amounts vary by vault. While a deposit is pending you can still add to it (top it up) with another deposit request, but you cannot request a withdrawal until your pending deposit has been processed.
 
 **3. Your deposit is processed and shares are issued** Deposits are batched and processed together. Once processed, your funds are deployed into the strategy and you receive vault shares representing your proportional ownership of the vault's total assets. Your share price moves with the strategy's performance from this point forward.
 
@@ -60,8 +60,16 @@ Once deployed, your capital is actively managed by the strategy. Share prices up
 
 > ⚠️ **Withdrawal requests cannot be cancelled once submitted.**
 
-Once submitted, you cannot make another deposit or withdrawal request until this one is processed.
+You can only have one withdrawal request in flight at a time, so you cannot submit another until this one is processed. You can, however, still make a deposit while a withdrawal is pending.
 
 **2. Redemption period** After submitting, the redemption period begins. The length of this period varies by strategy and is listed in each vault's details tab in the Neutral Trade app.
 
 **3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, service fees, and commission. Your vault shares are burned, reflecting your exit from the vault.
+
+### Switching between vaults
+
+If you want to move from one vault into another that uses the same deposit asset (for example, from one USDC vault to another), you can switch directly instead of withdrawing to your wallet and depositing again.
+
+A switch follows the source vault's normal redemption timing — the same lockup and redemption period apply. At the end of that period your capital moves straight into the destination vault, where it is deployed and issued new shares. You don't pay a redundant withdrawal fee: the only withdrawal-side cost is the difference if the source vault's withdrawal fee is higher than the destination's. The destination vault's deposit fee still applies.
+
+If the destination vault can't accept the funds when the switch completes — for example it is paused, or the amount is below its minimum or above its remaining capacity — your capital is returned to your wallet instead.
