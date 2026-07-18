@@ -39,7 +39,7 @@ Each vault's share price (NAV) combines the assets held on-chain with the value 
 
 ## Deposits and withdrawals batching
 
-Rather than processing each transaction individually, deposits and withdrawals are collected and netted against each other on a regular processing cycle before execution. (The cadence is set per vault — see each vault's details tab.) This has two benefits: it reduces unnecessary capital movement, and it prevents MEV bots from exploiting millisecond-level differences between vault pricing and external market rates.
+Rather than processing each transaction individually, deposits and withdrawals are collected and netted against each other once per day before execution. This has two benefits: it reduces unnecessary capital movement, and it prevents MEV bots from exploiting millisecond-level differences between vault pricing and external market rates.
 
 ## Fees are hard-capped, and vault-term changes are timelocked
 
@@ -49,4 +49,4 @@ Beyond those ceilings, the smart contract enforces a 12-hour timelock on every m
 
 ## There is an emergency circuit breaker
 
-In the event of extreme market conditions or a detected anomaly, the vault can be paused on-chain, immediately halting all new deposits and withdrawals. (The same pause mechanism is also used routinely each time the vault's price is refreshed.) While a vault is paused, open positions can be unwound and the capital returned to the vault contract. This is a last-resort protection designed to contain exposure during tail-risk events while keeping your funds within the audited vault perimeter.
+In the event of extreme market conditions or a detected smart contract anomaly, an emergency function can be triggered to immediately halt new deposits and withdrawals, and recall all deployed capital back to the base vault contract. This is a last-resort protection designed to contain exposure during tail-risk events while keeping your funds within the audited vault perimeter.
