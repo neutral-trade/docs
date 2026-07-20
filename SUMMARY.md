@@ -27,6 +27,7 @@
   * [CTA-Adaptive Alpha](for-capital-allocators/directional/cta-adaptive-alpha.md)
   * [Third Eye Flagship](for-capital-allocators/directional/third-eye-flagship.md)
   * [Systematic Alpha](for-capital-allocators/directional/systematic-alpha.md)
+  * [CTA Longshort Alpha](for-capital-allocators/directional/cta-longshort-alpha.md)
 * [NT Earn](for-capital-allocators/nt-earn.md)
 
 ## Neutral Strategy Vaults
