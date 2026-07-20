@@ -63,7 +63,7 @@ Cumulative return since inception at 1x leverage: **+39.3%**.
 
 ## Risk Management
 
-**Model-level risk diversification.** The book is run largely long-short, minimising net directional beta so returns are driven by relative-value selection rather than market direction, keeping correlation to crypto beta low. A proprietary Barra-style risk model continuously monitors factor loadings, maintaining smart-beta exposure tilted toward yield-generating factors while limiting unintended systematic risk.
+**Model-level risk diversification.** The book is run largely long-short, minimising net directional beta so returns are driven by a combination of hedged factors rather than market direction, keeping correlation to crypto beta low. A proprietary Barra-style risk model continuously monitors factor loadings, maintaining smart-beta exposure tilted toward yield-generating factors while limiting unintended systematic risk.
 
 **24/7 monitoring.** A fully tested real-time alerting system provides round-the-clock surveillance of all positions and system health. Discretionary intervention is applied only in a disciplined and conservative manner, as a safety measure rather than a source of returns.
 
