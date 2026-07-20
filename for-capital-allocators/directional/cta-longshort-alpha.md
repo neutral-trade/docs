@@ -45,7 +45,7 @@ Several uncorrelated return drivers run in parallel, and new ones are added over
 ## Performance
 
 {% hint style="warning" %}
-Figures below are the curator's live track record since the book launched in **October 2024**. Published vault figures depend on the leverage agreed with Neutral Trade — `[TO CONFIRM]` — and are recomputed from the daily return series before launch.
+Figures below are the curator's live track record since the book launched in **October 2024**.&#x20;
 {% endhint %}
 
 **At 1x leverage:**
@@ -76,22 +76,8 @@ Cumulative return since inception at 1x leverage: **+39.3%**.
 | ---------------------- | -------------- |
 | Max drawdown, live, 1x | −4.2%          |
 | Max drawdown, live, 2x | −8.4%          |
-| Vault drawdown limit   | `[TO CONFIRM]` |
+| Vault drawdown limit   | `15%`          |
 | Vault leverage         | `[TO CONFIRM]` |
-
-## Fees and Terms
-
-| Term              | Detail                     |
-| ----------------- | -------------------------- |
-| Performance fee   | **30%** of net new profits |
-| Management fee    | `[TO CONFIRM]`             |
-| Withdrawal fee    | `[TO CONFIRM]`             |
-| Deposit token     | USDC                       |
-| Minimum deposit   | `[TO CONFIRM]`             |
-| Deposit lock-up   | `[TO CONFIRM]`             |
-| Redemption notice | **5 days**                 |
-
-The performance fee is charged only on net new profits, enforced against each depositor's individual high-water mark. If the vault declines in value, no performance fee is charged until your position exceeds its previous peak. Fee accrual, high-water marks, and distribution are handled entirely on-chain by the vault smart contract.
 
 ## Custody & Security
 
