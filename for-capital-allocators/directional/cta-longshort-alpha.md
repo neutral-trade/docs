@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # CTA Longshort Alpha
 
 ## Overview
