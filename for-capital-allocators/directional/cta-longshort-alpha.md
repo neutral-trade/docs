@@ -6,7 +6,7 @@ hidden: true
 
 ## Overview
 
-CTA Longshort Alpha is a systematic book that takes long and short positions across crypto perpetual futures. Rather than betting on market direction, it builds an offsetting portfolio across a broad universe, so returns come from relative-value selection — which assets are mispriced against each other — while net directional exposure is deliberately kept low.
+CTA Longshort Alpha is a systematic book that takes long and short positions across crypto perpetual futures. Rather than betting on market direction, it builds an offsetting portfolio across a broad universe, so that returns from different factors are combined and hedged for a higher sharpe ratio.
 
 The edge is contrarian: the strategy profits from **market crowdedness and extreme sentiment shifts**, positioning against the crowd when it is offside and exiting as prices normalise. Signals are cross-validated across multiple trading venues and asset classes.
 
@@ -35,8 +35,6 @@ Several uncorrelated return drivers run in parallel, and new ones are added over
 | -------------------------------- | ------------------------------------------------ |
 | Primary venue                    | Binance perpetual futures                        |
 | Trading universe                 | \~Top 30 perpetuals (over 500 symbols monitored) |
-| Daily turnover                   | 60%                                              |
-| Margin usage                     | 60%                                              |
 | Correlation to peer crypto funds | Under 10%                                        |
 | Trading hours                    | Continuous, 24/7                                 |
 
@@ -45,7 +43,7 @@ Several uncorrelated return drivers run in parallel, and new ones are added over
 ## Performance
 
 {% hint style="warning" %}
-Figures below are the curator's live track record since the book launched in **October 2024**.&#x20;
+Figures below are the curator's live track record since the book launched in **October 2024**.
 {% endhint %}
 
 **At 1x leverage:**
@@ -54,7 +52,6 @@ Figures below are the curator's live track record since the book launched in **O
 | -------------------------- | ----------------- | ------ | ------ | ------------ | ------------- |
 | Since inception (Oct 2024) | +22.0%            | 2.35   | 5.24   | −4.2%        | 78            |
 | 2025                       | +22.2%            | 2.18   | 5.28   | −4.2%        | 51            |
-| 2026 YTD                   | +10.3%            | 1.35   | 3.15   | −3.3%        | 69            |
 
 Cumulative return since inception at 1x leverage: **+39.3%**.
 
