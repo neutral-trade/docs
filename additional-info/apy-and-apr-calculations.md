@@ -6,13 +6,12 @@ This specific information, along with gross and net APY, is visible when you hov
 
 While APR is based on historical performance and not guaranteed, it provides a clear insight into what depositors earned during that timeframe. APR is gross, before fees.
 
-**`APR = returns * (365 / daysElapsed)`** \
-**`daysElapsed = past 90 days`**\
-&#xNAN;**`Returns = (end value - start value) / start value`**
+**`APR = returns * (365 / daysElapsed)`**\
+&#xNAN;**`daysElapsed = past 90 days`**\
+\&#xNAN;**`Returns = (end value - start value) / start value`**
 
 For APY figures we use the daily compounding formula:
 
 ```
 APY=(1+APR/365)*365−1
 ```
-

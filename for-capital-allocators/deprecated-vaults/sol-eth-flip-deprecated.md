@@ -17,24 +17,24 @@ This vault has been deprecated and is no longer active on Neutral Trade. It is n
 
 Pairs trading typically involves simultaneously buying one asset and selling another correlated asset to profit from their relative price movements, regardless of market direction.
 
-This pairs trading vault keeps you market neutral while hedging against market volatility. The only factor you’re exposed to is the price of SOL relative to ETH, instead of the market-wide volatility.&#x20;
+This pairs trading vault keeps you market neutral while hedging against market volatility. The only factor you’re exposed to is the price of SOL relative to ETH, instead of the market-wide volatility.
 
 The strategy aims to hold 50% in long Solana exposure (while collecting LST yield from dSOL (7.52% APY as of 09/19/2025)), and maintaining an equal dollar amount of ETH perps shorts (to collect positive funding yield while maintaining ETH short exposure). The strategy rebalances daily or when there's a big mismatch between SOL long exposure and ETH short exposure.
 
 Built for true Solana believers, this vault is your bet on a future where Solana outshines Ethereum.
 
-If Solana outperforms ETH, you win. If opposite, you lose. With the latest developments and growing enthusiasm around Solana, the momentum seems undeniable.&#x20;
+If Solana outperforms ETH, you win. If opposite, you lose. With the latest developments and growing enthusiasm around Solana, the momentum seems undeniable.
 
 **Recent bullish catalysts for SOL:**
 
 * Upcoming SOL ETF
-* $TRUMP and $MELANIA launching memecoins on Solana&#x20;
-* DEX volume reached 17.5bn in a day, handling the highest volume onchain trading day on any chain ever.&#x20;
-* Real Economic Value (TX Fees + MEV Tips) at ATH, reaching 55m a day.&#x20;
+* $TRUMP and $MELANIA launching memecoins on Solana
+* DEX volume reached 17.5bn in a day, handling the highest volume onchain trading day on any chain ever.
+* Real Economic Value (TX Fees + MEV Tips) at ATH, reaching 55m a day.
 
-<figure><img src="../../.gitbook/assets/chrome_QkDjcRBRMv (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chrome_QkDjcRBRMv.png" alt=""><figcaption></figcaption></figure>
 
-More people are becoming bullish on Solana’s potential, while Ethereum’s dominance starts to feel less secure.&#x20;
+More people are becoming bullish on Solana’s potential, while Ethereum’s dominance starts to feel less secure.
 
 <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p><a href="https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA">https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA</a></p></figcaption></figure>
 
@@ -52,11 +52,11 @@ It's not a matter of IF, but WEN
 Delphi Digital is bullish on Solana
 {% endembed %}
 
-There is a big upside on betting SOL would flip ETH eventually.  It is approximately 30% of Ethereum's.&#x20;
+There is a big upside on betting SOL would flip ETH eventually. It is approximately 30% of Ethereum's.
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p><a href="https://marketcapof.com/solana/ethereum/">https://marketcapof.com/solana/ethereum/</a></p></figcaption></figure>
 
-While ETH Foundation is dumping on their holders.&#x20;
+While ETH Foundation is dumping on their holders.
 
 {% embed url="https://x.com/solidintel_x/status/1881290612680613902" %}
 
@@ -68,11 +68,9 @@ The running joke being EF "use Ethereum a lot" to dump ETH for stables to pay th
 
 {% embed url="https://x.com/licuende/status/1880938070997905596" %}
 
-<mark style="color:yellow;">**Deposit at Neutral Trade to support SOL on flipping ETH eventually, while being resistant to general market volatility.**</mark>&#x20;
+<mark style="color:yellow;">**Deposit at Neutral Trade to support SOL on flipping ETH eventually, while being resistant to general market volatility.**</mark>
 
-
-
-**Fees:**&#x20;
+**Fees:**
 
 * 10% commission
 * 2% annual service fee

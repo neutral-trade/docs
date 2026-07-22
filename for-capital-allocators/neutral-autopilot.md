@@ -42,7 +42,7 @@ What you get:
 
 ## How it works
 
-<figure><img src="../.gitbook/assets/nt-autopilot-flow (1).svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/nt-autopilot-flow.svg" alt=""><figcaption></figcaption></figure>
 
 1. **Deposit USDC.** You make a single USDC deposit into the Autopilot vault.
 2. **Your capital goes to work.** It's spread across a selection of Neutral Trade's live strategies, primarily market-neutral with up to 5% directional, and rebalanced between them as conditions change, so your money keeps working in the strongest performers instead of sitting in one bet.
@@ -77,16 +77,16 @@ Autopilot is primarily market-neutral, but it is not risk-free. As a multi-strat
 
 Curators cannot withdraw client assets. Every movement is restricted, programmatically, to pre-approved contracts and venues.
 
-On-chain operations run through Fordefi, which includes its MPC workspace, policy engine, admin quorum, and a 12-hour timelock on smart contract changes.&#x20;
+On-chain operations run through Fordefi, which includes its MPC workspace, policy engine, admin quorum, and a 12-hour timelock on smart contract changes.
 
 Centralized-exchange positions settle off-exchange via Copper (ClearLoop) and Ceffu (MirrorX), reducing exposure to exchange insolvency.
 
 Independent audits: **Offside Labs · Quantstamp · Halborn** reports are public on the [Security](../neutral-strategy-vaults/security.md) page.
 
-**Who runs the strategies.** Neutral Trade's own strategies are managed in-house by a team with Goldman Sachs and top-tier hedge-fund backgrounds. Third-party strategies are run by independent curator teams, each admitted only after Neutral Trade's [Curator Selection](../curators/curator-selection.md) review, which includes a verifiable track record, documented risk and leverage limits, and an operational check; teams with unverifiable records are declined.&#x20;
+**Who runs the strategies.** Neutral Trade's own strategies are managed in-house by a team with Goldman Sachs and top-tier hedge-fund backgrounds. Third-party strategies are run by independent curator teams, each admitted only after Neutral Trade's [Curator Selection](../curators/curator-selection.md) review, which includes a verifiable track record, documented risk and leverage limits, and an operational check; teams with unverifiable records are declined.
 
 {% hint style="info" %}
-**On the roadmap  (not live yet)**
+**On the roadmap (not live yet)**
 
 Autopilot is planned to become Neutral Trade's first tokenized vault. Your position becomes a transferable, composable token you can hold, move, or use across DeFi while it keeps earning. While it isn't available today, follow the Neutral Trade official [X](https://x.com/TradeNeutral) account to stay informed for when it launches.
 {% endhint %}

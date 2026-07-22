@@ -1,4 +1,4 @@
-# CTA-Momentum (R\* Research) \[Paused]
+# CTA-Momentum (R\* Research) \[Closed]
 
 {% hint style="danger" %}
 **⚠️ Deprecated vault — historical reference only.**
@@ -22,7 +22,7 @@ R\* Research CTA-Momentum embodies Neutral Trade’s mission to bring **hedge-fu
 
 ## Strategy Design
 
-CTA-Momentum's objective is to generate consistent, risk-adjusted returns by identifying short-term mispricings across highly liquid digital assets. It aims to deliver uncorrelated alpha that is resilient across varying market regimes.&#x20;
+CTA-Momentum's objective is to generate consistent, risk-adjusted returns by identifying short-term mispricings across highly liquid digital assets. It aims to deliver uncorrelated alpha that is resilient across varying market regimes.
 
 #### Alpha Source
 
@@ -41,9 +41,9 @@ CTA-Momentum's objective is to generate consistent, risk-adjusted returns by ide
 
 #### Frequency & Turnover
 
-* **Median Holding Period:** \~1–3 hours&#x20;
+* **Median Holding Period:** \~1–3 hours
 * **Trades:** 3-5 per asset per day
-* **Monthly Turnover:** Up to 1000x TVL&#x20;
+* **Monthly Turnover:** Up to 1000x TVL
 
 #### Risk Controls
 
@@ -53,7 +53,7 @@ CTA-Momentum's objective is to generate consistent, risk-adjusted returns by ide
   * Full strategy pause and reevaluation if a drawdown exceeds 20%
 * **Max** **Historical Drawdown:** 15%
 
-### Custodial Infrastructure&#x20;
+### Custodial Infrastructure
 
 #### Copper/CEFFU Custody & ClearLoop/MirrorX Settlement
 
@@ -64,13 +64,13 @@ CTA-Momentum's objective is to generate consistent, risk-adjusted returns by ide
 
 ### Execution
 
-#### OKX & Binance&#x20;
+#### OKX & Binance
 
 * Market Maker Tier Accounts (VIP 7 for OKX and MM-1 for Binance)
   * Institutional-grade liquidity and speed
   * Minimal fees
 * Strategy executes via an externally managed Neutral Trade account
-  * Protects trader alpha&#x20;
+  * Protects trader alpha
 
 ### Why R\* Research?
 
@@ -91,7 +91,7 @@ CTA-Momentum's objective is to generate consistent, risk-adjusted returns by ide
 
 #### **Live Trading on OKX**
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 ### Monthly OKX & Binance Reports
 

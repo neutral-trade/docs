@@ -14,7 +14,7 @@ Holding $JLP but not a fan of ETH, SOL (non-LST), wBTC, idle stablecoins, or Tra
 
 A yielding index based on JLP, but reimagined from the ground up.
 
-<figure><img src="../../.gitbook/assets/Drafts for posting (dont delete) (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Drafts for posting (dont delete) (17).png" alt=""><figcaption></figcaption></figure>
 
 ## Strategy Design
 
@@ -35,7 +35,7 @@ Hyper JLP is a basket of top-performing assets. Designed as a yield-bearing prod
 
 ### Full Upside In Bull Markets
 
-• **No trader PnL drag**&#x20;
+• **No trader PnL drag**
 
 **Hyper JLP** has no trader PnL exposure. This means in a rising market, you capture the full upside of the underlying tokens without subsidizing traders' gains.
 
