@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Trading Firms
 
 Every vault on Neutral Trade is run by a professional trading firm that passed our curator selection framework — verified track record, risk-control review, and operational due diligence.
