@@ -92,3 +92,4 @@
 * [Risk Warnings and Disclaimers Statement](legal/risk-warnings-and-disclaimers-statement.md)
 * [🔎 Neutral Trade User Terms and Conditions](legal/neutral-trade-user-terms-and-conditions.md)
 * [PRIVACY POLICY](legal/privacy-policy.md)
+* [COOKIE POLICY](legal/cookie-policy.md)
