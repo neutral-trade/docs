@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# CTA Longshort Alpha
+# CTA - Longshort Alpha
 
 ## Overview
 
@@ -69,12 +69,12 @@ Cumulative return since inception at 1x leverage: **+39.3%**.
 
 **Stress-tested through live events.** The book traded through the October 2025 market-wide liquidation cascade — the largest in crypto history — which stress-tested its execution infrastructure, and through the July 2024 altcoin drawdown of over 40%, which tested cross-sectional positioning and risk controls.
 
-| Risk parameter         | Value          |
-| ---------------------- | -------------- |
-| Max drawdown, live, 1x | −4.2%          |
-| Max drawdown, live, 2x | −8.4%          |
-| Vault drawdown limit   | `15%`          |
-| Vault leverage         | `[TO CONFIRM]` |
+| Risk parameter         | Value |
+| ---------------------- | ----- |
+| Max drawdown, live, 1x | −4.2% |
+| Max drawdown, live, 2x | −8.4% |
+| Vault drawdown limit   | `15%` |
+| Vault leverage         | 2x-3x |
 
 ## Custody & Security
 
