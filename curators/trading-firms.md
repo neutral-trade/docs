@@ -54,13 +54,17 @@ _Detailed firm profile coming soon._
 
 ### Vision Research
 
-Vision Research is a proprietary trading firm combining high-frequency trading signals with market making on major centralized exchanges, running 100+ substrategies built on machine-learning factor models.
+Proprietary trading firm combining high-frequency trading signals with market making on major centralized exchanges, running 100+ substrategies built on machine-learning factor models.
 
-|                           |                  |
-| ------------------------- | ---------------- |
-| Strategy on Neutral Trade | HFT Multi-factor |
-
-_Detailed firm profile coming soon._
+|                           |                                                                                                                                                                                                                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Founded                   | 2025                                                                                                                                                                                                                                                               |
+| Live track record         | Live since 2025                                                                                                                                                                                                                                                    |
+| Team                      | 4 — two portfolio managers (arbitrage / non-arbitrage) and two engineers (off-chain / on-chain)                                                                                                                                                                    |
+| Based in                  | Asia Pacific                                                                                                                                                                                                                                                       |
+| Est. AUM                  | Not disclosed                                                                                                                                                                                                                                                      |
+| Team background           | Prior experience at Blackstone, Crypto.com, ByteDance, a New York asset manager, and a systematic crypto fund; includes a former Columbia University lecturer. Quantitative research, low-latency execution architecture, and protocol-level on-chain engineering. |
+| Strategy on Neutral Trade | HFT Multi-factor                                                                                                                                                                                                                                                   |
 
 ### Xanthas
 
