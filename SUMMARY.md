@@ -93,3 +93,4 @@
 * [🔎 Neutral Trade User Terms and Conditions](legal/neutral-trade-user-terms-and-conditions.md)
 * [PRIVACY POLICY](legal/privacy-policy.md)
 * [COOKIE POLICY](legal/cookie-policy.md)
+* [Regional Availability](legal/regional-availability.md)
