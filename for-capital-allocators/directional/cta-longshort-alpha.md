@@ -36,27 +36,6 @@ Several uncorrelated return drivers run in parallel, and new ones are added over
 
 ***
 
-## Performance
-
-{% hint style="warning" %}
-Figures below are the curator's live track record since the book launched in **October 2024**.
-{% endhint %}
-
-**At 1x leverage:**
-
-| Period                     | Annualised return | Sharpe | Calmar | Max drawdown | Drawdown days |
-| -------------------------- | ----------------- | ------ | ------ | ------------ | ------------- |
-| Since inception (Oct 2024) | +22.0%            | 2.35   | 5.24   | −4.2%        | 78            |
-| 2025                       | +22.2%            | 2.18   | 5.28   | −4.2%        | 51            |
-
-Cumulative return since inception at 1x leverage: **+39.3%**.
-
-**At 2x leverage,** the curator reports an annualised net return of **44.1%**, Sharpe **2.35**, Calmar **5.24**, and a maximum drawdown of **−8.4%**. Leverage is adjustable to suit the risk profile of the allocation.
-
-> Past performance is not necessarily indicative of future results. Estimated returns are provided for informational purposes only and may not reflect actual performance. Returns are before applicable fees and expenses charged by Neutral Trade.
-
-***
-
 ## Risk Management
 
 **Model-level risk diversification.** The book is run largely long-short, minimising net directional beta so returns are driven by a combination of hedged factors rather than market direction, keeping correlation to crypto beta low. A proprietary Barra-style risk model continuously monitors factor loadings, maintaining smart-beta exposure tilted toward yield-generating factors while limiting unintended systematic risk.
@@ -65,12 +44,10 @@ Cumulative return since inception at 1x leverage: **+39.3%**.
 
 **Stress-tested through live events.** The book traded through the October 2025 market-wide liquidation cascade — the largest in crypto history — which stress-tested its execution infrastructure, and through the July 2024 altcoin drawdown of over 40%, which tested cross-sectional positioning and risk controls.
 
-| Risk parameter         | Value |
-| ---------------------- | ----- |
-| Max drawdown, live, 1x | −4.2% |
-| Max drawdown, live, 2x | −8.4% |
-| Vault drawdown limit   | `15%` |
-| Vault leverage         | 2x-3x |
+| Risk parameter       | Value |
+| -------------------- | ----- |
+| Vault drawdown limit | `15%` |
+| Vault leverage       | 2x-3x |
 
 ## Custody & Security
 
