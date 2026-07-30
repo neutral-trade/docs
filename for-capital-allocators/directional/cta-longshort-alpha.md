@@ -75,9 +75,9 @@ Full details: [Security](https://docs.neutral.trade/vault-infrastructure/securit
 * **Execution, technology and venue risk.** The strategy depends on connectivity, exchange availability and correct system behaviour, and concentrates execution on a single primary venue.
 * **No guarantee of returns.** Target figures are objectives, not commitments.
 
-## Why C\* Research?
+## Why C Research?
 
-C\* Research is a quantitative digital-asset trading team based in Asia. The team formed in mid-2024 and launched its live book in October 2024, and trades predominantly its **own capital** — roughly 90% of the book is proprietary, aligning the team directly with allocator outcomes.
+C Research is a quantitative digital-asset trading team based in Asia. The team formed in mid-2024 and launched its live book in October 2024, and trades predominantly its **own capital** — roughly 90% of the book is proprietary, aligning the team directly with allocator outcomes.
 
 The team's background is in systematic quantitative research at established global quant funds, spanning equities and commodities as well as digital assets, and it applies that institutional research framework to crypto markets.
 

@@ -47,7 +47,7 @@ _Live since March 30, 2026_
 | 2025 | 1.47% | 0.31% | -1.15% | -0.16% | 2.09% | 1.27% | 1.30% | 1.15% | 1.99%  | 1.99%  | 1.37% | 1.48% | **13.88%** |
 | 2024 | 1.15% | 1.07% | 1.06%  | 0.48%  | 1.36% | 1.05% | 1.12% | 1.51% | -0.42% | -0.71% | 2.49% | 0.97% | **11.67%** |
 
-#### Performance Statistics&#x20;
+#### Performance Statistics
 
 | Metric                  | Value  |
 | ----------------------- | ------ |
@@ -62,9 +62,9 @@ _Live since March 30, 2026_
 
 ### Risk Management
 
-The risk management framework prioritizes capital preservation through rigorous diversification and strict liquidity mandates.&#x20;
+The risk management framework prioritizes capital preservation through rigorous diversification and strict liquidity mandates.
 
-Portfolio construction is governed by disciplined concentration limits across both traditional and digital assets, ensuring that exposure remains diversified and restricted to highly liquid, large-cap instruments.&#x20;
+Portfolio construction is governed by disciplined concentration limits across both traditional and digital assets, ensuring that exposure remains diversified and restricted to highly liquid, large-cap instruments.
 
 Financial stability is maintained through a conservative leverage profile and proactive margin management, leaving significant headroom to absorb sudden market shifts. To mitigate downside risk, the strategy employs dynamic drawdown triggers, continuous stress testing against extreme market scenarios, and daily position adjustments to keep the overall risk profile aligned with long-term stability goals.
 
@@ -75,7 +75,7 @@ Financial stability is maintained through a conservative leverage profile and pr
 | Parameter              | Details                                                                                                                                             |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Strategy               | Multi-Asset Volatility Arbitrage                                                                                                                    |
-| Curator                | D\* Research                                                                                                                                        |
+| Curator                | D Research                                                                                                                                          |
 | Subscription Currency  | USDC                                                                                                                                                |
 | Minimum Subscription   | USDC 50,000                                                                                                                                         |
 | Minimum Redemption     | USDC 50,000                                                                                                                                         |
