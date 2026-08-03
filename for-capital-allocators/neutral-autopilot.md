@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Neutral Autopilot
 
 One deposit. Neutral Trade's strategies, managed for you.
