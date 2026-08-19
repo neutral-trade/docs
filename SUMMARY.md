@@ -16,7 +16,6 @@
 * [Market Neutral](for-capital-allocators/market-neutral/README.md)
   * [Mid-frequency Market Making](for-capital-allocators/market-neutral/mid-frequency-market-making.md)
   * [Delta Neutral Arbitrage](for-capital-allocators/market-neutral/delta-neutral-arbitrage.md)
-  * [JLP Delta Neutral Enhanced](for-capital-allocators/market-neutral/jlp-delta-neutral-enhanced.md)
   * [Hyperliquid Funding Arb](for-capital-allocators/market-neutral/hyperliquid-funding-arb.md)
   * [Multi-Asset Volatility Arbitrage](for-capital-allocators/market-neutral/multi-asset-volatility-arbitrage.md)
   * [Options Market Making](for-capital-allocators/market-neutral/options-market-making.md)
@@ -64,6 +63,7 @@
   * [\[Hyperliquid\] ALT Dominance \[Deprecated\]](for-capital-allocators/deprecated-vaults/hyperliquid-alt-dominance-deprecated.md)
   * [🎲 Bet](for-capital-allocators/deprecated-vaults/bet/README.md)
     * [📉 \[Hyperliquid\] The Big Short](for-capital-allocators/deprecated-vaults/bet/hyperliquid-the-big-short.md)
+  * [JLP Delta Neutral Enhanced](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-enhanced.md)
 
 ## Neutral Strategy Vaults
 

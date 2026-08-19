@@ -1,24 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
-  tags:
-    visible: true
-  actions:
-    visible: true
----
-
 # JLP Delta Neutral Enhanced
 
 ## **Overview**
@@ -27,7 +6,7 @@ The JLP Delta Neutral Enhanced vault earns yield from Jupiter's JLP liquidity pr
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/jlpdn">https://www.neutral.trade/strategies/jlpdn</a></td></tr></tbody></table>
 
-## **How it works**&#x20;
+## **How it works**
 
 ### **Leveraging JLP**
 
@@ -70,6 +49,6 @@ JLP holds exposure to SOL, BTC, and ETH, through its token composition, and trad
 
 ## Custody & Security
 
-The vault operates under Neutral Strategy Vaults standard walled garden framework. Multi-party approvals for all fund movements, whitelisted addresses only, and no single key holder able to act unilaterally. Collateral held in Ceffu MPC custody and never on exchange balance sheets.&#x20;
+The vault operates under Neutral Strategy Vaults standard walled garden framework. Multi-party approvals for all fund movements, whitelisted addresses only, and no single key holder able to act unilaterally. Collateral held in Ceffu MPC custody and never on exchange balance sheets.
 
 Vault infrastructure has been audited by Quantstamp, Halborn, and Offside Labs. Full details: [Security](https://docs.neutral.trade/vault-infrastructure/security).
