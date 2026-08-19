@@ -63,7 +63,7 @@
   * [\[Hyperliquid\] ALT Dominance \[Deprecated\]](for-capital-allocators/deprecated-vaults/hyperliquid-alt-dominance-deprecated.md)
   * [🎲 Bet](for-capital-allocators/deprecated-vaults/bet/README.md)
     * [📉 \[Hyperliquid\] The Big Short](for-capital-allocators/deprecated-vaults/bet/hyperliquid-the-big-short.md)
-  * [JLP Delta Neutral Enhanced](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-enhanced.md)
+  * [JLP Delta Neutral Enhanced \[Closed\]](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-enhanced.md)
 
 ## Neutral Strategy Vaults
 
