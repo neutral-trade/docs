@@ -83,12 +83,14 @@
 
 * [Distributors](for-distribution-partners/distributors.md)
 * [API & SDK & IDL](for-distribution-partners/api-and-sdk-and-idl.md)
+* [Neutral Builders Code](for-distribution-partners/neutral-builders-code.md)
 
 ## Additional Info
 
 * [Fees + Redemption Period](additional-info/fees-+-redemption-period.md)
 * [APY and APR Calculations](additional-info/apy-and-apr-calculations.md)
 * [Brand Kit](additional-info/brand-kit.md)
+* [Neutral VIP Program](additional-info/neutral-vip-program.md)
 
 ## LEGAL
 
