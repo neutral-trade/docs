@@ -2,13 +2,12 @@
 description: >-
   Annual service fee discounts on Neutral Autopilot, across Silver, Gold and
   Diamond tiers. Effective 1 September 2026.
-hidden: true
 ---
 
 # Neutral VIP Program
 
 {% hint style="info" %}
-The Neutral VIP Program takes effect on **1 September 2026**, alongside the move to a standard **1% annual service fee** on all vaults.
+The Neutral VIP Program takes effect on **1 September 2026.**
 
 Throughout this page, "annual service fee" is the time-based fee described on [Fees + Redemption Period](fees-+-redemption-period.md).
 {% endhint %}
@@ -42,11 +41,3 @@ Discounts are **not applied automatically**. Reaching a threshold makes you elig
 Your tier is a **maintenance requirement**, not a one-time award. Your qualifying points or Autopilot balance must stay at or above your tier's threshold.
 
 If your qualifying level falls below the threshold for **more than 30 days**, your tier is **automatically downgraded** to the tier your current level supports, or removed if you no longer qualify for any tier.
-
-## Worked example
-
-You hold **$1.2M in Neutral Autopilot** and claim Gold on the balance path.
-
-* Annual service fee before the discount: 1% of $1.2M = **$12,000 per year**
-* Gold discount: 20% off = **$2,400 per year**
-* Annual service fee you pay: **$9,600 per year**
