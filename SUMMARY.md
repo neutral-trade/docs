@@ -9,6 +9,7 @@
 * [Introduction](README.md)
 * [Our Thesis](getting-started/our-thesis.md)
 * [Neutral Trade Points & Referrals](getting-started/neutral-trade-points-and-referrals.md)
+* [Neutral VIP Program](getting-started/neutral-vip-program.md)
 
 ## For Capital Allocators
 
@@ -102,7 +103,6 @@
 * [Fees + Redemption Period](additional-info/fees-+-redemption-period.md)
 * [APY and APR Calculations](additional-info/apy-and-apr-calculations.md)
 * [Brand Kit](additional-info/brand-kit.md)
-* [Neutral VIP Program](additional-info/neutral-vip-program.md)
 
 ## LEGAL
 

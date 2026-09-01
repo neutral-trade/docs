@@ -12,14 +12,10 @@ Autopilot aims to earn steadily whether crypto is rising or falling.
 
 _Live since July 2026_
 
-_New deposits pay no management fee for their first month. The 1% annual management fee applies
-afterward._
+_New deposits pay no management fee for their first month. The 1% annual management fee applies afterward._
 
 {% hint style="info" %}
-Autopilot is the current production vault in the [Neutral VIP
-Program](../additional-info/neutral-vip-program.md). Eligible wallets can reduce the standard annual
-management fee to **0.90% (Silver), 0.80% (Gold), or 0.70% (Diamond)** through either an NT Points
-path or a direct Autopilot-balance path.
+Autopilot is the current production vault in the [Neutral VIP Program](../getting-started/neutral-vip-program.md). Eligible wallets can reduce the standard annual management fee to **0.90% (Silver), 0.80% (Gold), or 0.70% (Diamond)** through either an NT Points path or a direct Autopilot-balance path.
 {% endhint %}
 
 ## **Why Autopilot?**
