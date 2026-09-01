@@ -79,7 +79,7 @@ Financial stability is maintained through a conservative leverage profile and pr
 | Subscription Currency  | USDC                                                                                                                                                |
 | Minimum Subscription   | USDC 50,000                                                                                                                                         |
 | Minimum Redemption     | USDC 50,000                                                                                                                                         |
-| Annual Service Fee     | 1%                                                                                                                                                  |
+| Annual Management Fee  | 1%                                                                                                                                                  |
 | Commission             | 0%                                                                                                                                                  |
 | Subscription Frequency | Monthly (5 business days before first business day of each calendar month)                                                                          |
 | Redemptions            | Quarterly, first Business Day of each calendar quarter. Settlement time is within 11 business days. USDC is returned within 3 days post-settlement. |

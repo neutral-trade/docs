@@ -1,7 +1,7 @@
 ---
 description: >-
-  The mechanics of the on-chain fee share — what you earn, how attribution is
-  captured, and the rules that cannot be undone.
+  How builder registration, first-deposit attribution, live fee tiers, accrual,
+  and claims work.
 layout:
   width: default
   title:
@@ -24,126 +24,124 @@ layout:
 
 # How builder codes work
 
-A builder code attributes the users you bring to Neutral Trade vaults, and pays you a share of the
-fees those users generate. The whole mechanism lives in the vault program, so attribution and
-payouts are verifiable on chain.
+**A builder attribution** links a user's position in one vault to a registered builder wallet. The
+vault program records the link, calculates the builder's live fee share, and accrues earnings in
+vault shares.
 
-## What you earn
+The dashboard calls the wallet address a **Builder ID**. An integration can submit that address
+directly or use a human-readable builder code that resolves to it.
 
-Your share is carved out of the **vault manager's** performance and management fee take.
+## The fee share
 
-**It does not increase what your users pay.** A referred user and a direct user are charged exactly
-the same. Your share comes out of the manager's portion, not on top of the user's.
+The launched program shares only the **1% annual management fee** on the 12 current strategy vaults.
+It does not share performance fees.
 
-Rates are set per vault and can be tuned per partner by agreement. Both the performance-fee share and
-the management-fee share are configured independently.
+The referred user pays exactly the same fee they would pay without a builder. The program transfers
+part of the manager's collected management fee to the builder instead of adding a new charge.
 
-## The four rules that matter
+The standard live ladder is documented in
+[Builders Code Rebate](neutral-builders-code.md#rebate-ladder).
 
-These are properties of the program, not policy choices. None of them can be worked around after the
-fact, so design your integration around them.
+## Attribution is permanent, but the rate is live
 
-### 1. Attribution happens once, in the user's first transaction
+Two different rules matter:
 
-A user is bound to your code in the same transaction as their **first ever deposit to that vault**.
+* **The builder link is permanent per user and vault.** It must be written in the user's first vault
+  deposit transaction and cannot be replaced later.
+* **The fee split is dynamic.** The current tier is resolved when fees are charged. Existing
+  referred users move with the builder when its tier rises or falls.
 
-If a user has already deposited — even once, even years ago, even a single lamport — they can never
-be attributed to you on that vault. There is no retroactive linking.
+Historical rate fields on an attributed-user record describe the bind event. They do not freeze or
+control the live settlement rate.
 
-This is the rule that decides whether your integration earns anything. See the
-[Integration guide](integration-guide.md).
+## First-deposit attribution
 
-### 2. The rate is captured at the moment of binding
+The attributed deposit must place the following actions in one Solana transaction:
 
-When a user binds, the current rate is written onto their account and stays there permanently.
+* Initialize the user's vault account when it does not exist.
+* Bind the user's vault account to the builder's registered referrer account.
+* Request the deposit.
+* Add the NT Points attribution memo used by the rewards service.
 
-A rate renegotiated later applies **only to users who bind afterwards**. Your existing cohort keeps
-what they were bound at. This cuts both ways: an improved rate does not lift your existing book, and
-a reduced one does not erode it.
+Atomic ordering ensures that either the binding and deposit both succeed or neither does.
 
-### 3. Registration is per vault
+{% hint style="danger" %}
+If the user has prior activity in that vault, an integration cannot add or change its builder
+attribution. Always require successful attribution before presenting the first deposit transaction
+for signature.
+{% endhint %}
 
-You register separately on each vault you want to distribute. There is no global registration, and
-being registered on one vault gives you nothing on another.
+## Registration and tiers are per vault
 
-Some vaults require you to hold a minimum position of your own before you can register. That
-threshold is published per vault, and is zero on many of them.
+A builder registers separately on every vault it distributes. Registration on one vault does not
+enable attribution on another.
 
-### 4. Earnings accrue as vault shares
+Each vault also maintains its own **referred net deposits** counter for that builder. Successful
+referred deposits raise it and referred withdrawals lower it. The counter is measured in the
+vault's deposit asset minor units and is separate from attributed TVL, which moves with share price.
 
-Your fee share accumulates as **shares in the vault**, not as a cash balance.
+The program selects the greatest tier threshold that the counter has reached. A counter below
+$100,000 receives no share; a counter at exactly $100,000 receives 10%. The same rule applies at
+every higher boundary.
 
-Its value therefore moves with vault performance between accrual and claim — up or down. You are
-economically exposed to the vault you distribute, on your own earnings, until you claim them.
+## Effective fees and discounts
 
-## The lifecycle
+When the vault charges a user's management fee, it first applies any user-specific fee setting.
+This includes an eligible VIP discount on Neutral Autopilot. The builder's live percentage is then
+applied to the fee actually charged.
 
-```
-register on a vault
-      │
-      ▼
-user arrives with your code ──► first deposit binds them ──► rate captured
-      │
-      ▼
-user generates performance / management fees
-      │
-      ▼
-your share accrues as vault shares
-      │
-      ▼
-you request a claim ──► cooldown ──► settled on chain ──► tokens received
-```
+The vault program supports a per-builder rate override as an administrative control. If one is
+configured, the effective rate shown in the dashboard and API is authoritative. Otherwise, the
+standard tier schedule determines the rate.
 
-## Claiming
+## Earnings and claims
 
-Claiming is a two-step process, deliberately:
+The builder's share accrues as **vault shares**, not as a fixed cash balance. Its token value can
+rise or fall with the vault's price per share.
 
-1. **You request.** Accrued shares move to a pending state and a cooldown begins, following the same
-   redemption mechanics as a normal withdrawal from that vault — see
-   [Fees + Redemption Period](../additional-info/fees-+-redemption-period.md).
-2. **The vault settles it** during a later processing cycle, and transfers the tokens.
+A claim has two stages:
 
-The value shown at request time is an **estimate**. The final amount is recomputed at settlement,
-because the share price moves in between.
+* The builder signs a claim request. Accrued shares move into a pending withdrawal.
+* A keeper settles the request after the vault's cooldown and processing conditions are satisfied.
 
-You can hold one pending claim per vault at a time.
+The amount shown at request time is an estimate. The program calculates the final token amount at
+settlement using the then-current price per share. Only settled claims appear in the payout ledger.
 
-## What a vault manager controls
+## Vault-level controls
 
-| Control | Effect |
-| --- | --- |
-| Enable referrals | Whether the vault participates at all |
-| Default rates | The standard share for that vault |
-| Your rate override | A negotiated rate specific to you |
-| Minimum deposit | Capital you must hold to register |
-| Deactivate you | Stops future accrual on that vault |
+The vault manager can enable or disable referrals, configure the tier schedule, set a minimum
+builder deposit for registration, apply a builder-specific override, or deactivate a builder.
 
-If you are deactivated, **already-accrued earnings remain yours and stay claimable.** Only future
-accrual stops.
+Deactivation prevents future binds and accrual. Earnings already accrued to the builder remain
+claimable.
 
-## Verifying everything yourself
+## Verify the state
 
-Because this lives in the vault program, you do not have to trust our reporting:
+The authoritative balances and configuration are onchain:
 
-* Your accrued balances sit in your referrer account on chain.
-* Settled claims carry transaction signatures.
-* Your effective rates derive from the vault configuration and your referrer account.
+* The builder's referrer account contains its referred net deposits, accrued shares, override flags,
+  and active status for that vault.
+* The vault account contains the enabled flag, registration minimum, and tier schedule.
+* Fee events record the effective referral rates used for each accrual.
+* Settled claims carry Solana transaction signatures.
 
-The [API](../developers/builder-code-data.md) reports all of it, and the
-[IDL](../developers/#idl) lets you decode it directly.
+The [builder data API](../developers/builder-code-data.md) projects this state, and the
+[IDL](../developers/#idl) lets an integrator decode it directly.
 
-## What this is not
+## NT Points referrals are separate
 
-Neutral Trade also runs an
-[NT Points referral programme](../getting-started/neutral-trade-points-and-referrals.md) for
-individual users — a separate, off-chain system with its own codes that awards points, not fees.
-Builder codes are the on-chain commercial programme for distribution partners. The two are unrelated
-and do not interact.
+The [NT Points referral system](../getting-started/neutral-trade-points-and-referrals.md) is an
+offchain rewards relationship for individual users. A points code can be applied after a deposit
+and earns points rather than a management-fee share.
 
-## Next steps
+An attributed builder deposit also emits the points memo, so the same deposit can participate in
+both systems. The points record does not create the onchain fee entitlement, and a points referral
+alone does not create builder attribution.
 
-* [Distributors](distributors.md) — the commercial arrangement and how to get in touch
-* [Partner Portal](partner-portal.md) — sign up, claim a code, register, track earnings
-* [Integration guide](integration-guide.md) — the attributed deposit, in code
-* [Builder-code data](../developers/builder-code-data.md) — reading earnings programmatically
-* [How They Work](../neutral-strategy-vaults/how-they-work.md) — the vaults you are distributing
+## Continue
+
+* [Builders Code Rebate](neutral-builders-code.md) explains the commercial ladder.
+* [Builder dashboard](partner-portal.md) covers registration, reporting, keys, and claims.
+* [Integration guide](integration-guide.md) shows the required attributed deposit.
+* [Builder-code data](../developers/builder-code-data.md) covers reporting endpoints.
+

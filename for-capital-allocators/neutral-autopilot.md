@@ -12,7 +12,8 @@ Autopilot aims to earn steadily whether crypto is rising or falling.
 
 _Live since July 2026_
 
-_New deposits pay no management fee for their first month! A 1% service fee applies after._
+_New deposits pay no management fee for their first month. The 1% annual management fee applies
+afterward._
 
 ## **Why Autopilot?**
 

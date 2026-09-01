@@ -54,8 +54,8 @@ coverY: 0
 
 #### 2.3 Fee Types
 
-* **Service fees:** Charged based on the elapsed time and the NV’s set service fee rate. These fees are deducted in the form of shares, reducing the user’s share balance. NV managers can withdraw the accumulated service fee shares at any time.
-* **Commission:** Charged when the current share price exceeds the user's high-water mark (HWM). The fee is calculated on the profit above the HWM using the predefined performance fee rate. The user’s HWM is then updated to the new share price. Suppose a new deposit is made when the current share price is below the existing HWM. In that case, the HWM is recalculated as a weighted average between the previous HWM (applied to existing shares) and the new deposit’s entry price. Like service fees, commissions are charged in shares and reduce the user’s balance. NV managers may withdraw the accrued commission shares at any time.
+* **Management fees:** Charged based on elapsed time and the vault's management-fee rate. These fees are deducted in shares, reducing the user’s share balance. Vault managers can withdraw accumulated management-fee shares at any time.
+* **Commission:** Charged when the current share price exceeds the user's high-water mark (HWM). The fee is calculated on the profit above the HWM using the predefined performance fee rate. The user’s HWM is then updated to the new share price. Suppose a new deposit is made when the current share price is below the existing HWM. In that case, the HWM is recalculated as a weighted average between the previous HWM (applied to existing shares) and the new deposit’s entry price. Like management fees, commissions are charged in shares and reduce the user’s balance. NV managers may withdraw the accrued commission shares at any time.
 * **Deposit fees:** Deducted from the deposited amount before NV shares are issued, resulting in a lower net deposit credited to the user.
 * **Withdrawal fees:** Applied to the amount redeemed. The net funds returned to the user are reduced by the applicable withdrawal fee.
 
@@ -86,7 +86,7 @@ coverY: 0
 
 * Share price changes based on the performance of the underlying strategy
 * A lockup period may apply before withdrawals can be requested
-* Service fees and commissions (if applicable) are periodically charged.
+* Management fees and commissions, if applicable, are periodically charged.
 
 **5. Submit withdrawal request**
 
@@ -97,6 +97,6 @@ coverY: 0
 
 **6. Withdrawal processing and share redemption**
 
-* After the cooldown period, users automatically receive their share of the NV assets (net of any applicable withdrawal fees, service fees, and commissions)
+* After the cooldown period, users automatically receive their share of the NV assets, net of any applicable withdrawal fees, management fees, and commissions.
 * NV shares are burned once withdrawal process is complete, reflecting the reduction in total ownership
 * Withdrawals are typically processed automatically and sent to your wallet within 24 hours after the cooldown period has ended

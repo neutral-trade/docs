@@ -1,7 +1,7 @@
 ---
 description: >-
-  Programmatic access to Neutral Trade vault data, user positions, and builder-code
-  earnings.
+  Programmatic access to vault data, unsigned transactions, user positions, and
+  builder-code reporting.
 layout:
   width: default
   title:
@@ -24,68 +24,60 @@ layout:
 
 # Developers
 
-Neutral Trade exposes vault configuration, live performance, historical time series, user positions,
-and builder-code earnings through a versioned REST API, a TypeScript SDK, and an on-chain program
-IDL.
+Neutral Trade provides a v2 REST API, a TypeScript SDK, and a Solana program IDL.
 
-|                    |                                                                     |
-| ------------------ | ------------------------------------------------------------------- |
-| **Base URL**       | `https://api.neutral.trade`                                         |
-| **Protocol**       | HTTPS, JSON                                                         |
-| **Interactive spec** | [`https://api.neutral.trade/docs`](https://api.neutral.trade/docs) |
-| **Machine-readable spec** | `https://api.neutral.trade/openapi.json`                     |
-| **Where to call it from** | Backend / server-side. Never embed an API key in a browser or mobile client. |
+**REST base URL:** `https://api.neutral.trade`
 
-## These docs versus the interactive spec
+**Interactive OpenAPI:** [api.neutral.trade/docs](https://api.neutral.trade/docs)
 
-The interactive spec is the authoritative reference for **exact request parameters, response fields,
-and status codes**. It is generated from the running service, so it is never out of date.
+**Machine-readable OpenAPI:** `https://api.neutral.trade/openapi.json`
 
-These pages exist for what a spec cannot tell you: which credential unlocks what, what the data
-actually means, which guarantees hold, and which details will cost you a bug if you miss them. Read
-these first, then use the spec while you build.
+The running OpenAPI document is authoritative for exact parameters, response fields, and status
+codes. These pages explain credential boundaries, financial meaning, and integration invariants.
 
-## Where to start
+## Start with the relevant guide
 
-| You want to… | Start here |
-| --- | --- |
-| Understand what you can access and how to authenticate | [Access & authentication](access-and-authentication.md) |
-| Avoid the mistakes that cost real money | [API conventions](api-conventions.md) |
-| Pull vault performance, TVL, or user positions | [Vault & user data](vault-and-user-data.md) |
-| Read your builder-code earnings | [Builder-code data](builder-code-data.md) |
-| Move an existing integration off the old API | [Migrating from the legacy API](migrating-from-the-legacy-api.md) |
-| Earn a fee share on deposits you refer | [How builder codes work](../for-distribution-partners/how-builder-codes-work.md) |
-| Understand the commercial arrangement | [Distributors](../for-distribution-partners/distributors.md) |
-| Understand how the vaults themselves work | [How They Work](../neutral-strategy-vaults/how-they-work.md) |
+* [Access & authentication](access-and-authentication.md) explains public routes, partner keys, and
+  wallet sessions.
+* [API conventions](api-conventions.md) covers integer amounts, freshness, pagination, and
+  transaction-builder responses.
+* [Vault & user data](vault-and-user-data.md) explains configuration, performance, balances, and
+  activity.
+* [Builder-code data](builder-code-data.md) explains tiers, attributed users, earnings, history, and
+  payouts.
+* [Migrating from the legacy API](migrating-from-the-legacy-api.md) maps numeric v1 vault IDs and
+  instruction builders to v2.
+* [Integration guide](../for-distribution-partners/integration-guide.md) implements a strict
+  attributed first deposit.
 
-## SDK
+## Transactions
 
-The TypeScript SDK wraps the on-chain program and provides transaction builders the REST API
-deliberately does not — including the single-transaction attributed deposit that distribution
-partners need.
+The REST API builds unsigned deposit and withdrawal transactions:
+
+* `POST /v2/vault/{vaultAddress}/tx/deposit`
+* `POST /v2/vault/{vaultAddress}/tx/withdraw`
+
+Both are public, CORS-enabled, and metered by IP. The response provides an unsigned
+`transactionBase64` and equivalent `instructions[]`. The server never signs or submits.
+
+Use the TypeScript SDK when you need direct RPC state checks, program instruction composition,
+registration plans, or builder claim helpers.
 
 {% embed url="https://sdk.neutral.trade/" %}
 
-## The API does not build transactions
-
-The REST API is read-only by design and holds no Solana RPC connection. It can tell you what a
-deposit or withdrawal **would** produce (`simulate-deposit`, `simulate-withdraw`), but it cannot
-construct a transaction for a user to sign.
-
-Use the SDK for anything that writes to the chain.
-
 ## IDL
 
-The Anchor IDL describes the on-chain program that runs Neutral Trade vaults. Use it to decode
-accounts and instructions, or to build transactions directly against the program.
+The current Anchor IDL includes the live builder tier configuration and referred-net-deposit state.
+Use it to decode accounts and events or construct program interactions directly.
 
-* `ntbundle.json` — Anchor IDL (JSON)
-* `ntbundle.ts` — typed IDL (TypeScript)
+* `ntbundle.json` is the JSON IDL.
+* `ntbundle.ts` is the typed TypeScript IDL.
 
 {% file src="../.gitbook/assets/ntbundle.json" %}
 
-{% file src="../.gitbook/assets/ntbundle (1).ts" %}
+{% file src="../.gitbook/assets/ntbundle.ts" %}
 
 ## Support
 
-Questions, key requests, and integration help: [@NeutralTradeWill on Telegram](https://t.me/NeutralTradeWill).
+For keys and integration help, contact
+[@NeutralTradeWill on Telegram](https://t.me/NeutralTradeWill).

@@ -74,3 +74,20 @@ Referral-based NT Points are included in **daily TVL point distributions**:
 * Each user can **apply one** referral code only, once applied, it’s permanent.
 * Referral codes can be applied **any time**, even after a user has already deposited.
 * Invalid or duplicate codes trigger a simple error notification.
+
+## Points referrals and builder attribution
+
+**NT Points referrals** and the **Builders Code Rebate** are separate mechanisms:
+
+* A points referral is an offchain, user-level rewards relationship. It can be applied after a user
+  has deposited and pays 10% of the referee's NT Points to the referrer.
+* Builder attribution is an onchain, per-vault commercial fee relationship. It must be included in
+  the user's first deposit transaction for that vault and shares the management fee with a
+  registered builder.
+
+An attributed builder deposit also includes the NT Points attribution memo, so one first deposit can
+participate in both systems. A points referral by itself does not create a management-fee rebate,
+and applying a points code later cannot repair missing builder attribution.
+
+See [Builders Code Rebate](../for-distribution-partners/neutral-builders-code.md) and
+[How builder codes work](../for-distribution-partners/how-builder-codes-work.md).

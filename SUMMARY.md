@@ -82,8 +82,20 @@
 ## FOR DISTRIBUTION PARTNERS
 
 * [Distributors](for-distribution-partners/distributors.md)
-* [API & SDK & IDL](for-distribution-partners/api-and-sdk-and-idl.md)
-* [Neutral Builders Code](for-distribution-partners/neutral-builders-code.md)
+* [Builders Code Rebate](for-distribution-partners/neutral-builders-code.md)
+* [How Builder Codes Work](for-distribution-partners/how-builder-codes-work.md)
+* [Builder Dashboard](for-distribution-partners/partner-portal.md)
+* [Integration Guide](for-distribution-partners/integration-guide.md)
+* [API, SDK & IDL](for-distribution-partners/api-and-sdk-and-idl.md)
+
+## DEVELOPERS
+
+* [Developers](developers/README.md)
+* [Access & Authentication](developers/access-and-authentication.md)
+* [API Conventions](developers/api-conventions.md)
+* [Vault & User Data](developers/vault-and-user-data.md)
+* [Builder-Code Data](developers/builder-code-data.md)
+* [Migrating from the Legacy API](developers/migrating-from-the-legacy-api.md)
 
 ## Additional Info
 

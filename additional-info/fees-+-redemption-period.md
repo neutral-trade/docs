@@ -1,47 +1,60 @@
 ---
 description: >-
-  All fees and redemption periods are shown in the neutral.trade vault "details"
-  page
+  The 1% management fee across the 12 current strategy vaults, performance
+  fees, builder rebates, and withdrawal timing.
 ---
 
 # Fees + Redemption Period
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+All 12 current Neutral Strategy Vaults have a **1% annual management fee** as their base schedule.
+The management fee accrues over elapsed time and is charged in vault shares.
 
-Funds will become available for withdrawal at the conclusion of the redemption period. In Neutral Strategy Vaults, you remain exposed to both the upside and downside during this period.
+At a simple annualized rate, 1% is approximately 0.00274% per day. Actual charges use the program's
+elapsed-time calculation and current user-specific fee setting rather than a rounded daily rate.
 
-The annual service fee is time-based. For example, a 2% annual service fee breaks down to about 0.00548% per day (2% / 365 days).
+A disclosed promotion, VIP discount, or wallet-level fee setting can reduce the management fee
+actually charged. It does not change the vault's 1% base schedule.
 
-Commission is taken on the profits we’ve made for you. If we didn't make money for you, we don't earn.
+## Builder fee split
 
-Deposited funds are subject to a redemption period to prevent arbitrage opportunities. Due to the nature of our strategies, manual adjustments may be required to facilitate withdrawals in an orderly manner.
+The [Builders Code Rebate](../for-distribution-partners/neutral-builders-code.md) shares part of the
+management fee with an attributed builder:
 
-**Vault specific details can be found in each vaults "Details" section:**
+* The user-specific management fee is calculated first.
+* The builder receives its live per-vault tier percentage of that charged fee.
+* The split comes from the manager's fee and does not increase the user's cost.
+* Performance fees are excluded from the launched builder ladder.
 
-{% hint style="info" %}
-**Annual Service Fee** — _Time-based usage fee. For example, a 2% annual service fee breaks down to about 0.00548% per day (2% / 365 days)._
+## Performance fee
 
-**Commission** — _Profit-sharing cut, only charges if profits are made for the user._&#x20;
+Some vaults also charge a **performance fee**, shown as Commission in parts of the app. It applies
+only to profit above the user's high-water mark and varies by vault.
 
-_**Commission Paid**_ — the total commission you’ve paid. These are only charged on profits above your High Water Mark (the highest balance after fees).
+If a position has not made a new post-fee profit above its high-water mark, no performance fee is
+charged for that interval.
 
-**Earnings** — The total profit you’ve made in the vault, after all fees (commission/service fee) have been deducted.
+The high-water mark is the user's highest post-fee position value used for performance-fee
+accounting. A new deposit can adjust the account's weighted entry basis according to the vault
+program rules.
 
-**Balance** — The current value of your holdings in the vault (after fees).
+## Position values
 
-**High Water Mark** — Your highest post-fee portfolio value. Commission is only charged if your balance goes above this level. New High Water Mark = max(Previous High Water Mark, Current Balance after Fees).&#x20;
+**Balance** is the current value of the user's vault shares after charged fees.
 
-**Example:**
+**Earnings** is the user's profit shown after management and performance fees.
 
-1\. You deposit 100 USDC.
+**Commission paid** is the cumulative performance fee charged on profit above the high-water mark.
 
-2\. Portfolio grows to 110 USDC. A 10% gain is achieved, fees are taken (e.g. 2 USDC if fee = 20%), leaving you with 108 USDC.
+## Withdrawals
 
-3\. Your new High Water Mark = 108 USDC.
+Deposits and withdrawals are processed on each vault's configured schedule. A withdrawal request
+can have a cooldown followed by a keeper processing window.
 
-4\. You won’t pay fees again unless your portfolio grows beyond 108 USDC.
-{% endhint %}
+The user remains exposed to changes in the vault's price per share until settlement. The value
+shown when a withdrawal or builder claim is requested is therefore an estimate rather than a fixed
+redemption amount.
 
-## Deposit/Withdrawal Lifecycle (Neutral Strategy Vaults)
+Each vault's Details view contains its current minimums, lock or cooldown, processing cadence,
+management fee, and performance fee.
 
 <figure><img src="../.gitbook/assets/3f425389-d6fd-4b15-addc-13f4add6d4b5.png" alt=""><figcaption></figcaption></figure>

@@ -23,6 +23,7 @@ Managed by Neutral Trade, the strategy systematically neutralizes the directiona
 ### **Fees**
 
 * **Performance Fee:** 25%
+* **Annual Management Fee:** 1%
 * **Withdrawal Fee:** 0.3% (provided to existing depositors)
 
 ### **Redemptions**

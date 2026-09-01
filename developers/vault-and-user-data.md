@@ -25,7 +25,7 @@ layout:
 # Vault & user data
 
 Available to any valid API key. Exact fields and parameters live in the
-[interactive spec](https://api.neutral.trade/docs) — this page covers what the data means and how to
+[interactive spec](https://api.neutral.trade/docs). This page covers what the data means and how to
 combine it.
 
 ## Vault data
@@ -33,7 +33,7 @@ combine it.
 | Group | What it gives you |
 | --- | --- |
 | **Directory & config** | Every registered vault: name, asset and decimals, fee schedule, capacity, minimums, lock and redemption policy, processing cadence |
-| **Current metrics** | APR / APY, Sharpe, max drawdown, ROI, current TVL — gross and net of fees |
+| **Current metrics** | APR / APY, Sharpe, max drawdown, ROI, current TVL, gross and net of fees |
 | **Metrics history** | The same risk and return measures as a dated daily series |
 | **Share price** | Current lossless price per share, plus a series of ticks at event resolution |
 | **Daily snapshots** | One row per vault per day: closing TVL, share price, shares outstanding, plus flow and fee aggregates |
@@ -57,7 +57,7 @@ recomputation from raw share prices will not match our published net figures exa
 
 Vaults process deposits and withdrawals on a schedule rather than continuously. Each vault record
 carries its cadence and processing time. This is what determines when a user's request actually
-settles — surface it, or users will assume their deposit is stuck.
+settles. Surface it, or users will assume their deposit is stuck.
 
 The lock-up, cooldown, and redemption-window rules behind those schedules are explained in
 [Fees + Redemption Period](../additional-info/fees-+-redemption-period.md).
@@ -91,7 +91,7 @@ Combine position history with activity to find the entry point, or read interest
 window directly.
 
 **"List vaults for a catalog page."**
-Read the directory. Filter on the catalog metadata yourself — the API returns every registered vault,
+Read the directory. Filter on the catalog metadata yourself. The API returns every registered vault,
 including ones not shown on our own site.
 
 **"Show a live APR on our marketing page."**
@@ -100,14 +100,20 @@ gains nothing and burns quota.
 
 **"Tell a user when their withdrawal arrives."**
 Read pending requests for the estimate, and show the vault's redemption schedule alongside it. The
-estimate can be `null` — have a fallback message.
+estimate can be `null`, so have a fallback message.
 
 **"Reconcile our books monthly."**
 Use daily snapshots and the daily flow aggregates, bounded by the response watermark. Do not
 reconcile against live current-state reads; they move.
 
-## What is not exposed
+## Boundaries
 
-* **Strategy-internal venue allocations** — where a vault's capital sits across exchanges and
+* **Strategy-internal venue allocations:** where a vault's capital sits across exchanges and
   protocols. This stays on our private stack.
-* **Transaction building** — the API holds no RPC connection. Use the SDK.
+* **Signing and submission:** the public REST API can build and preflight unsigned deposit and
+  withdrawal transactions, but it never holds a user key, signs, or submits. The connected user
+  remains the authority.
+
+Use `POST /v2/vault/{vaultAddress}/tx/deposit` or
+`POST /v2/vault/{vaultAddress}/tx/withdraw` for REST transaction builds. Use the SDK for direct
+RPC state checks and custom instruction composition.

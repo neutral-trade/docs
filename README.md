@@ -21,7 +21,7 @@ layout:
 
 # Introduction
 
-_Allocators can invest in Strategies, Traders can raise on-chain capital with Neutral Strategy Vaults._
+_Allocators can invest in Strategies, Traders can raise onchain capital with Neutral Strategy Vaults._
 
 **Neutral Trade** is the platform for curated systematic strategies for Allocators, and a Capital Formation Infrastructure for Trading firms.
 
@@ -36,6 +36,12 @@ Our team combines experience from Goldman Sachs and a top-three global hedge fun
 #### **Curate**
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td></td><td>Learn what it takes to partner with Neutral Trade, and how to get started.</td><td><a href="curators/curator-onboarding.md">curator-onboarding.md</a></td></tr></tbody></table>
+
+#### **Build**
+
+Distribution partners can integrate all 12 current strategy vaults and earn up to 50% of the 1%
+management fee through the live
+[Builders Code Rebate](for-distribution-partners/neutral-builders-code.md).
 
 #### **Trusted by leading Solana protocols and Investors**
 

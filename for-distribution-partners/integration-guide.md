@@ -1,7 +1,7 @@
 ---
 description: >-
-  Making attribution land — the one-transaction attributed deposit, and the
-  mistakes that silently cost you every user.
+  Build a first deposit that requires builder attribution, using the public
+  transaction API or the TypeScript SDK.
 layout:
   width: default
   title:
@@ -24,130 +24,147 @@ layout:
 
 # Integration guide
 
-This page covers the part of a distribution integration that actually earns you money: making sure
-the users you send are attributed to your builder code.
+Builder attribution must be applied in the user's first deposit transaction for each vault. The
+recommended integration rejects an unattributed build instead of quietly allowing the deposit to
+continue.
 
 {% hint style="danger" %}
-**Attribution is one-shot and cannot be repaired.**
-
-A user is bound to your code in the same transaction as their **first ever deposit to that vault**.
-If that transaction lands without the binding, that user can never be attributed to you on that
-vault — not by a support ticket, not by a backfill, not by us.
-
-Get this right before you drive traffic.
+A successful deposit is not proof of attribution. Require an affirmative attribution result before
+asking the user to sign. If the first deposit lands without the binding, it cannot be added later.
 {% endhint %}
 
-## The shape of it
+## Public transaction API
 
-The SDK builds a single transaction that opens the user's vault account, binds them to your code, and
-submits their deposit together:
+The public builder returns an unsigned Solana v0 transaction. It is CORS-enabled and metered by IP,
+so a frontend does not need an API key.
 
 ```ts
+const response = await fetch(
+  `https://api.neutral.trade/v2/vault/${vaultAddress}/tx/deposit`,
+  {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      userAddress,
+      amountRaw: "100000000",
+      referrer: builderId,
+      requireAttribution: true,
+    }),
+  },
+);
+
+const payload = await response.json();
+
+if (
+  payload.success !== true ||
+  payload.data?.validation?.accepted !== true ||
+  payload.data?.attribution?.applied !== true ||
+  typeof payload.data?.transactionBase64 !== "string"
+) {
+  throw new Error("Builder attribution was not applied");
+}
+
+const transactionBase64 = payload.data.transactionBase64;
+```
+
+`vaultAddress` is the base58 vault account, `builderId` is the builder wallet address, and
+`amountRaw` is a base-10 string in the deposit token's minor units. For a six-decimal asset,
+100 tokens is `"100000000"`.
+
+Use exactly one of:
+
+* `referrer: builderId` to attribute directly to a registered builder wallet.
+* `code: "ACME"` to let the API resolve a human-readable builder code.
+
+`requireAttribution: true` is essential for a referral flow. Without it, attribution can soft-fail
+and the API can still return a valid unattributed deposit transaction. In strict mode, any
+attribution failure returns HTTP 200 with `validation.accepted: false`, an
+`ATTRIBUTION_REQUIRED` rejection, and no transaction.
+
+Deserialize `transactionBase64`, verify the vault, amount, instructions, and required signer, then
+ask the connected user wallet to sign and submit before `lastValidBlockHeight`. Request a fresh
+build after expiry. The API never signs or submits for the user.
+
+## TypeScript SDK
+
+The SDK builder returns the ordered instructions that your application must place in one
+transaction:
+
+```ts
+import { address, createSolanaRpc } from "@solana/kit";
 import { buildAttributedDepositTx } from "@neutral-trade/sdk";
 
-const tx = await buildAttributedDepositTx({
-  code: "ACME",
-  resolveCode,        // see below
-  user,               // the user's wallet signer
-  vault,              // vault address
-  amount,             // raw integer, smallest unit — bigint
+const rpc = createSolanaRpc(rpcUrl);
+
+const instructions = await buildAttributedDepositTx(rpc, {
+  user,
+  vault: address(vaultAddress),
+  amount: 100_000_000n,
+  referrer: address(builderId),
 });
 ```
 
-All three actions are in one transaction on purpose. They either all land or none do, so there is no
-window where a deposit succeeds unattributed.
+`user` is the user's `TransactionSigner`. `amount` is a `bigint` in token minor units. The
+builder verifies the vault, builder registration, builder minimum, user eligibility, and deposit
+minimum before returning instructions.
 
-## Resolving your code in the browser
+For a human-readable code, supply `code` and a `resolveCode` function instead of `referrer`.
+The public resolver is:
 
-`resolveCode` turns your human-readable code into the on-chain address it points to. Point it at the
-public resolver:
-
-```
+```http
 GET https://api.neutral.trade/public/codes/ACME
-→ { "success": true, "data": { "code": "ACME", "referrer": "<base58 address>" } }
 ```
 
-This endpoint is **public and CORS-enabled deliberately** so it can be called from your frontend.
+Cache a code resolution for no more than 60 seconds because a code can be repointed or disabled.
 
-{% hint style="warning" %}
-**This is the only Neutral endpoint your browser code should call.** Your API key belongs on your
-server. A key in a browser bundle is a leaked key.
-{% endhint %}
+## What one attributed deposit contains
 
-Cache the resolution for at most 60 seconds. Codes can be re-pointed, and a stale cache attributes
-users to the wrong address.
+The REST and SDK paths construct the same atomic ordering:
 
-## Amounts
+* Initialize the user's vault account when needed.
+* Bind it to the registered builder.
+* Request the deposit.
+* Add the NT Points attribution memo.
 
-`amount` is a **raw integer in the asset's smallest unit** — not a UI decimal. For a 6-decimal
-stablecoin, 100 tokens is `100_000_000n`.
+All instructions must stay in the same transaction and in the returned order.
 
-Use `BigInt` throughout. Converting through `Number` loses precision on large balances and produces
-a deposit that does not match what the user entered.
+## Eligibility checks
 
-## Checking before you build
+Attribution succeeds only when:
 
-Before showing a user a deposit flow, confirm the vault will actually attribute them:
+* The vault has builder referrals enabled.
+* The builder is registered and active on that vault.
+* The builder satisfies any vault-level registration deposit requirement.
+* The user is not the builder.
+* The user's vault account has no prior activity.
+* The deposit meets the vault minimum and passes current vault policy.
 
-* **Is the vault referral-enabled, and are you registered and active on it?** Read your
-  [terms](../developers/builder-code-data.md#your-terms-are-chain-state-not-a-contract-record) per
-  vault. If you are not registered there, deposits earn you nothing.
-* **Has this user deposited to this vault before?** If so, attribution is impossible. Decide whether
-  to show them the vault anyway — usually yes, since they are still your user — but do not expect
-  earnings.
+Use a fresh wallet for end-to-end testing. A reused test wallet can correctly reject attribution
+even when the integration is implemented properly.
 
-## Testing it end to end
+## Confirm and monitor
 
-Do this on devnet with a sandbox key before you go live:
+After submission:
 
-1. Register on a devnet vault.
-2. Run a fresh wallet through your real deposit flow.
-3. Wait for the vault's next processing cycle — attribution binds immediately, but fees accrue only
-   when charged.
-4. Confirm the wallet appears in your attributed users.
+* Confirm that the transaction finalized.
+* Confirm `attribution.applied` was true in the build response.
+* Confirm the user appears under Referred users or
+  `GET /v2/referrer/{builderId}/users`.
+* Compare attributed-user growth with your own completed first-deposit count.
 
-**Step 4 is the test.** A transaction that succeeds proves nothing about attribution; only the cohort
-appearing confirms it. Verify with a wallet that has never touched that vault, since a reused test
-wallet will silently fail to bind and look identical to a bug in your integration.
+The rate displayed on an attributed-user record is not a permanent settlement rate. Earnings use
+the builder's live per-vault tier or configured override when management fees are charged.
 
-## The failure that looks like success
+## Launch checklist
 
-The most expensive mistake in this integration is not an error. It is a deposit flow that works
-perfectly, transactions that confirm, users who are happy — and no attribution, because the binding
-was never in the transaction.
+- [ ] Registered and active on every vault offered
+- [ ] Builder ID or code resolves to the intended wallet
+- [ ] `requireAttribution: true` set on every referred first deposit
+- [ ] No API key shipped in the frontend
+- [ ] Amounts handled as integer strings or `bigint`, never floating-point numbers
+- [ ] Unsigned transaction inspected before wallet signing
+- [ ] Fresh-wallet test finalized and appeared in Referred users
+- [ ] Attribution monitoring compared with completed first deposits
 
-Nothing surfaces this except checking your cohort. Build the check into your launch, and monitor
-attributed user count against your own signup numbers afterwards. A growing gap means attribution is
-silently failing.
-
-## Rates
-
-The rate a user is bound at is **captured permanently** at that moment. Your negotiated rate applies
-to users who bind from that point on; your existing cohort keeps what they had.
-
-Attributed-user records carry each user's own captured rate, which is what explains historical
-earnings. See [How builder codes work](how-builder-codes-work.md#2-the-rate-is-captured-at-the-moment-of-binding).
-
-## Reading your earnings
-
-Pull them into your own systems through the API — see
-[Builder-code data](../developers/builder-code-data.md). Two rules worth repeating:
-
-* Amounts are raw integer strings. `BigInt` only.
-* A `null` USD value means "no price available", not zero. A `503` means "temporarily unavailable",
-  not "you earned nothing". Neither should render as `$0.00`.
-
-## Checklist before launch
-
-- [ ] Registered and active on every vault you will offer
-- [ ] Code resolves through the public endpoint from your frontend
-- [ ] API key is server-side only, and absent from your client bundle
-- [ ] Amounts handled as `BigInt` end to end
-- [ ] A fresh test wallet completed a deposit **and appeared in your attributed users**
-- [ ] Users who already hold a position are handled without breaking
-- [ ] Monitoring in place comparing attributed users against your own signups
-
-## Getting help
-
-[@NeutralTradeWill on Telegram](https://t.me/NeutralTradeWill), or our
-[Telegram group](https://t.me/neutraltrade).
+Exact request and response schemas remain available at
+[api.neutral.trade/docs](https://api.neutral.trade/docs).

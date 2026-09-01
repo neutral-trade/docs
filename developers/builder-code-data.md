@@ -1,7 +1,7 @@
 ---
 description: >-
-  Earnings, attributed users, payouts, and terms for a registered builder code —
-  and why these endpoints stay closed without one.
+  Read live tiers, referred net deposits, accrued shares, users, flows, history,
+  terms, and settled builder claims.
 layout:
   width: default
   title:
@@ -24,102 +24,118 @@ layout:
 
 # Builder-code data
 
-Served from `https://api.neutral.trade` under `/v2/referrer/…`. Exact fields and parameters are in
-the interactive spec at [`api.neutral.trade/docs`](https://api.neutral.trade/docs).
+Builder reporting is served from `https://api.neutral.trade`. Exact fields and parameters are in
+the [interactive OpenAPI document](https://api.neutral.trade/docs).
 
-{% hint style="info" %}
-**These endpoints require more than a valid API key.** They are addressed by referrer wallet, and
-your key authorizes exactly one: the owner wallet of your organization. If you are not a distribution
-partner, this section does not apply to you — nothing else in the API is affected.
+A valid partner API key can read any referrer address. These routes are not restricted to the owner
+wallet associated with the key.
 
-See [Access & authentication](access-and-authentication.md), and
-[How builder codes work](../for-distribution-partners/how-builder-codes-work.md) for the
-program itself.
-{% endhint %}
+## Referrer endpoints
 
-## What you can read
+For a builder wallet address, use:
 
-| Group | What it gives you |
-| --- | --- |
-| **Summary** | Accrued fees per vault, claimable value, attributed TVL, attributed user count, and any pending withdrawal |
-| **Attributed users** | The cohort your code brought in: shares, net deposits, first deposit time, and the fee rate captured for each |
-| **Flows** | Deposits and withdrawals made by your attributed users over a window |
-| **Daily history** | Earnings, attributed TVL, and flows as a completed-day series |
-| **Payouts** | Settled claims, each with a transaction signature you can verify on an explorer |
-| **Terms** | Your current on-chain referral terms per vault |
+* `GET /v2/referrer/{address}/summary`
+* `GET /v2/referrer/{address}/payouts`
+* `GET /v2/referrer/{address}/history`
+* `GET /v2/referrer/{address}/users`
+* `GET /v2/referrer/{address}/flows`
 
-## Your terms are chain state, not a contract record
+The summary is the best first request. It groups the builder's state by vault and includes active
+status, asset metadata, accrued fee shares, claimable value, pending claims, attributed users,
+attributed TVL, referred net deposits, the current tier, and the next tier.
 
-The terms endpoint does not read a stored agreement. There is no stored agreement. It reads the
-vault's on-chain referral configuration and any override applied to your referrer account, then
-resolves them exactly as the program does.
+## Vault schedule discovery
 
-Each vault returns:
+`GET /v2/vaults` and `GET /v2/vault/{vaultAddress}` expose the current referral configuration
+under `referral`. This includes whether referrals are enabled and the ordered `tiers` array.
 
-| Field | Meaning |
-| --- | --- |
-| `registered` | You hold a referrer account on this vault |
-| `active` | The vault manager has not disabled you |
-| `referrerEnabled` | The vault has referrals switched on at all |
-| `defaultPfeeBps` / `defaultMfeeBps` | The vault's standard referral rates |
-| `effectivePfeeBps` / `effectiveMfeeBps` | **What you actually earn** — the numbers to display |
-| `rateOverrideFlags` | Which fees carry a negotiated override |
-| `referrerMinDepositAmount` | Capital required to register on this vault |
+Each tier has `threshold`, `mfeeBps`, and `pfeeBps`. The threshold is a raw integer in that
+vault asset's minor units. Read the schedule instead of hard-coding it, even though all 12 launched
+strategy vaults currently use the same commercial ladder.
 
-Because this is chain state, it is verifiable independently. Anything we report here can be checked
-against the program.
+## Referred net deposits and tier progress
 
-{% hint style="warning" %}
-**Effective rates apply to users who bind from now on.** The program captures a user's rate at the
-moment they are attributed, and that user keeps it permanently. A renegotiated rate does not apply
-retroactively to your existing cohort.
+`referredNetDeposits` is a signed integer in the vault asset's minor units. It tracks referred
+deposits minus referred withdrawals in that vault since tier tracking was enabled.
 
-Attributed-user records carry each user's own captured rate. Use those to explain historical
-earnings; use the terms endpoint to project future ones.
-{% endhint %}
+It deliberately differs from `attributedTvl`:
 
-## Reading earnings correctly
+* Referred net deposits drive tier placement and do not move with share price.
+* Attributed TVL is the current mark-to-market value of the bound cohort.
+* Withdrawals can make referred net deposits negative.
+* Pre-existing builders without a backfill start at zero when tier tracking begins.
 
-**Accruals are share counts, not currency.** Your earnings accumulate as vault shares, so their value
-moves with vault performance until you claim. The summary converts to token and USD for display, but
-the share count is the underlying quantity.
+Use the value inside each vault summary for tier progress. Do not combine minor-unit counters from
+different vault assets.
 
-**Everything follows the standard number rules** in [API conventions](api-conventions.md): raw
-integer strings, `BigInt` only, nullable USD meaning "no price" rather than zero.
+`currentTier` is null below the first threshold. Otherwise it reports the reached tier index and
+live management and performance referral basis points. `nextTier` reports the next threshold and
+the exact remaining net deposit amount, or null at the top.
 
-**Daily history contains completed UTC days only.** Today is never included. Each response carries a
-watermark showing the newest day covered — show it, or partners will report earnings as missing when
-the day simply has not closed.
+The launched standard schedule has zero performance-fee share. The management-fee component is 10%,
+20%, 30%, 40%, or 50% after the corresponding threshold.
 
-**Attributed TVL is your cohort's current position value**, not the total you have ever referred.
-Users who withdraw leave it. Track cumulative contribution through flows instead.
+## Current terms
 
-## Payouts
+`GET /v2/partner/agreements` returns the authenticated partner owner's current terms across
+vaults. Important fields include:
 
-The payout ledger records claims that have **settled on chain**, each with a transaction signature.
-A claim you have requested but that has not yet settled appears as a pending withdrawal on the
-summary, not as a payout.
+* `registered`, `active`, and `referrerEnabled`
+* `referrerMinDepositAmount`
+* `effectiveMfeeBps` and `effectivePfeeBps`
+* `rateOverrideFlags`
 
-This distinction matters when reconciling: pending is a promise, a payout is money that moved.
+The effective fields match live fee settlement. When the relevant override flag is absent, the
+program derives the rate from that vault's tier schedule and the builder's current referred net
+deposits.
 
-## Failure modes specific to these endpoints
+`defaultMfeeBps` and `defaultPfeeBps` are deprecated compatibility fields. Do not use them to
+project earnings.
 
-| Response | Cause |
-| --- | --- |
-| `403` | The address you requested is not the one your key authorizes |
-| `403` with `OWNER_WALLET_REQUIRED` | Your organization has no owner wallet — claim one in the portal |
-| Empty results, `200` | You are registered but have no attributed users yet, or none have generated fees |
-| `503` | Projection unavailable or degraded — retry; do not render zeros |
+## Attributed users and live rates
 
-An empty result and a `503` mean different things. The first says "nothing yet", the second says "we
-do not currently know". Never collapse them into the same UI state.
+The users endpoint returns the bound cohort, position data, first attribution time, net deposits,
+and related audit fields.
 
-## Verifying independently
+Some user records retain referral rates recorded at binding. Those fields describe the historical
+bind event only. They do not determine current accrual. Existing referred users use the builder's
+live effective rate whenever management fees are charged.
 
-Every figure here derives from on-chain events. If you want to check our numbers:
+## Earnings
 
-* Your referrer account holds the authoritative accrued balances.
-* Settled payouts carry transaction signatures.
-* Your effective rates come from the vault configuration and your referrer account.
+Accruals are share quantities rather than fixed currency amounts. The summary separates management
+and performance fee shares and converts the total to token and USD values when current asset
+metadata and pricing are available.
 
-The [IDL](./#idl) lets you decode all of it directly.
+For the launched rebate, the management-fee share is the active component. A nullable USD value
+means pricing is unavailable, not that earnings are zero.
+
+## History and partial days
+
+Completed UTC days are returned by default. `throughDate` identifies the newest completed day.
+
+Set `includePartial=true` to include the newest provisional day. Provisional rows carry a partial
+marker, and `partialThrough` states how fresh that partial coverage is. Do not mix a partial day
+with completed daily values without labeling it.
+
+Daily history includes earnings, attributed TVL, flows, closing attributed-user count, and the
+closing referred-net-deposit counter used for tier placement.
+
+## Flows and payouts
+
+Flows provide the deposits and withdrawals made by the attributed cohort over the requested window.
+Use them for cumulative capital analysis rather than treating current TVL as lifetime referrals.
+
+Payouts contain settled builder claims and their Solana transaction signatures. A requested claim
+that has not settled appears as `pendingWithdrawal` in the summary and is not yet a payout.
+
+## Number and freshness rules
+
+Token amounts and shares are raw integer strings. Parse them with `BigInt`, apply the asset
+decimals only for display, and never route them through a JavaScript `Number`.
+
+HTTP 503 means projection state is temporarily unavailable or degraded. Retry and show an
+unavailable state rather than rendering zero.
+
+See [API conventions](api-conventions.md) and
+[How builder codes work](../for-distribution-partners/how-builder-codes-work.md).

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Response shape, number handling, freshness, pagination, and the failure modes
-  that cost integrations real money.
+  Response envelopes, lossless amounts, identifiers, freshness, pagination,
+  partial history, previews, and unsigned transactions.
 layout:
   width: default
   title:
@@ -24,137 +24,155 @@ layout:
 
 # API conventions
 
-These rules apply across every endpoint on `https://api.neutral.trade`. Two of them — number
-handling and the meaning of `503` — are the ones that cause real bugs. Read those even if you skip
-the rest.
-
-Exact fields, parameters, and status codes for any individual endpoint are in the interactive spec
-at [`api.neutral.trade/docs`](https://api.neutral.trade/docs), generated from the running service.
+These conventions apply to `https://api.neutral.trade`. The
+[interactive OpenAPI document](https://api.neutral.trade/docs) remains authoritative for each
+endpoint's exact schema and status codes.
 
 ## Response envelope
 
-Every response carries a `success` flag and a `data` object. Reads that reflect chain state also
-carry `asOf`:
+Successful reads use a `success` flag and `data`. Reads derived from Solana state also include an
+`asOf` cursor:
 
 ```json
 {
   "success": true,
-  "data": { },
-  "asOf": { "slot": 300000000, "blockTime": 1800000000 }
+  "data": {},
+  "asOf": {
+    "slot": 300000000,
+    "blockTime": 1800000000
+  }
 }
 ```
 
-`asOf` is the chain position the data was derived from — not the time you made the request. Use it
-to show freshness and to detect a stalled feed.
+`asOf` identifies the chain position reflected by the projection, not the time the HTTP request
+arrived. Surface it when freshness matters.
 
-Errors invert the flag:
+Errors set `success` to false and provide a machine-readable error or message. Policy validation
+can also return HTTP 200 with `success: true` and `validation.accepted: false`, so HTTP status
+alone is not enough.
+
+## Token amounts are lossless strings
+
+Token amounts, share counts, price-per-share values, and tier thresholds use raw base-10 integer
+strings in the relevant token's **minor units**.
 
 ```json
 {
-  "success": false,
-  "error": "Unauthorized",
-  "message": "Valid API key required."
+  "raw": "123450000",
+  "token": "123.45",
+  "usd": 123.57
 }
 ```
 
-## ⚠️ Token amounts are strings, and must stay that way
+Treat `raw` as canonical and parse it with `BigInt`. Apply the token's decimal count only when
+rendering major units.
 
-Every token amount, share count, and price-per-share is returned as a **raw integer string in the
-asset's smallest unit** — not a decimal, not a JSON number.
+Do not use `Number`, `parseInt`, or `parseFloat` for the canonical amount. JavaScript numbers
+lose integer precision above 2^53.
 
-```json
-{ "raw": "123450000", "token": "123.45", "usd": 123.57 }
-```
+Amounts sent to transaction and preview endpoints follow the same rule. For a six-decimal token,
+100 tokens is the raw string `"100000000"`.
 
-* `raw` — the canonical integer. Parse with `BigInt`, never `Number`.
-* `token` — an exact decimal rendering, provided for display.
-* `usd` — a floating-point convenience value, **nullable** (see below).
+## Nullable USD values
 
-Passing `raw` through `Number()` or `parseFloat()` silently loses precision above 2⁵³. On a
-nine-decimal asset that threshold arrives at around nine million tokens. **This is the single most
-common integration bug, and it under-reports balances.**
+`usd: null` means no sufficiently fresh price was available. It does not mean the token amount is
+zero.
 
-Amounts you send follow the same rule. Preview endpoints take `amount` and `shares` as raw
-minor-unit integers, not UI decimals.
+Render null as unavailable. When an aggregate includes an unpriced component, its USD total may
+also be null or omitted. Inspect the response's unpriced-asset metadata instead of assuming a
+stablecoin price.
 
-## ⚠️ Null USD means "no price", not "zero"
+## Unavailable projections
 
-USD fields are nullable. `null` means no non-stale price tick was available for that asset at that
-chain position — it does **not** mean the value is zero.
+HTTP 503 means a required projection is missing, catching up, or degraded. Show a temporarily
+unavailable state and retry with backoff.
 
-Render `null` as `—` or "unavailable". Rendering `$0.00` tells your user they hold nothing, which is
-a materially different and incorrect claim.
-
-Where a response aggregates several assets, the USD total is **omitted entirely** if any component
-lacks a price, and the unpriced assets are listed explicitly. We never substitute a fallback price,
-and there is no `$1.00` assumption for stablecoins.
-
-## ⚠️ `503` means "unavailable", not "empty"
-
-The API never fabricates data it does not have. If a projection is missing, still catching up, or
-flagged as degraded, the affected read returns **`503`** rather than a plausible-looking zero.
-
-Treat `503` as a freshness state, not a failure: show "temporarily unavailable" and retry. Rendering
-zeros or an empty chart is wrong in the way that matters — it looks like an answer.
-
-Some aggregate endpoints return partial results instead, and name the vaults they had to omit.
-Check for those fields rather than assuming a complete set.
+Do not turn a 503 into an empty list, zero balance, or zero earnings. Those are valid data values
+with materially different meaning.
 
 ## Pagination
 
-List endpoints use **opaque keyset cursors**:
+Paginated endpoints use opaque keyset cursors:
 
-```
-GET /v2/referrer/{addr}/payouts?limit=50
-→ { "data": { "payouts": [...], "nextCursor": "..." } }
-
-GET /v2/referrer/{addr}/payouts?limit=50&cursor=<nextCursor>
+```http
+GET /v2/referrer/{address}/payouts?limit=50
+GET /v2/referrer/{address}/payouts?limit=50&cursor={nextCursor}
 ```
 
-* Pass `nextCursor` back verbatim. Never construct, decode, or mutate one.
-* `nextCursor: null` means you have reached the end.
-* There is no offset or page-number pagination. Cursors are stable under concurrent writes; offsets
-  would not be.
-* `limit` accepts 1–100.
+Pass `nextCursor` back verbatim. Do not decode, construct, or mutate it. A null cursor means there
+is no next page.
 
-## Dates and history
+Date-grouped endpoints keep a date together on one cursor page. Other feeds state their sort order
+in OpenAPI.
 
-* Date filters (`startDate`, `endDate`, `from`, `to`) are **inclusive** and always UTC.
-* Daily series contain **completed UTC days only**. Today never appears. Each response carries a
-  watermark (`throughDate`) telling you the newest day covered — surface it, or users will report
-  missing earnings that simply have not closed yet.
-* Some historical rows predate our current data pipeline and are explicitly flagged as legacy or
-  reconstructed. Do not present them as exact.
+## Dates and daily history
+
+Date filters are inclusive and use UTC unless the endpoint says otherwise.
+
+Daily series normally return completed UTC days and expose `throughDate` as the completed
+watermark. Referrer history can also include the provisional current day:
+
+```http
+GET /v2/referrer/{address}/history?includePartial=true
+```
+
+A provisional row is explicitly marked partial. `partialThrough` identifies its freshness. Label
+partial data in charts and do not compare it with a completed day as if both covered the same
+period.
+
+Historical or reconstructed rows can carry legacy flags. Preserve those flags in downstream
+reporting.
 
 ## Identifiers
 
-Vaults are addressed by their **base58 on-chain address**. There is no numeric vault ID, and no
-per-vault share-token mint — a position is a share balance tracked by the vault program, not a
-transferable token.
+Current vault endpoints use the vault's base58 Solana account address. Numeric v1 `vaultId`
+values are legacy identifiers and do not work in v2 paths.
 
-If you are looking for a "vault token address", you want the vault address. If you are looking for
-the deposit asset's mint, that is a separate field on the vault record.
+A vault position is a share balance tracked by the program. There is no transferable per-vault
+share-token mint. The deposit asset mint is a separate field on the vault record.
 
-## Previews are estimates
+Builder IDs and referrer path parameters are base58 wallet addresses. Human-readable builder codes
+resolve to those addresses.
 
-`simulate-deposit` and `simulate-withdraw` compute outcomes from current projected state without a
-Solana RPC call. They are useful, and they are not promises:
+## Previews
 
-* Deposit shares are estimated at the current share price. The program mints them during a later
-  netting cycle, so a price move before netting changes the final result.
-* Withdrawal amounts are recomputed at settlement, after cooldown.
-* Previews take no user address, so they cannot check balances, allowlists, existing pending
-  requests, or any user-specific fee or timing overrides.
+`simulate-deposit` and `simulate-withdraw` estimate outcomes from current projected state. They
+do not construct transactions and are not settlement guarantees.
 
-A rejection on policy grounds — below minimum, over capacity, vault paused — returns `200` with a
-structured `accepted: false` verdict. Malformed input returns `400`. Always validate the real
-transaction against live state before asking a user to sign.
+Deposit shares can change before keeper processing. Withdrawal value can change during cooldown.
+Preview requests also cannot validate every user-specific condition.
+
+A policy rejection can return HTTP 200 with `accepted: false`. Malformed input returns HTTP 400.
+
+## Unsigned transaction builders
+
+The public transaction routes are:
+
+* `POST /v2/vault/{vaultAddress}/tx/deposit`
+* `POST /v2/vault/{vaultAddress}/tx/withdraw`
+
+An accepted response contains `transactionBase64`, `instructions[]`, `blockhash`,
+`lastValidBlockHeight`, required signers, compute budget, and validation data. Signature slots are
+empty.
+
+The client must:
+
+* Verify the returned vault, amount, instructions, and required signer.
+* Ask the connected user to sign.
+* Submit before `lastValidBlockHeight`.
+* Request a fresh build after blockhash expiry.
+
+For referred deposits, pass `code` or `referrer` and set `requireAttribution: true`. Confirm
+`attribution.applied` before signing. See the
+[integration guide](../for-distribution-partners/integration-guide.md).
+
+The API never holds a user key and never submits the transaction.
 
 ## Processing estimates
 
-Fields describing when a request will process are **schedule-derived estimates, not commitments**.
-They can be `null` when timing inputs are incomplete or a request has already reached a terminal
-state. Do not build countdowns that imply certainty.
+Processing timestamps derive from the configured schedule. They are estimates rather than
+commitments and can be null when timing inputs are unavailable.
 
-The underlying lock-up, cooldown, and redemption-window rules are documented in
-[Fees + Redemption Period](../additional-info/fees-+-redemption-period.md).
+Do not present an estimate as a guaranteed countdown. Show the vault's actual cooldown and
+processing cadence from [Fees + Redemption Period](../additional-info/fees-+-redemption-period.md).
+

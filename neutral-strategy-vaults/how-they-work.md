@@ -64,7 +64,7 @@ You can only have one withdrawal request in flight at a time, so you cannot subm
 
 **2. Redemption period** After submitting, the redemption period begins. The length of this period varies by strategy and is listed in each vault's details tab in the Neutral Trade app.
 
-**3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, service fees, and commission. Your vault shares are burned, reflecting your exit from the vault.
+**3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, management fees, and commission. Your vault shares are burned, reflecting your exit from the vault.
 
 ### Switching between vaults
 

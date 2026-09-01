@@ -1,24 +1,28 @@
 ---
 description: >-
-  Annual service fee discounts on Neutral Autopilot, across Silver, Gold and
-  Diamond tiers. Effective 1 September 2026.
+  Management-fee discounts on Neutral Autopilot across Silver, Gold, and
+  Diamond tiers. Live from 1 September 2026.
 ---
 
 # Neutral VIP Program
 
 {% hint style="info" %}
-The Neutral VIP Program takes effect on **1 September 2026.**
+The Neutral VIP Program is live from **1 September 2026**.
 
-Throughout this page, "annual service fee" is the time-based fee described on [Fees + Redemption Period](fees-+-redemption-period.md).
+The management fee is the time-based fee described on
+[Fees + Redemption Period](fees-+-redemption-period.md).
 {% endhint %}
 
-The VIP Program discounts your annual service fee on [Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md), across three tiers. Commission is not discounted, and continues to be charged only on profits above your High Water Mark.
+The VIP Program discounts the management fee on
+[Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md), across three tiers.
+Commission is not discounted and continues to be charged only on profits above your High Water
+Mark.
 
 Every wallet qualifies through **NT Points** or through the **balance it holds in Autopilot,** whichever gets you further.
 
 ## Tiers
 
-| Tier    | NT Points path                     | Autopilot balance path | Service fee discount |
+| Tier    | NT Points path                     | Autopilot balance path | Management fee discount |
 | ------- | ---------------------------------- | ---------------------- | -------------------- |
 | Silver  | 20,000 points + $10K in Autopilot  | $100K in Autopilot     | 10% off              |
 | Gold    | 60,000 points + $10K in Autopilot  | $1M in Autopilot       | 20% off              |
