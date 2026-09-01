@@ -15,6 +15,13 @@ _Live since July 2026_
 _New deposits pay no management fee for their first month. The 1% annual management fee applies
 afterward._
 
+{% hint style="info" %}
+Autopilot is the current production vault in the [Neutral VIP
+Program](../additional-info/neutral-vip-program.md). Eligible wallets can reduce the standard annual
+management fee to **0.90% (Silver), 0.80% (Gold), or 0.70% (Diamond)** through either an NT Points
+path or a direct Autopilot-balance path.
+{% endhint %}
+
 ## **Why Autopilot?**
 
 Neutral Trade offers a growing set of strategies: funding arbitrage, cross-exchange arbitrage, market making, and more. Each is strong on its own, but choosing and managing them yourself is harder than it looks.

@@ -12,8 +12,12 @@ The management fee accrues over elapsed time and is charged in vault shares.
 At a simple annualized rate, 1% is approximately 0.00274% per day. Actual charges use the program's
 elapsed-time calculation and current user-specific fee setting rather than a rounded daily rate.
 
-A disclosed promotion, VIP discount, or wallet-level fee setting can reduce the management fee
-actually charged. It does not change the vault's 1% base schedule.
+A disclosed promotion, [VIP discount](neutral-vip-program.md), or wallet-level fee setting can
+reduce the management fee actually charged. It does not change the vault's 1% base schedule.
+
+The production VIP Program currently applies to Neutral Autopilot. Its Silver, Gold, and Diamond
+tiers reduce the standard 1% annual management fee to 0.90%, 0.80%, and 0.70%, respectively.
+Performance fees are not discounted.
 
 ## Builder fee split
 
