@@ -88,6 +88,10 @@ keeps the old key valid for 60 seconds. See
 The public deposit transaction builder does not require a key in the browser. A key is for
 authenticated data reads and server-side integrations.
 
+The [reference implementation](https://github.com/neutral-trade/builder-codes-ui-example) is a
+worked example that keeps the API key in a server-side proxy for authenticated vault and position
+reads.
+
 ## Request a claim
 
 Select the vault earnings you want to claim and sign the request. The app can batch requests across

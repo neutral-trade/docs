@@ -59,6 +59,10 @@ and ordered tier schedule. Tier thresholds are raw values in the vault asset's m
 
 ## Builder integration
 
+The [reference implementation](https://github.com/neutral-trade/builder-codes-ui-example) is a
+small Next.js app showing the hosted Widget, public REST transaction builder, and TypeScript SDK
+paths against Neutral Autopilot.
+
 For a referred first deposit, call the public deposit builder with a `referrer` address or
 human-readable `code` and set `requireAttribution: true`. An accepted response contains both:
 

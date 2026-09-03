@@ -155,6 +155,13 @@ After submission:
 The rate displayed on an attributed-user record is not a permanent settlement rate. Earnings use
 the builder's live per-vault tier or configured override when management fees are charged.
 
+## Reference implementation
+
+The [builder codes UI example](https://github.com/neutral-trade/builder-codes-ui-example) is a small
+Next.js reference app showing the Neutral Autopilot deposit and withdrawal-request journey through
+the hosted Widget, public REST transaction builder, and TypeScript SDK. It keeps the API key in a
+server-side proxy for authenticated vault and position reads.
+
 ## Launch checklist
 
 - [ ] Registered and active on every vault offered
