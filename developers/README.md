@@ -49,6 +49,8 @@ codes. These pages explain credential boundaries, financial meaning, and integra
   instruction builders to v2.
 * [Integration guide](../for-distribution-partners/integration-guide.md) implements a strict
   attributed first deposit.
+* [Reference implementation](https://github.com/neutral-trade/builder-codes-ui-example) — a small
+  Next.js app showing all three integration paths against Neutral Autopilot.
 
 ## Transactions
 
