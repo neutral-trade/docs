@@ -9,6 +9,7 @@
 * [Introduction](README.md)
 * [Our Thesis](getting-started/our-thesis.md)
 * [Neutral Trade Points & Referrals](getting-started/neutral-trade-points-and-referrals.md)
+* [Referral Revenue Share](getting-started/referral-revenue-share.md)
 * [Neutral VIP Program](getting-started/neutral-vip-program.md)
 
 ## For Capital Allocators
