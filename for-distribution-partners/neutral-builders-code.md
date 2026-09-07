@@ -14,8 +14,8 @@ The program is enabled across all 12 current Neutral Strategy Vaults. Each has a
 
 The standard management-fee split is:
 
-* Below $100,000: 0%
-* $100,000 to below $500,000: 10%
+* Below $10,000: 0%
+* $10,000 to below $500,000: 10%
 * $500,000 to below $3,000,000: 20%
 * $3,000,000 to below $5,000,000: 30%
 * $5,000,000 to below $10,000,000: 40%
