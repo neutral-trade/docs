@@ -64,6 +64,8 @@ Registration and tier progress are maintained independently for every included v
 
 ## Start building
 
-Connect the wallet that will receive earnings at [neutral.trade/builder/register](https://www.neutral.trade/builder/register), select the vaults you want to distribute, and register. That wallet address becomes your **Builder ID**.
+Registration is open to any wallet, not only to partners running an app. An individual sharing a personal referral link registers through the same page and earns on the same ladder; see [Referral Revenue Share](../getting-started/referral-revenue-share.md) for that route.
+
+Connect the wallet that will receive earnings at [neutral.trade/builder/register](https://www.neutral.trade/builder/register), select the vaults you want to distribute, and register. That wallet address becomes your **Builder ID**. Each vault sets a minimum deposit the registering wallet must already hold in that vault; the picker shows the amount per vault.
 
 Use the [builder dashboard](partner-portal.md) to track tiers, referred users, earnings, and claims. Use the [integration guide](integration-guide.md) before sending users into a deposit flow because attribution must be included in their first vault deposit transaction.

@@ -108,6 +108,15 @@ The [NT Points referral system](../getting-started/neutral-trade-points-and-refe
 
 An attributed builder deposit also emits the points memo, so the same deposit can participate in both systems. The points record does not create the onchain fee entitlement, and a points referral alone does not create builder attribution.
 
+The two do meet on one path. A deposit made on neutral.trade binds its onchain referrer to the
+user's existing points referrer, so points and fee share name the same wallet there. Any wallet
+can now register as a builder and earn on its own referral link — see
+[Referral Revenue Share](../getting-started/referral-revenue-share.md).
+
+A deposit built by your own app is not on that path. Your app writes the onchain `referrer`
+field itself, so the fee share follows your builder ID while the user's points referrer, if they
+already have one, is unaffected.
+
 ## Continue
 
 * [Builders Code Rebate](neutral-builders-code.md) explains the commercial ladder.
