@@ -18,6 +18,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Security
@@ -28,13 +30,20 @@ Neutral Trade's security approach operates across three layers: audited smart co
 
 ### Smart Contract Audits
 
-The vault infrastructure (Neutral Strategy Vaults) underpinning all Neutral Trade strategies has been independently audited by three security firms. Reports are publicly available.
+The vault infrastructure (Neutral Strategy Vaults) underpinning all Neutral Trade strategies has been independently audited by four security firms. Reports are publicly available.
 
 | Auditor          | Date              | Scope                               | Report                                                                                                                    |
 | ---------------- | ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **Halborn**      | January 21, 2025  | Neutral Trade Vaults Infrastructure | [View Report](https://www.halborn.com/audits/neutral-trade/neutral-trade---smart-contract-assessment-0777aa)              |
 | **Quantstamp**   | June 25, 2025     | Neutral Trade Vaults Infrastructure | [View Certificate](https://certificate.quantstamp.com/full/neutral-trade/52a6403b-648c-4ea6-be5e-c8b525acc9b7/index.html) |
 | **Offside Labs** | December 11, 2025 | Neutral Trade Vaults Infrastructure | [View Report](https://drive.google.com/file/d/11Ck5gkVXLot_se_hxPRWUU_FT_vjsrar/view?usp=sharing)                         |
+| **Adevar Labs**  | October 3, 2026   | Neutral Trade Vaults Infrastructure | [View Report (PDF)](../.gitbook/assets/neutral-trade-adevar-labs-audit-report-2026-10.pdf)                                |
+
+The most recent audit, by Adevar Labs, found no Critical issues. Every High and Medium finding was fixed and verified in the fix review. You can view and download the full report here:
+
+{% file src="../.gitbook/assets/neutral-trade-adevar-labs-audit-report-2026-10.pdf" %}
+Adevar Labs audit report, after fix review (October 3, 2026)
+{% endfile %}
 
 Audits assess code for vulnerabilities, economic design flaws, and unintended behaviours. They do not eliminate all risk, see [Risk Warnings and Disclaimers](../legal/risk-warnings-and-disclaimers-statement.md) for a full disclosure.
 
@@ -48,7 +57,7 @@ For all on-chain vault operations and Solana-side management, Neutral Trade uses
 
 **Centralised exchange positions — Copper and Ceffu**
 
-For strategies that execute on centralised exchanges, Neutral Trade uses [Copper](https://copper.co) (ClearLoop) and [Ceffu](https://ceffu.com) (MirrorX) for off-exchange custody and settlement.&#x20;
+For strategies that execute on centralised exchanges, Neutral Trade uses [Copper](https://copper.co) (ClearLoop) and [Ceffu](https://ceffu.com) (MirrorX) for off-exchange custody and settlement.
 
 Copper and Ceffu custody applies only to strategies with centralised exchange execution legs.
 
