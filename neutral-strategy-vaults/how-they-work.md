@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # How They Work
@@ -30,11 +32,11 @@ Neutral Strategy Vaults are the infrastructure layer that connects your deposit 
 
 You deposit on Solana. That's the only chain you interact with, no bridging, no additional wallets. Behind the scenes, the vault deploys capital to execution venues (centralised exchanges, decentralized exchanges, DeFi protocols, or all), sometimes across various chains depending on the strategy.
 
-The vault operates within a walled garden, neither Neutral Trade nor any curator can move your funds to arbitrary external addresses. Curators, the trading teams who manage strategies within Neutral Strategy Vaults, have API access to execute trades on your behalf. They can adjust positions, rebalance, and manage the strategy. All movements are restricted to pre-approved contracts and venues. They cannot withdraw or redirect your assets.&#x20;
+The vault operates within a walled garden, neither Neutral Trade nor any curator can move your funds to arbitrary external addresses. Curators, the trading teams who manage strategies within Neutral Strategy Vaults, have API access to execute trades on your behalf. They can adjust positions, rebalance, and manage the strategy. All movements are restricted to pre-approved contracts and venues. They cannot withdraw or redirect your assets.
 
-For a full breakdown of the protections in place: [Vault Protections](vault-protections.md).
+For a full breakdown of the protections in place: Vault Protections.
 
-<figure><img src="../.gitbook/assets/NT-Vault-Educational-Infographic11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FWa7yILfFalwCEDmY15Tk%2FNT-Vault-Educational-Infographic11.png?alt=media&#x26;token=8079cb33-af42-48dc-bca1-14de0bebf4e9" alt=""><figcaption></figcaption></figure>
 
 ### Depositing
 
@@ -56,13 +58,13 @@ Once deployed, your capital is actively managed by the strategy. Share prices up
 
 ### Withdrawing
 
-**1. Submit a withdrawal request** You can request a withdrawal after any applicable lockup period has ended. There exist exceptions such as with [Multi-Asset Volatility Arbitrage](../for-capital-allocators/market-neutral/multi-asset-volatility-arbitrage.md), which has a quarterly redemption period and notice requirements. See the vaults details tab in the app for all such details.
+**1. Submit a withdrawal request** You can request a withdrawal after any applicable lockup period has ended. There exist exceptions such as with Multi-Asset Volatility Arbitrage, which has a quarterly redemption period and notice requirements. See the vaults details tab in the app for all such details.
 
 > ⚠️ **Withdrawal requests cannot be cancelled once submitted.**
 
 You can only have one withdrawal request in flight at a time, so you cannot submit another until this one is processed. You can, however, still make a deposit while a withdrawal is pending.
 
-**2. Redemption period** After submitting, the redemption period begins. The length of this period varies by strategy and is listed in each vault's details tab in the Neutral Trade app.
+**2. Redemption period** After submitting, your request joins the vault's next cutoff (00:00 UTC) and is redeemed on the redemption day for that cutoff. Most vaults follow a once-weekly schedule (Friday redemptions) or a twice-weekly schedule (Monday and Friday redemptions), and Neutral Autopilot redeems on Saturday. The full schedule, and the vaults on each one, are on Fees + Redemption Period.
 
 **3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, management fees, and commission. Your vault shares are burned, reflecting your exit from the vault.
 
