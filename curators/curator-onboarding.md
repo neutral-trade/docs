@@ -18,6 +18,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Curator Onboarding
@@ -38,11 +40,15 @@ We often prefer a genuinely uncorrelated niche strategy over a higher-capacity s
 
 ### What You Get
 
+You keep the strategy. We run everything else.
+
 * **One SMA, many investors** — manage a single account; Neutral Trade aggregates depositor capital and handles per-wallet accounting.
 * **Automated fee distribution** — performance fees calculated per wallet with individual high-water marks, paid out automatically.
-* **Broad venue access** — Binance, OKX, Bybit, Gate, KuCoin, Bitget, Hyperliquid, Lighter, Kraken, and Deribit.
+* **9 venues, already integrated** — Binance, KuCoin, OKX, Bybit, Gate, Bitget, Hyperliquid, Lighter, and a TradFi brokerage, with custody through Ceffu, Copper, and Fordefi MPC.
 * **Your IP stays yours** — no code disclosure, no replication commitments, no exclusivity, no non-compete.
 * **Full operational support** — investor relations, technical setup, marketing, and a proprietary margin-management system for automated capital rebalancing.
+
+The full stack — venues, custody routes, collateral transfers, daily NAV, and reporting — is described on [Infrastructure for Trading Firms](infrastructure-for-trading-firms.md).
 
 ### The Onboarding Process
 

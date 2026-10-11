@@ -76,6 +76,7 @@
 
 ## CURATORS
 
+* [Infrastructure for Trading Firms](curators/infrastructure-for-trading-firms.md)
 * [Curator Selection](curators/curator-selection.md)
 * [Curator Onboarding](curators/curator-onboarding.md)
 * [Copy of Strategy Curator Vetting Framework](curators/copy-of-strategy-curator-vetting-framework.md)
