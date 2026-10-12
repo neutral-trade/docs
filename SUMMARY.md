@@ -15,7 +15,6 @@
 ## For Capital Allocators
 
 * [Neutral Autopilot](for-capital-allocators/neutral-autopilot.md)
-* [Neutral Tokenize](for-capital-allocators/neutral-tokenize.md)
 * [Market Neutral](for-capital-allocators/market-neutral/README.md)
   * [Mid-frequency Market Making](for-capital-allocators/market-neutral/mid-frequency-market-making.md)
   * [Delta Neutral Arbitrage](for-capital-allocators/market-neutral/delta-neutral-arbitrage.md)
@@ -69,6 +68,10 @@
   * [🎲 Bet](for-capital-allocators/deprecated-vaults/bet/README.md)
     * [📉 \[Hyperliquid\] The Big Short](for-capital-allocators/deprecated-vaults/bet/hyperliquid-the-big-short.md)
   * [JLP Delta Neutral Enhanced \[Closed\]](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-enhanced.md)
+
+## Neutral Tokenize
+
+* [Neutral Tokenize](for-capital-allocators/neutral-tokenize.md)
 
 ## Neutral Strategy Vaults
 
