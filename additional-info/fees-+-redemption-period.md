@@ -25,7 +25,7 @@ The Builders Code Rebate shares part of the management fee with an attributed bu
 
 ## Performance fee
 
-Some vaults also charge a **performance fee**, shown as Commission in parts of the app. It applies only to profit above the user's high-water mark and varies by vault.
+Some vaults also charge a **performance fee**. It applies only to profit above the user's high-water mark and varies by vault.
 
 If a position has not made a new post-fee profit above its high-water mark, no performance fee is charged for that interval.
 
@@ -37,7 +37,7 @@ The high-water mark is the user's highest post-fee position value used for perfo
 
 **Earnings** is the user's profit shown after management and performance fees.
 
-**Commission paid** is the cumulative performance fee charged on profit above the high-water mark.
+**Performance fee paid** is the cumulative performance fee charged on profit above the high-water mark.
 
 ## Withdrawals
 
@@ -45,7 +45,7 @@ From 12 October 2026, Neutral Strategy Vaults follow a fixed weekly redemption s
 
 You can submit a withdrawal request on any day. The request joins the next cutoff, and the vault redeems it on the redemption day for that cutoff. Every cutoff is at 00:00 UTC, the start of the day.
 
-![Redemption schedule for Autopilot, once-weekly, and twice-weekly vaults](../.gitbook/assets/redemption-schedule.jpg)
+![Redemption schedule for Autopilot, once-weekly, and twice-weekly vaults](https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2Ffw547BvNapWdcjmCR8I4%2Fredemption-schedule.jpg?alt=media)
 
 ### Redemption schedule
 

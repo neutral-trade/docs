@@ -14,7 +14,7 @@ The management fee is the time-based fee described on [Fees + Redemption Period]
 
 The production VIP Program currently applies to [Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md) (vault 76). It discounts that vault's management fee across three tiers. It does not currently apply to the other Neutral Strategy Vaults.
 
-Commission is not discounted and continues to be charged only on profits above your High Water Mark. VIP eligibility and discounts are wallet-specific.
+The performance fee is not discounted and continues to be charged only on profits above your High Water Mark. VIP eligibility and discounts are wallet-specific.
 
 Every wallet qualifies through **NT Points** or through the **balance it holds in Autopilot,** whichever gets you further.
 

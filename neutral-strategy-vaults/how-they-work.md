@@ -66,7 +66,7 @@ You can only have one withdrawal request in flight at a time, so you cannot subm
 
 **2. Redemption period** After submitting, your request joins the vault's next cutoff (00:00 UTC) and is redeemed on the redemption day for that cutoff. Most vaults follow a once-weekly schedule (Friday redemptions) or a twice-weekly schedule (Monday and Friday redemptions), and Neutral Autopilot redeems on Saturday. The full schedule, and the vaults on each one, are on Fees + Redemption Period.
 
-**3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, management fees, and commission. Your vault shares are burned, reflecting your exit from the vault.
+**3. Funds are returned to your wallet** After the redemption period, your funds are automatically returned to your wallet, net of any applicable withdrawal fees, management fees, and performance fees. Your vault shares are burned, reflecting your exit from the vault.
 
 ### Switching between vaults
 

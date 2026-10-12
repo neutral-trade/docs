@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Multi-Asset Volatility Arbitrage
@@ -39,7 +41,7 @@ _Live since March 30, 2026_
 
 ### Performance
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 134925.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FODrG9N5F8oDwoYu9qt8T%2FScreenshot%202026-03-28%20134925.png?alt=media&#x26;token=d0c089ad-f34e-426f-9fd6-05d8bc777eca" alt=""><figcaption></figcaption></figure>
 
 | Year | Jan   | Feb   | Mar    | Apr    | May   | Jun   | Jul   | Aug   | Sep    | Oct    | Nov   | Dec   | YTD        |
 | ---- | ----- | ----- | ------ | ------ | ----- | ----- | ----- | ----- | ------ | ------ | ----- | ----- | ---------- |
@@ -80,14 +82,14 @@ Financial stability is maintained through a conservative leverage profile and pr
 | Minimum Subscription   | USDC 50,000                                                                                                                                         |
 | Minimum Redemption     | USDC 50,000                                                                                                                                         |
 | Annual Management Fee  | 1%                                                                                                                                                  |
-| Commission             | 0%                                                                                                                                                  |
+| Performance Fee        | 0%                                                                                                                                                  |
 | Subscription Frequency | Monthly (5 business days before first business day of each calendar month)                                                                          |
 | Redemptions            | Quarterly, first Business Day of each calendar quarter. Settlement time is within 11 business days. USDC is returned within 3 days post-settlement. |
 | Redemption Notice      | 30 days advance notice required, before the first Business Day of each calendar quarter                                                             |
 | Redemption Gate        | Capped at 25% of the products AUM ($200M) per quarter                                                                                               |
 | Broker & Custodian     | NASDAQ, NYSE, CME                                                                                                                                   |
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 021504.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FD2l5LlJ44HVk44Qla3SC%2FScreenshot%202026-03-28%20021504.png?alt=media&#x26;token=88825581-43fd-4c37-93ea-6698c195fe2f" alt=""><figcaption></figcaption></figure>
 
 ***
 
