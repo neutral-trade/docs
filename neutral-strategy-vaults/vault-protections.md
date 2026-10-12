@@ -1,4 +1,8 @@
 ---
+description: >-
+  The on-chain controls that protect deposits in Neutral Strategy Vaults:
+  restricted fund movement, bounded NAV updates, fee caps, a 12-hour timelock,
+  and a circuit breaker.
 layout:
   width: default
   title:
@@ -16,6 +20,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 

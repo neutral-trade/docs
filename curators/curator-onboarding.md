@@ -1,5 +1,7 @@
 ---
-description: Professional Traders, Hedge Funds and Quant Teams
+description: >-
+  How trading firms and quant teams launch a strategy on Neutral Trade:
+  requirements, due diligence, integration, pilot, and full deployment.
 layout:
   width: default
   title:

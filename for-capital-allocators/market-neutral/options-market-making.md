@@ -1,3 +1,9 @@
+---
+description: >-
+  A market-neutral crypto options market making strategy, with off-exchange
+  custody through Copper. USDC deposits on Solana.
+---
+
 # Options Market Making
 
 ## Overview
@@ -36,4 +42,3 @@ The core engine is built around an arbitrage-free eSSVI volatility surface and a
 **Counterparty and exchange risk:** Trading on a centralised venue creates exposure to venue-level failure, insolvency, or operational disruption. Mitigations: off-exchange custody and settlement via Copper, so assets remain with the custodian rather than on the exchange balance sheet.
 
 **Operational and execution risk:** The strategy runs as automated software executing via API on the exchange account, and depends on continuous availability of connectivity, exchange APIs, and infrastructure. Disruption at any layer can prevent timely quoting or hedging. Mitigations: a defence-in-depth control stack including exchange-native market-maker-protection groups and cancel-on-disconnect at the lowest latency layer, and independent software circuit breakers above it.
-

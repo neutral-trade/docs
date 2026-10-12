@@ -15,6 +15,7 @@
 ## For Capital Allocators
 
 * [Neutral Autopilot](for-capital-allocators/neutral-autopilot.md)
+* [Neutral Tokenize](for-capital-allocators/neutral-tokenize.md)
 * [Market Neutral](for-capital-allocators/market-neutral/README.md)
   * [Mid-frequency Market Making](for-capital-allocators/market-neutral/mid-frequency-market-making.md)
   * [Delta Neutral Arbitrage](for-capital-allocators/market-neutral/delta-neutral-arbitrage.md)
@@ -22,6 +23,7 @@
   * [Options Market Making](for-capital-allocators/market-neutral/options-market-making.md)
   * [Jupiter JLP Delta Neutral](for-capital-allocators/market-neutral/jupiter-jlp-delta-neutral.md)
   * [HFT Multi-factor](for-capital-allocators/market-neutral/hft-multi-factor.md)
+  * [Meridian Liquidity Provider](for-capital-allocators/market-neutral/meridian-liquidity-provider.md)
 * [Directional](for-capital-allocators/directional/README.md)
   * [CTA - Adaptive Alpha](for-capital-allocators/directional/cta-adaptive-alpha.md)
   * [Third Eye Flagship](for-capital-allocators/directional/third-eye-flagship.md)

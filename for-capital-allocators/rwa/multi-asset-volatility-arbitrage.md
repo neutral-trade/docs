@@ -1,7 +1,7 @@
 ---
 description: >-
-  Neutral Trade's first non solely crypto strategy — a systematic, cross-asset
-  volatility strategy.
+  A systematic, cross-asset volatility strategy on listed equity, fixed income,
+  and volatility markets. Funded with USDC through Neutral Trade.
 layout:
   width: default
   title:
@@ -26,12 +26,14 @@ layout:
 
 # Multi-Asset Volatility Arbitrage
 
-### Overview
+## Overview
+
+Multi-Asset Volatility Arbitrage is the first strategy on Neutral Trade that is not solely crypto. It is listed under [RWA](./).
 
 * Captures global volatility risk premia through systematic relative value and volatility arbitrage strategies across traditional and alternative markets
-* Systematically scans across highly liquid equity and fixed income instruments, as well as VIX derivatives and identify most efficient instruments for expressing volatility views
+* Systematically scans highly liquid equity and fixed income instruments, as well as VIX derivatives, and identifies the most efficient instruments for expressing volatility views
 * Special focus on digital assets as a structurally rich volatility risk premia asset class, providing unique, underexploited opportunities
-* Trading digital asset US equity proxies such as Bitcoin ETF, Microstrategy, Coinbase and BTC Index, enabling efficient access to digital asset volatility through regulated, liquid instruments.
+* Trades digital asset US equity proxies such as Bitcoin ETFs, MicroStrategy, Coinbase, and BTC Index, enabling efficient access to digital asset volatility through regulated, liquid instruments
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/volatility-alpha-strategy-1">https://www.neutral.trade/strategies/volatility-alpha-strategy-1</a></td></tr></tbody></table>
 
@@ -39,9 +41,9 @@ _Live since March 30, 2026_
 
 ***
 
-### Performance
+## Performance
 
-<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FODrG9N5F8oDwoYu9qt8T%2FScreenshot%202026-03-28%20134925.png?alt=media&#x26;token=d0c089ad-f34e-426f-9fd6-05d8bc777eca" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 134925.png" alt="Multi-Asset Volatility Arbitrage performance chart"><figcaption></figcaption></figure>
 
 | Year | Jan   | Feb   | Mar    | Apr    | May   | Jun   | Jul   | Aug   | Sep    | Oct    | Nov   | Dec   | YTD        |
 | ---- | ----- | ----- | ------ | ------ | ----- | ----- | ----- | ----- | ------ | ------ | ----- | ----- | ---------- |
@@ -49,7 +51,7 @@ _Live since March 30, 2026_
 | 2025 | 1.47% | 0.31% | -1.15% | -0.16% | 2.09% | 1.27% | 1.30% | 1.15% | 1.99%  | 1.99%  | 1.37% | 1.48% | **13.88%** |
 | 2024 | 1.15% | 1.07% | 1.06%  | 0.48%  | 1.36% | 1.05% | 1.12% | 1.51% | -0.42% | -0.71% | 2.49% | 0.97% | **11.67%** |
 
-#### Performance Statistics
+### Performance Statistics
 
 | Metric                  | Value  |
 | ----------------------- | ------ |
@@ -60,9 +62,11 @@ _Live since March 30, 2026_
 
 > Past performance is not necessarily indicative of future results. Estimated returns are provided for informational purposes only and may not reflect actual performance. Returns are before applicable fees and expenses charged by Neutral Trade.
 
+The table covers the period to February 2026, before the vault opened on Neutral Trade. Vault performance since March 30, 2026 is shown on the strategy page in the app.
+
 ***
 
-### Risk Management
+## Risk Management
 
 The risk management framework prioritizes capital preservation through rigorous diversification and strict liquidity mandates.
 
@@ -70,9 +74,11 @@ Portfolio construction is governed by disciplined concentration limits across bo
 
 Financial stability is maintained through a conservative leverage profile and proactive margin management, leaving significant headroom to absorb sudden market shifts. To mitigate downside risk, the strategy employs dynamic drawdown triggers, continuous stress testing against extreme market scenarios, and daily position adjustments to keep the overall risk profile aligned with long-term stability goals.
 
+For the risks that apply to every RWA strategy, see Key Risks on the [RWA](./) page.
+
 ***
 
-### Subscription Terms on Neutral Trade
+## Subscription Terms on Neutral Trade
 
 | Parameter              | Details                                                                                                                                             |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -83,27 +89,32 @@ Financial stability is maintained through a conservative leverage profile and pr
 | Minimum Redemption     | USDC 50,000                                                                                                                                         |
 | Annual Management Fee  | 1%                                                                                                                                                  |
 | Performance Fee        | 0%                                                                                                                                                  |
+| Withdrawal Fee         | 0.3%                                                                                                                                                |
 | Subscription Frequency | Monthly (5 business days before first business day of each calendar month)                                                                          |
 | Redemptions            | Quarterly, first Business Day of each calendar quarter. Settlement time is within 11 business days. USDC is returned within 3 days post-settlement. |
 | Redemption Notice      | 30 days advance notice required, before the first Business Day of each calendar quarter                                                             |
-| Redemption Gate        | Capped at 25% of the products AUM ($200M) per quarter                                                                                               |
-| Broker & Custodian     | NASDAQ, NYSE, CME                                                                                                                                   |
+| Redemption Gate        | Capped at 25% of the product's AUM ($200M) per quarter                                                                                              |
+| Trading Venues         | NASDAQ, NYSE, CME                                                                                                                                   |
 
-<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FD2l5LlJ44HVk44Qla3SC%2FScreenshot%202026-03-28%20021504.png?alt=media&#x26;token=88825581-43fd-4c37-93ea-6698c195fe2f" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 021504.png" alt="Monthly subscription flow and quarterly redemption flow"><figcaption></figcaption></figure>
 
 ***
 
-### Why Neutral Trade Selected This Strategy
+## Why Neutral Trade Selected This Strategy
 
-Neutral Trade has vetted and curated this opportunity through a rigorous due diligence process before selecting it as the first not solely crypto related strategy on our platform. Key factors in our selection:
+Neutral Trade has vetted and curated this opportunity through a rigorous due diligence process before selecting it as the first strategy on our platform that is not solely crypto-related. Key factors in our selection:
 
-* **Track Record:** Consistent positive monthly returns since April 2025 inception, with pre-launch backtest and internal trading extending to January 2024. The strategy has demonstrated strong risk-adjusted performance.
+* **Track Record:** Positive returns in every month from May 2025 through February 2026, after the strategy's April 2025 inception. Pre-launch backtest and internal trading extend to January 2024. The strategy has demonstrated strong risk-adjusted performance.
 * **Risk Framework:** Institutional-grade risk controls including hard leverage limits, dynamic drawdown reduction, daily stress testing, and conservative margin management.
 * **Structural Alpha Source:** Volatility risk premia represent a well-documented and persistent source of returns. The strategy's ability to trade across both traditional and digital asset volatility markets provides a differentiated and underexploited opportunity set.
 
+{% hint style="info" %}
+D Research is an alias. We've excluded the curator's full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence on the team and its strategy.
+{% endhint %}
+
 ***
 
-### Disclaimers
+## Disclaimers
 
 This material is for informational purposes only and does not constitute an offer to sell, a solicitation of an offer to buy, or a recommendation for any security or strategy. Past performance is not necessarily indicative of future results and there can be no assurance that the strategy will achieve comparable results or that target returns will be met.
 

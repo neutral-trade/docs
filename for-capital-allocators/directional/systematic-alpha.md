@@ -1,4 +1,10 @@
-# Systematic Alpha
+---
+description: >-
+  A long-only systematic strategy that combines mean-reversion and
+  trend-following models, with positions typically held 3 to 5 days.
+---
+
+# CTA - Systematic Alpha
 
 ## Overview
 
@@ -34,11 +40,11 @@ Positions are typically held 3 to 5 days and are not structurally locked in for 
 
 ### **Adaptive capital deployment**
 
-The strategy is not always fully exposed to the market. Capital exposure automatically expands and contracts with signal strength and market conditions.&#x20;
+The strategy is not always fully exposed to the market. Capital exposure automatically expands and contracts with signal strength and market conditions.
 
 * Typically around 30% of capital is exposed on average.
 * Allocation expands only in strong-signal regimes.
-* In weak-signal regimes most capital is held in cash or interest-bearing instruments.&#x20;
+* In weak-signal regimes most capital is held in cash or interest-bearing instruments.
 
 This structure is the strategy's first margin of safety: under a market shock, partial rather than full exposure limits losses.
 
@@ -52,7 +58,7 @@ This structure is the strategy's first margin of safety: under a market shock, p
 
 The most liquid ETFs and equity index futures listed on the Nasdaq. The universe is structured to expand with market conditions and alpha validation.
 
-#### **Liquidity and capacity**&#x20;
+#### **Liquidity and capacity**
 
 The strategy's underlying assets trade in some of the world's deepest liquidity pools, and every entry and exit size is small relative to market depth. Because the strategy does not depend on micro-alpha or capacity-bound inefficiencies, alpha decay with AUM growth is structurally small. Some sector ETFs are relatively shallow, so the strategy operates within a manageable capacity range and adjusts its instrument mix as scale grows.
 

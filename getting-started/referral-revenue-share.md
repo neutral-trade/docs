@@ -1,3 +1,9 @@
+---
+description: >-
+  Turn on referral revenue share in three steps and earn a share of the 1%
+  management fee on the capital you refer to Neutral Trade vaults.
+---
+
 # Referral Revenue Share
 
 Your Neutral Trade referral link has always earned NT Points. Since 4 September 2026 the same link can also pay you a share of the management fee on every deposit that comes through it. This page shows how to turn it on and how the payout works.

@@ -1,5 +1,5 @@
 ---
-description: Get the latest Neutral Trade designs
+description: Download the Neutral Trade logo, wordmark, and brand assets.
 ---
 
 # Brand Kit

@@ -1,4 +1,7 @@
 ---
+description: >-
+  The six-dimension framework Neutral Trade uses to vet trading firms: track
+  record, risk management, infrastructure, operations, legal, and fit.
 layout:
   width: default
   title:
@@ -16,6 +19,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 

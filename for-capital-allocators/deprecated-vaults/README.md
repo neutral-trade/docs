@@ -1,3 +1,9 @@
+---
+description: >-
+  Archive of closed Neutral Trade vaults, kept for transparency and historical
+  performance review. These vaults do not accept new deposits.
+---
+
 # Deprecated Vaults
 
 In this section, you’ll find a list of **deprecated vaults** — strategies that are no longer active or maintained on Neutral Trade. These vaults have either completed their lifecycle, been upgraded, or replaced by more optimized models.

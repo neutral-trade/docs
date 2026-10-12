@@ -1,3 +1,9 @@
+---
+description: >-
+  A delta-neutral arbitrage strategy curated by Velox Trading Group. Trades
+  across multiple venues with off-exchange custody through Copper and Ceffu.
+---
+
 # Delta Neutral Arbitrage
 
 ## Overview
@@ -38,7 +44,7 @@ For a subsequent phase:
 
 ## Risk Factors
 
-**Counterparty and exchange risk** — Trading across exchanges creates exposure to venue-level failure, insolvency, or operational disruption. Mitigations include:  off-exchange custody and settlement via Copper (ClearLoop) and Ceffu (MirrorX) for centralised exchange trading, and diversification across six venues at launch with additional venues planned.
+**Counterparty and exchange risk** — Trading across exchanges creates exposure to venue-level failure, insolvency, or operational disruption. Mitigations include: off-exchange custody and settlement via Copper (ClearLoop) and Ceffu (MirrorX) for centralised exchange trading, and diversification across six venues at launch with additional venues planned.
 
 **Liquidation and ADL risk** — The strategy operates at 1.5x leverage. Sharp price moves or correlated venue stress can trigger forced liquidation or Auto-Deleveraging on perpetual futures positions. Mitigations include: a conservative leverage profile relative to typical arbitrage strategies, continuous position monitoring, and trading in liquid markets where rebalancing is reliable.
 

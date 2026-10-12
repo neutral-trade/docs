@@ -1,3 +1,9 @@
+---
+description: >-
+  A market-neutral, maker-dominant high-frequency strategy curated by Vision
+  Research. Earns bid-ask spread and maker rebates.
+---
+
 # HFT Multi-factor
 
 ## Overview

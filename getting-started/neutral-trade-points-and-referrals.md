@@ -1,4 +1,7 @@
 ---
+description: >-
+  How NT Points and referrals work on Neutral Trade: daily deposit points,
+  monthly fee points, the 10% referral bonus, and the link to VIP fee discounts.
 layout:
   width: default
   title:
@@ -16,6 +19,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -112,14 +117,14 @@ Deposits made inside a distribution partner's own app follow a different path â€
 
 Both rewards travel on the same code, but they are recorded in different places and follow different rules.
 
-| | NT Points referral | Revenue share |
-| --- | --- | --- |
-| Where it lives | Offchain rewards record | Onchain, in the vault program |
-| Scope | One referrer per wallet, all vaults | Per vault |
-| When it is set | Any time, including after a deposit | The referee's first deposit on that vault |
-| Can it be added later | Yes | No |
-| Activation needed | None | Register on each vault |
-| Pays | 10% of the referee's NT Points | A tiered share of the management fee |
+|                       | NT Points referral                  | Revenue share                             |
+| --------------------- | ----------------------------------- | ----------------------------------------- |
+| Where it lives        | Offchain rewards record             | Onchain, in the vault program             |
+| Scope                 | One referrer per wallet, all vaults | Per vault                                 |
+| When it is set        | Any time, including after a deposit | The referee's first deposit on that vault |
+| Can it be added later | Yes                                 | No                                        |
+| Activation needed     | None                                | Register on each vault                    |
+| Pays                  | 10% of the referee's NT Points      | A tiered share of the management fee      |
 
 Applying a points code after the fact still earns points, but it cannot create or repair a missing fee attribution.
 

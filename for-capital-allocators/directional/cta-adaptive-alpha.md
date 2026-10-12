@@ -1,4 +1,7 @@
 ---
+description: >-
+  A systematic directional (CTA) crypto strategy curated by Atlas Research, with
+  defined risk controls and weekly redemptions.
 layout:
   width: default
   title:
@@ -17,9 +20,11 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# CTA-Adaptive Alpha
+# CTA - Adaptive Alpha
 
 ## Overview
 

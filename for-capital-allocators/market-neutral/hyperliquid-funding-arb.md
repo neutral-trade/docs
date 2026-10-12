@@ -1,4 +1,7 @@
 ---
+description: >-
+  A delta-neutral funding rate strategy on Hyperliquid, run by Neutral Trade.
+  Earns perpetual funding and HLP yield on USDC deposits.
 layout:
   width: default
   title:
@@ -16,6 +19,8 @@ layout:
   tags:
     visible: true
   actions:
+    visible: true
+  anchors:
     visible: true
 ---
 

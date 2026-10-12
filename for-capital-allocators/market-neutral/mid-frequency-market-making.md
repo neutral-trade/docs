@@ -1,5 +1,7 @@
 ---
-description: Mid-Frequency Market Making
+description: >-
+  A market-neutral, mid-frequency market making strategy curated by AdverseGuard
+  Alpha. USDC deposits on Solana with weekly redemptions.
 layout:
   width: default
   title:
@@ -18,19 +20,21 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Mid-frequency Market Making
 
 ## Overview <a href="#docs-internal-guid-bcd172ee-7fff-eec8-8ec6-59bba23b723f" id="docs-internal-guid-bcd172ee-7fff-eec8-8ec6-59bba23b723f"></a>
 
-This is a mid-frequency market-making strategy designed to generate steady returns by providing liquidity to Binance Perpetual Futures markets. It continuously adjusts its quote pricing and activity based on current conditions. The excess return stems from both the predictive power of a proprietary fair price model, as well as high-quality trade execution capability. When risk increases, it scales back to protect capital.&#x20;
+This is a mid-frequency market-making strategy designed to generate steady returns by providing liquidity to Binance Perpetual Futures markets. It continuously adjusts its quote pricing and activity based on current conditions. The excess return stems from both the predictive power of a proprietary fair price model, as well as high-quality trade execution capability. When risk increases, it scales back to protect capital.
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/adverseguard-alpha">https://www.neutral.trade/strategies/adverseguard-alpha</a></td></tr></tbody></table>
 
 _Live since April 23, 2026_
 
-## How it works  <a href="#docs-internal-guid-6a3917eb-7fff-4b82-1ba4-a43521243508" id="docs-internal-guid-6a3917eb-7fff-4b82-1ba4-a43521243508"></a>
+## How it works <a href="#docs-internal-guid-6a3917eb-7fff-4b82-1ba4-a43521243508" id="docs-internal-guid-6a3917eb-7fff-4b82-1ba4-a43521243508"></a>
 
 **Spread capture** — The system continuously quotes both sides of the ETHUSDT perpetual futures order book on Binance. By maintaining active bid and ask quotes, it earns the spread between buy and sell prices and collects maker rebates.
 
@@ -64,11 +68,10 @@ The strategy employs a stop-loss framework designed to catch risk at both the ex
 
 ## Why AdverseGuard Alpha?
 
-AdverseGuard Alpha operates at the intersection of traditional finance and digital assets, deploying a multi-strategy quantitative framework across global markets.&#x20;
+AdverseGuard Alpha operates at the intersection of traditional finance and digital assets, deploying a multi-strategy quantitative framework across global markets.
 
 Their edge is built on a world-class team with deep roots in high-frequency trading, asset management, and exchange infrastructure. They bring decades of combined institutional experience from industry titans including Tower Research, Citadel, Susquehanna (SIG), Kronos Research, Point72, State Street, RBC, and J.P. Morgan. This institutional pedigree allows them to bridge the gap between legacy financial rigor and the frontiers of digital asset liquidity.
 
 {% hint style="info" %}
 We’ve excluded AdverseGuard Alpha’s full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence, including real-money testing.
 {% endhint %}
-
