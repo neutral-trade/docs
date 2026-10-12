@@ -92,4 +92,4 @@ It depends on the vault's schedule. Most vaults redeem once or twice a week. See
 
 **Can I hold my position as a token?**
 
-Not yet. [Neutral Tokenize](../for-capital-allocators/neutral-tokenize.md) is coming soon.
+Not yet. [Neutral Tokenize](../neutral-tokenize/overview.md) is coming soon.

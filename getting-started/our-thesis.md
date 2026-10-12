@@ -72,6 +72,6 @@ The trust assumptions that historically required taking a trading team's word fo
 
 ## Where This Goes Next
 
-Access keeps getting simpler. [Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md) turns a set of strategies into one managed position. [Neutral Tokenize](../for-capital-allocators/neutral-tokenize.md), coming soon, turns that position into a token you hold in your own wallet. Each step removes one more barrier between an ordinary allocator and a professional strategy.
+Access keeps getting simpler. [Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md) turns a set of strategies into one managed position. [Neutral Tokenize](../neutral-tokenize/overview.md), coming soon, turns that position into a token you hold in your own wallet. Each step removes one more barrier between an ordinary allocator and a professional strategy.
 
 None of this removes risk. Strategies can lose money, and the [Risk Overview](../for-capital-allocators/risk-overview/) sets out how.

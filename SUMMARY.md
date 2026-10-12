@@ -15,7 +15,6 @@
 ## For Capital Allocators
 
 * [Neutral Autopilot](for-capital-allocators/neutral-autopilot.md)
-* [Neutral Tokenize](for-capital-allocators/neutral-tokenize.md)
 * [Market Neutral](for-capital-allocators/market-neutral/README.md)
   * [Mid-frequency Market Making](for-capital-allocators/market-neutral/mid-frequency-market-making.md)
   * [Delta Neutral Arbitrage](for-capital-allocators/market-neutral/delta-neutral-arbitrage.md)
@@ -76,6 +75,10 @@
 * [Vault Protections](neutral-strategy-vaults/vault-protections.md)
 * [Security](neutral-strategy-vaults/security.md)
 * [Copy of Neutral Strategy Vaults](neutral-strategy-vaults/copy-of-neutral-strategy-vaults.md)
+
+## NEUTRAL TOKENIZE
+
+* [Overview](neutral-tokenize/overview.md)
 
 ## CURATORS
 

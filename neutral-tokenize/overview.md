@@ -4,7 +4,7 @@ description: >-
   in your own wallet. Coming soon, starting with Neutral Autopilot.
 ---
 
-# Neutral Tokenize
+# Overview
 
 Hedge fund strategies, held as a token in your wallet.
 
@@ -16,7 +16,7 @@ Hedge fund strategies, held as a token in your wallet.
 
 Neutral Tokenize is a new way to hold a [Neutral Strategy Vault](../neutral-strategy-vaults/how-they-work.md). You deposit USDC and receive a token that represents your share of the vault. The token sits in your own wallet, and its value follows the vault's share price.
 
-The first tokenized vault is planned to be [Neutral Autopilot](neutral-autopilot.md), the multi-strategy vault that allocates across Neutral Trade's live strategies.
+The first tokenized vault is planned to be [Neutral Autopilot](../for-capital-allocators/neutral-autopilot.md), the multi-strategy vault that allocates across Neutral Trade's live strategies.
 
 Our goal is to open hedge fund grade strategies to everyone. A vault removed the $1M minimum, the paperwork, and the quarterly lock-up. A token removes the last step: you do not need to learn a new app to hold a professional strategy. You hold one token, the same way you hold any other asset on Solana.
 
@@ -80,7 +80,7 @@ The most recent audit, by Adevar Labs in October 2026, reviewed the vault progra
 
 A token is a different way to hold a vault. It is not a lower level of risk.
 
-* **Strategy risk.** The token price follows the vault. If the strategies lose money, the token price falls. See the [Risk Overview](risk-overview/).
+* **Strategy risk.** The token price follows the vault. If the strategies lose money, the token price falls. See the [Risk Overview](../for-capital-allocators/risk-overview/).
 * **Redemption timing.** The exit is a redemption on Neutral Trade, on the vault's schedule. You stay exposed to the token price until settlement.
 * **No guaranteed market price.** If the token trades on a third-party venue, that price can differ from the vault's NAV. Neutral Trade does not guarantee liquidity on any third-party venue.
 * **Third-party protocol risk.** If you use the token as collateral, you take on the risks of that protocol, including liquidation.

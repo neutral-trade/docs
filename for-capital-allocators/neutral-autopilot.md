@@ -162,7 +162,7 @@ Centralized-exchange positions settle off-exchange via Copper (ClearLoop) and Ce
 {% hint style="info" %}
 **Coming soon: Autopilot as a token**
 
-Autopilot is planned to be the first vault on [Neutral Tokenize](neutral-tokenize.md). Your position becomes a token that you hold in your own wallet while it stays invested in the vault. It is not live yet, and no launch date is announced.
+Autopilot is planned to be the first vault on [Neutral Tokenize](../neutral-tokenize/overview.md). Your position becomes a token that you hold in your own wallet while it stays invested in the vault. It is not live yet, and no launch date is announced.
 {% endhint %}
 
 ## Common Questions
