@@ -16,31 +16,29 @@ Neutralized JLP offers great benefits for JLP holders during the short, medium, 
 
 Though the strategy is the same as JLP DN (USDC), being JLP-denominated changes a few aspects and alters some use cases
 
-**Let’s learn about JLP DN (JLP-Denominated)!**&#x20;
+**Let’s learn about JLP DN (JLP-Denominated)!**
 
-<figure><img src="../../../.gitbook/assets/JLP price movements(5).svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FYmy1aO35YJUh52vQuYm2%2FJLP%20price%20movements(5).svg?alt=media&#x26;token=5dadcb1b-0533-4483-a3e4-748a32c4aa82" alt=""><figcaption></figcaption></figure>
 
 ## JLP-Denominated Strategy Differences
 
-To begin, let's observe the image above.&#x20;
+To begin, let's observe the image above.
 
 In this vault, your **JLP balance moves with JLP's price**.
 
-Though the JLP balance may increase or decrease depending on the price of JLP, the **USDC value of the position remains steady** (while receiving yield from Jupiter perpetual fees).&#x20;
+Though the JLP balance may increase or decrease depending on the price of JLP, the **USDC value of the position remains steady** (while receiving yield from Jupiter perpetual fees).
 
 ### Potential Use Case:
 
 As this vault is denominated in JLP, you can utilize it to capitalize on JLP price movements!
 
-#### Bearish sentiments rising?&#x20;
+#### Bearish sentiments rising?
 
-* Simply make a deposit and gain additional JLP on price downtrends.&#x20;
+* Simply make a deposit and gain additional JLP on price downtrends.
 
-#### Hit the pico bottom, feeling bullish now?&#x20;
+#### Hit the pico bottom, feeling bullish now?
 
 * Make a withdrawal to regain directional exposure, with more JLP than you began with!
-
-
 
 With a short 1-hour redemption period, you stay fully flexible with your plans.
 
@@ -56,7 +54,7 @@ Read more about this strategy's design here:
 
 ### Fees & Withdrawals
 
-7% service fee (charged by the time period the deposits are in the vault). A short 1-hour withdrawal redemption period applies.
+7% management fee (charged by the time period the deposits are in the vault). A short 1-hour withdrawal redemption period applies.
 
 ## Deposit Links
 
@@ -86,4 +84,4 @@ Drift Website (Backup):
 
 ***
 
-Launch date: 2025-02-13&#x20;
+Launch date: 2025-02-13

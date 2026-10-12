@@ -6,7 +6,7 @@
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/123.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
 **The Solana Memes ETF** is a diversified, actively managed index vault built to capture the explosive potential of top-tier Solana memecoins. As community hype and market interest around memecoins grow, this vault gives you structured exposure to a handpicked basket of what we see as the blue chips of the Solana meme world.
 
@@ -16,7 +16,7 @@ Want to bet on memes without doing hours of research? We've got you. The Memes E
 
 ## Explanation of the Memes Index Vault
 
-<figure><img src="../../.gitbook/assets/ETFM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2F6NWVv9iNsMisMZ7k3CI1%2FETFM.png?alt=media&#x26;token=7b221fc5-737a-4152-82b0-2d551a14506e" alt=""><figcaption></figcaption></figure>
 
 #### Why hold just one memecoin when you can ride the whole wave?
 
@@ -40,7 +40,7 @@ Each meme’s weight (e.g., BONK getting the largest share) reflects its market 
 
 ## Fees & Withdrawals
 
-10% commission on profits our trading made for you. 2% annual service fee (charged by the time period the deposits are in the vault; Daily 0.00548% on your principal).
+10% performance fee on profits our trading made for you. 2% annual management fee (charged by the time period the deposits are in the vault; Daily 0.00548% on your principal).
 
 Withdrawals are subject to a 1-day redemption period.
 

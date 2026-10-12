@@ -6,7 +6,7 @@
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/123.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
 A high-conviction, trend-following trade: long HYPE, short SOL. Requested by community.
 
@@ -78,10 +78,10 @@ But:
 
 ### Vault Terms
 
-| Item        | Detail         |
-| ----------- | -------------- |
-| Commission  | 10% of profits |
-| Service Fee | 0              |
+| Item            | Detail         |
+| --------------- | -------------- |
+| Performance Fee | 10% of profits |
+| Management Fee  | 0              |
 
 ***
 

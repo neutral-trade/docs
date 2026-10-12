@@ -13,7 +13,7 @@ This vault has been deprecated and is no longer active on Neutral Trade. It is n
 
 ## Explanation of the ETH Super Staking
 
-ETH Super Staking empowers Ethereum holders with a robust liquidity-enhancing strategy, improving decentralized exchange resilience, especially on Jupiter Perp DEX.&#x20;
+ETH Super Staking empowers Ethereum holders with a robust liquidity-enhancing strategy, improving decentralized exchange resilience, especially on Jupiter Perp DEX.
 
 We acquire and collateralize wETH, then open borrow positions to run delta neutral strategies on top of our wETH collateral.
 
@@ -21,10 +21,10 @@ We acquire and collateralize wETH, then open borrow positions to run delta neutr
 
 Let’s explore the key sources of yield for the staking vault:
 
-1. JLP fees — 17.59% APY as of 09/12/2025 (75% of trading fees, borrowing fees, mint/burn fees, liquidation fees from traders trading on Jupiter Perp DEX)
-2. Funding fees from Perpetual Shorts on ETH, BTC, and SOL (Longs usually pay shorts perps funding) —  \~7.92% APR, \~11.20% APR, and \~3.02% APR as of 09/19/2025.
+1. JLP fees — 17.59% APY as of 09/12/2025 (75% of trading fees, borrowing fees, mint/burn fees, liquidation fees from traders trading on Jupiter Perp DEX)
+2. Funding fees from Perpetual Shorts on ETH, BTC, and SOL (Longs usually pay shorts perps funding) — \~7.92% APR, \~11.20% APR, and \~3.02% APR as of 09/19/2025.
 
-Combined, these sources deliver the yield, allowing you to gain pure ETH exposure and  rewards.
+Combined, these sources deliver the yield, allowing you to gain pure ETH exposure and rewards.
 
 ## What is wETH?
 
@@ -39,7 +39,7 @@ ETH Super Staking is built to outperform, offering an enhanced yield that tradit
 
 ## Lock Up Period & Withdrawals
 
-Our ETH Super Staking vault applies a 20% commission on profits, along with a 1% service fee, ensuring aligned incentives.
+Our ETH Super Staking vault applies a 20% performance fee on profits, along with a 1% management fee, ensuring aligned incentives.
 
 To optimize liquidity and returns, withdrawals come with a brief 1-day redemption period.
 

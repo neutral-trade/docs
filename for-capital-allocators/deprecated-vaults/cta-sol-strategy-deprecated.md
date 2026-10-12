@@ -10,11 +10,11 @@ description: HIGH RISK
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/123.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
 **Overview**
 
-This **CTA-SOL strategy** is managed by **Marco**, an external quant trader who has passed due diligence by the Neutral Trade team. The strategy leverages advanced machine learning and alternative data to exploit momentum and mean reversion in digital assets like $SOL.&#x20;
+This **CTA-SOL strategy** is managed by **Marco**, an external quant trader who has passed due diligence by the Neutral Trade team. The strategy leverages advanced machine learning and alternative data to exploit momentum and mean reversion in digital assets like $SOL.
 
 While it delivers a high Sharpe ratio and strong returns, the risk level can be significant. Maximum drawdowns can reach 15% or more. Invest wisely.
 
@@ -23,7 +23,7 @@ While it delivers a high Sharpe ratio and strong returns, the risk level can be 
 * **Asset Focus:** Solana ($SOL)
 * **Trading Frequency:** High-frequency, intra-day trading
 * **Holding Period:** \~1 hour (median)
-* **Execution Platforms:**  Drift on Solana
+* **Execution Platforms:** Drift on Solana
 * **Leverage:** Adaptive, based on market conditions
 * **Risk Controls:** 15% target volatility
 
@@ -54,7 +54,7 @@ While it delivers a high Sharpe ratio and strong returns, the risk level can be 
     * **90-day live monitoring on CEXs and Drift.**
     * Consistent profitability while adhering to **strict risk parameters**.
 
-    <figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Neutral Vault Live Tracking since Jan 2025</p></figcaption></figure>
+    <figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2F5cWVCVJmaij2NGVc6opg%2Fimage.png?alt=media&#x26;token=c3c506cc-4a0e-4f00-81bd-d1863195954f" alt=""><figcaption><p>Neutral Vault Live Tracking since Jan 2025</p></figcaption></figure>
 
 ***
 
@@ -81,11 +81,11 @@ Neutral Trade conducted a rigorous **due diligence process** before onboarding M
 
 ### **Risk Management on Neutral's side**
 
-Neutral Trade will constantly track the volatility and daily maximum drawdown on the vault - if it exceeds the historical numbers of the strategy, the team would cut half of the position size, and if it is above our maximum theshold %, we will stop the algo and unwind positions, and conduct prompt reevaluation on the strategy.  The risk management procedure allows the maximum drawdown of our users to be less than 20%.&#x20;
+Neutral Trade will constantly track the volatility and daily maximum drawdown on the vault - if it exceeds the historical numbers of the strategy, the team would cut half of the position size, and if it is above our maximum theshold %, we will stop the algo and unwind positions, and conduct prompt reevaluation on the strategy. The risk management procedure allows the maximum drawdown of our users to be less than 20%.
 
 ## Fees & Withdrawals
 
-25% commission on profits our trading made for you and 2% management fee.
+25% performance fee on profits our trading made for you and 2% management fee.
 
 To optimize liquidity and returns, withdrawals are subject to a 7-day redemption period.
 

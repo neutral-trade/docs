@@ -6,11 +6,11 @@
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Thread Cover Images(2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FZD4KhPhAQ81t6LO59W8Z%2FThread%20Cover%20Images(2).png?alt=media&#x26;token=e1acb20e-9b9d-4042-a718-f90c82635ca9" alt=""><figcaption></figcaption></figure>
 
 ## Lighter Liquidity Provider
 
-The Lighter Liquidity Provider (LLP) pool is coming to Solana!&#x20;
+The Lighter Liquidity Provider (LLP) pool is coming to Solana!
 
 Available on Neutral Trade!
 
@@ -39,8 +39,8 @@ Built as an Ethereum L2, it combines the speed and liquidity of centralized exch
 
 ## Fees
 
-* **Commission** - 0%
-* **Annual Service Fee** - 2%
+* **Performance Fee** - 0%
+* **Annual Management Fee** - 2%
 * **Withdrawal Fee** - 0.2%
 
 ## Deposit
@@ -50,4 +50,3 @@ Built as an Ethereum L2, it combines the speed and liquidity of centralized exch
 ## Trade On Lighter
 
 [app.lighter.xyz/?referral=NEUTRAL](https://app.lighter.xyz/?referral=NEUTRAL)
-

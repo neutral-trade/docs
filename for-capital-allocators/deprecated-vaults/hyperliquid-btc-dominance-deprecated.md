@@ -10,9 +10,9 @@ icon: btc
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/123.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
-Neutral Trade is now live on Hyperliquid — starting with our [Funding Arb](../../for-capital-allocators/market-neutral/hyperliquid-funding-arb.md) strategy and expanding with two brand-new Dominance Vaults, built directly on Hyperliquid’s native vault infrastructure.
+Neutral Trade is now live on Hyperliquid — starting with our [Funding Arb](../market-neutral/hyperliquid-funding-arb.md) strategy and expanding with two brand-new Dominance Vaults, built directly on Hyperliquid’s native vault infrastructure.
 
 {% hint style="info" %}
 Save more on Hyperliquid! Use our Referral Code:
@@ -20,7 +20,7 @@ Save more on Hyperliquid! Use our Referral Code:
 [https://app.hyperliquid.xyz/join/NEUTRALTRADE](https://app.hyperliquid.xyz/join/NEUTRALTRADE)
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Drafts for posting (dont delete) (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2F1uMlvgoYTXQlrJsBYB6h%2FDrafts%20for%20posting%20(dont%20delete)%20(38).png?alt=media&#x26;token=295239f6-19cf-4f5b-8502-1a92d56292d4" alt=""><figcaption></figcaption></figure>
 
 ## 🤔 What is Dominance?
 
@@ -47,7 +47,7 @@ $$
 
 ## 1. BTC Dominance Vault
 
-<figure><img src="../../.gitbook/assets/chrome_wwWD0Lp5tD.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2Fy7bZ4W4oKKVJks0yD1Uo%2Fchrome_wwWD0Lp5tD.png?alt=media&#x26;token=a7d573b8-479b-418e-a645-0bb09caffd52" alt=""><figcaption></figcaption></figure>
 
 This vault captures **Bitcoin strength relative to altcoins**.
 
@@ -113,7 +113,7 @@ Markets frequently rotate between **risk-on** (focused on altcoins) and **risk-o
 
 You make money when one side **outperforms** the other, even if overall prices stay flat.
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FSKA5phY5fZJR5sOBJ9PX%2Fimage%20(10).png?alt=media&#x26;token=3fa187cf-21b6-4a98-88c6-9a38a3f3f372" alt=""><figcaption></figcaption></figure>
 
 #### 2. Risk-controlled investment
 
@@ -130,7 +130,7 @@ The vaults spread your position across a carefully selected basket of assets —
 
 ## Fees & Withdrawals
 
-10% commission on profits our trading made for you.
+10% performance fee on profits our trading made for you.
 
 ***
 

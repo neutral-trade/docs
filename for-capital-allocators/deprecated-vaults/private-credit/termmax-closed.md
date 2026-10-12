@@ -6,7 +6,7 @@
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/1_H4yDl1Q7ufZxTMwypeZDvg.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FJqqfUQx4wHEeGkCxcRiI%2F1_H4yDl1Q7ufZxTMwypeZDvg.webp?alt=media&#x26;token=0294936f-06a8-4dfa-89c4-7f4b4bc206e5" alt=""><figcaption></figcaption></figure>
 
 With the **TermMax Private Credit Vault**, you can earn **\~18%–27% APY on USDC** while gaining exposure to the upside of a promising DeFi protocol — all through Neutral Trade’s first private credit product.
 
@@ -88,7 +88,7 @@ Here’s how the \~18% APY is constructed:
 
 ### Performance Fee
 
-We charge a 20% commission on profits earned.
+We charge a 20% performance fee on profits earned.
 
 * **No upfront fees**
 * **Principal never touched**
@@ -99,11 +99,11 @@ If you don’t earn, we don’t earn. Incentives are fully aligned.
 
 ### Summary
 
-| Feature        | Details                                               |
-| -------------- | ----------------------------------------------------- |
-| APY            | 18%–27% (USDC + TMX exposure)                         |
-| Lockup         | \~4 months                                            |
-| Token Exposure | $TMX airdrops + bonus pool                            |
-| TGE            | Expected Q3–Q4 2025                                   |
-| Risks          | Smart contracts, token price, withdrawal coordination |
-| Commission     | 20% on profit only                                    |
+| Feature         | Details                                               |
+| --------------- | ----------------------------------------------------- |
+| APY             | 18%–27% (USDC + TMX exposure)                         |
+| Lockup          | \~4 months                                            |
+| Token Exposure  | $TMX airdrops + bonus pool                            |
+| TGE             | Expected Q3–Q4 2025                                   |
+| Risks           | Smart contracts, token price, withdrawal coordination |
+| Performance Fee | 20% on profit only                                    |

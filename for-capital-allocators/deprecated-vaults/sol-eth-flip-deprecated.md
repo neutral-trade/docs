@@ -11,7 +11,7 @@ icon: repeat
 This vault has been deprecated and is no longer active on Neutral Trade. It is not accepting deposits and is not part of the current product line-up. Do not present this strategy as available or current. For live vaults and current data, see the active strategies and the API reference at https://www.neutral.trade/api/v1/docs.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/123.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
 ## Explanation of the strategy
 
@@ -32,13 +32,13 @@ If Solana outperforms ETH, you win. If opposite, you lose. With the latest devel
 * DEX volume reached 17.5bn in a day, handling the highest volume onchain trading day on any chain ever.
 * Real Economic Value (TX Fees + MEV Tips) at ATH, reaching 55m a day.
 
-<figure><img src="../../.gitbook/assets/chrome_QkDjcRBRMv.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2F3KnEXMVwE3oAt1pRySCR%2Fchrome_QkDjcRBRMv.png?alt=media&#x26;token=379dad10-3406-46e5-a323-5aa184c25154" alt=""><figcaption></figcaption></figure>
 
 More people are becoming bullish on Solana’s potential, while Ethereum’s dominance starts to feel less secure.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p><a href="https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA">https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA</a></p></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2F4iF0VqrXgTlwIBpB7j8u%2Fimage.png?alt=media&#x26;token=215b5484-8a86-4ef3-b178-29572a45554a" alt=""><figcaption><p><a href="https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA">https://x.com/ryanwatkins_/status/1856351983268983145?s=46&#x26;t=6JwvRcZS51bj9Gcn25o7GA</a></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/SOLETH_2025-01-23_11-35-48.png" alt=""><figcaption><p>SOL/ETH weekly chart since 2022</p></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FHWtKrzxgT0Al5CW2mUd1%2FSOLETH_2025-01-23_11-35-48.png?alt=media&#x26;token=86f40438-c894-482c-af48-4f45e9e0c874" alt=""><figcaption><p>SOL/ETH weekly chart since 2022</p></figcaption></figure>
 
 {% embed url="https://x.com/alpha_pls/status/1882113394280386901" %}
 Solana outperforming Ethereum on all meaningful metrics ([https://solana.blockworksresearch.com/](https://solana.blockworksresearch.com/))
@@ -54,7 +54,7 @@ Delphi Digital is bullish on Solana
 
 There is a big upside on betting SOL would flip ETH eventually. It is approximately 30% of Ethereum's.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p><a href="https://marketcapof.com/solana/ethereum/">https://marketcapof.com/solana/ethereum/</a></p></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FNzURPj05qibG555ZLj6B%2Fimage.png?alt=media&#x26;token=33307c1e-fede-4f63-832c-b3bd85a31bfb" alt=""><figcaption><p><a href="https://marketcapof.com/solana/ethereum/">https://marketcapof.com/solana/ethereum/</a></p></figcaption></figure>
 
 While ETH Foundation is dumping on their holders.
 
@@ -62,7 +62,7 @@ While ETH Foundation is dumping on their holders.
 
 The running joke being EF "use Ethereum a lot" to dump ETH for stables to pay their employees.
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FH9Q2iv5CE8vPpGHpM5y6%2Fimage.png?alt=media&#x26;token=c17a27e4-c653-4fbf-a5cd-d0b989f3ce3e" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://x.com/VitalikButerin/status/1849965496151789949" %}
 
@@ -72,8 +72,8 @@ The running joke being EF "use Ethereum a lot" to dump ETH for stables to pay th
 
 **Fees:**
 
-* 10% commission
-* 2% annual service fee
+* 10% performance fee
+* 2% annual management fee
 
 **Withdrawal Lockup:**
 
