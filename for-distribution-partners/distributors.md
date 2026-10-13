@@ -53,4 +53,4 @@ Attribution and earnings are verifiable from Solana program state and events. Th
 
 Register at [neutral.trade/builder/register](https://www.neutral.trade/builder/register), then follow the [integration guide](integration-guide.md).
 
-For a supported rollout, contact [partnerships@neutral.trade](mailto:partnerships@neutral.trade), [@NeutralTradeWill on Telegram](https://t.me/NeutralTradeWill), or the [Neutral Trade Telegram group](https://t.me/neutraltrade).
+For a supported rollout, contact [partnerships@neutral.trade](mailto:partnerships@neutral.trade), [@bayes309 on Telegram](https://t.me/bayes309), or the [Neutral Trade Telegram group](https://t.me/neutraltrade).

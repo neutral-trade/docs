@@ -82,4 +82,4 @@ Use it to decode accounts and events or construct program interactions directly.
 ## Support
 
 For keys and integration help, contact
-[@NeutralTradeWill on Telegram](https://t.me/NeutralTradeWill).
+[@bayes309 on Telegram](https://t.me/bayes309).
