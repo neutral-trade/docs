@@ -28,7 +28,7 @@ The curator monitors over 500 symbols and trades a universe of roughly the top 3
 | **Withdrawal fee**  | 0.3%                                     |
 | **Redemptions**     | Once weekly, on Friday                   |
 
-The vault's Details view in the app shows the current terms. See [Fees + Redemption Period](../../additional-info/fees-+-redemption-period.md).
+The vault's Details view in the app shows the current terms. See [Fees + Redemption Period](../../../additional-info/fees-+-redemption-period.md).
 
 ## How It Works
 
@@ -84,7 +84,7 @@ Depositor capital never leaves institutional custody. Funds are mirrored into a 
 | Blockchain       | Solana                                                                                                   |
 | Vault program    | NT Bundle V1, audited by Halborn, Quantstamp, Offside Labs, and Adevar Labs                              |
 
-Full details: [Security](../../neutral-strategy-vaults/security.md).
+Full details: [Security](../../../neutral-strategy-vaults/security.md).
 
 ## Risk Factors
 
@@ -97,7 +97,7 @@ Full details: [Security](../../neutral-strategy-vaults/security.md).
 * **Execution, technology and venue risk.** The strategy depends on connectivity, exchange availability and correct system behaviour, and concentrates execution on a single primary venue.
 * **No guarantee of returns.** Target figures are objectives, not commitments.
 
-The [Risk Overview](../risk-overview/) covers these risks in more detail.
+The [Risk Overview](../../risk-overview/) covers these risks in more detail.
 
 ## Why C Research?
 
@@ -113,4 +113,4 @@ C Research is an alias. We've excluded the curator's full name to mitigate alpha
 Neutral Trade conducts due diligence on every curator, but does not guarantee strategy performance. Allocate only what you can afford to have at risk.
 {% endhint %}
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../../legal/risk-warnings-and-disclaimers-statement.md)_._

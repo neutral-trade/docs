@@ -48,14 +48,14 @@ The exact deadlines and settlement times are in the Subscription Terms on the [s
 
 ## Key Risks
 
-RWA strategies carry the risks in the [Risk Overview](../risk-overview/), and some that are specific to traditional markets.
+RWA strategies carry the risks in the [Risk Overview](../../risk-overview/), and some that are specific to traditional markets.
 
 * **Market and volatility risk.** A volatility strategy can lose money when volatility rises sharply or when relative-value positions move apart. Losses can arrive quickly in a market shock.
 * **Liquidity and redemption risk.** Redemptions are quarterly, need advance notice, and are subject to a gate. An exit can take longer than one quarter. Your capital stays exposed to the strategy until settlement.
 * **Market-hours risk.** Traditional exchanges close overnight, on weekends, and on holidays. Positions cannot be adjusted while a market is closed, and prices can gap at the open.
 * **Off-chain counterparty risk.** Capital that is deployed in traditional markets sits with traditional brokers and custodians. This is a different set of counterparties from the crypto venues that other vaults use.
-* **Regulatory and access risk.** Traditional securities markets are regulated. A change in rules can restrict the instruments, the venues, or who can access the strategy. See [Regional Availability](../../legal/regional-availability.md).
-* **Platform and smart contract risk.** Deposits, withdrawals, and share accounting run through the Neutral Strategy Vault contracts. See [Security](../../neutral-strategy-vaults/security.md) and [Vault Protections](../../neutral-strategy-vaults/vault-protections.md).
+* **Regulatory and access risk.** Traditional securities markets are regulated. A change in rules can restrict the instruments, the venues, or who can access the strategy. See [Regional Availability](../../../legal/regional-availability.md).
+* **Platform and smart contract risk.** Deposits, withdrawals, and share accounting run through the Neutral Strategy Vault contracts. See [Security](../../../neutral-strategy-vaults/security.md) and [Vault Protections](../../../neutral-strategy-vaults/vault-protections.md).
 
 ## Who RWA Strategies Are Built For
 
@@ -66,7 +66,7 @@ RWA strategies are built for allocators who:
 * Want a return source that does not depend on crypto funding rates or exchange spreads.
 * Accept scheduled valuation and limited liquidity in exchange for access to that return source.
 
-If you need weekly liquidity, look at [Market Neutral](../market-neutral/) strategies or [Neutral Autopilot](../neutral-autopilot.md).
+If you need weekly liquidity, look at [Market Neutral](../market-neutral/) strategies or [Neutral Autopilot](../../neutral-autopilot.md).
 
 ## Related Strategies
 
@@ -74,7 +74,7 @@ If you need weekly liquidity, look at [Market Neutral](../market-neutral/) strat
 
 ## Curator and Due Diligence
 
-Every curator passes [Curator Selection](../../curators/curator-selection.md) before a strategy is listed: a verified track record, a review of risk controls, and operational due diligence.
+Every curator passes [Curator Selection](../../../curators/curator-selection.md) before a strategy is listed: a verified track record, a review of risk controls, and operational due diligence.
 
 {% hint style="info" %}
 D Research is an alias. We've excluded the curator's full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence on the team and its strategy.
@@ -82,6 +82,6 @@ D Research is an alias. We've excluded the curator's full name to mitigate alpha
 
 ## Fees and Terms
 
-The current RWA strategy has a 1% annual management fee, no performance fee, and a 0.3% withdrawal fee. See [Fees + Redemption Period](../../additional-info/fees-+-redemption-period.md) for how fees are charged. Minimums, deadlines, and fees for the vault are in its Details view in the app.
+The current RWA strategy has a 1% annual management fee, no performance fee, and a 0.3% withdrawal fee. See [Fees + Redemption Period](../../../additional-info/fees-+-redemption-period.md) for how fees are charged. Minimums, deadlines, and fees for the vault are in its Details view in the app.
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. These strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. These strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../../legal/risk-warnings-and-disclaimers-statement.md)_._

@@ -27,7 +27,7 @@ Its edge comes from combining multiple independent quantitative signals into a s
 | **Performance fee** | 35% of profit above your high-water mark |
 | **Redemptions**     | Once weekly, on Friday                   |
 
-The vault's Details view in the app shows the current terms. See [Fees + Redemption Period](../../additional-info/fees-+-redemption-period.md).
+The vault's Details view in the app shows the current terms. See [Fees + Redemption Period](../../../additional-info/fees-+-redemption-period.md).
 
 ## How It Works
 
@@ -71,7 +71,7 @@ Depositor capital never leaves institutional custody. Funds are mirrored into a 
 | Blockchain       | Solana                                                                      |
 | Vault program    | NT Bundle V1, audited by Halborn, Quantstamp, Offside Labs, and Adevar Labs |
 
-Full details: [Security](../../neutral-strategy-vaults/security.md).
+Full details: [Security](../../../neutral-strategy-vaults/security.md).
 
 ## Risk Factors
 
@@ -81,7 +81,7 @@ Full details: [Security](../../neutral-strategy-vaults/security.md).
 * **Venue concentration.** Execution is concentrated on a single venue (Binance).
 * **No guarantee of returns.** Past drawdown levels do not limit future losses.
 
-The [Risk Overview](../risk-overview/) covers these risks in more detail.
+The [Risk Overview](../../risk-overview/) covers these risks in more detail.
 
 ## Why AdverseGuard Alpha?
 
@@ -93,4 +93,4 @@ The team has deep roots in high-frequency trading, asset management, and exchang
 AdverseGuard Alpha is an alias. We've excluded the curator's full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence on the team and its strategy.
 {% endhint %}
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../../legal/risk-warnings-and-disclaimers-statement.md)_._

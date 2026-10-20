@@ -32,7 +32,7 @@ Nothing on Neutral Trade is a savings account, an insured deposit, or a guarante
 
 ### Liquidity & Redemption Risk
 
-Deposits and withdrawals are batched and processed on each vault's schedule, not instantly. Some vaults have lockup periods; all have redemption periods, and some (such as [Multi-Asset Volatility Arbitrage](../rwa/multi-asset-volatility-arbitrage.md)) redeem quarterly with notice requirements. Between submitting a withdrawal request and receiving funds, your capital remains in the strategy and its value continues to move with performance.
+Deposits and withdrawals are batched and processed on each vault's schedule, not instantly. Some vaults have lockup periods; all have redemption periods, and some (such as [Multi-Asset Volatility Arbitrage](../usdc-yield/rwa/multi-asset-volatility-arbitrage.md)) redeem quarterly with notice requirements. Between submitting a withdrawal request and receiving funds, your capital remains in the strategy and its value continues to move with performance.
 
 Requests cannot be cancelled once submitted, and in stressed markets a strategy may need to unwind positions at worse prices to meet redemptions. The per-vault liquidity reserve is designed to absorb normal redemption flow — it is not a guarantee that every exit completes on the usual schedule in every market condition. Always check the lockup, redemption period, and any notice requirements in the vault's details tab before depositing.
 

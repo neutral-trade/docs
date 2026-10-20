@@ -100,7 +100,7 @@ NT Earn holds USDC throughout and takes no directional exposure to crypto prices
 * **Liquidity risk.** In extreme market conditions, high utilization across multiple protocols simultaneously could delay withdrawals beyond the standard 1-hour window. The automated exit strategy is designed to reduce this risk, but cannot eliminate it entirely.
 * **Stablecoin risk.** The vault holds USDC. A loss of the USDC peg would affect the value of your position.
 
-See the [Risk Overview](risk-overview/) for the full picture.
+See the [Risk Overview](../risk-overview/) for the full picture.
 
 ## Common Questions
 
@@ -114,6 +114,6 @@ No.
 
 **How is NT Earn different from the strategy vaults?**
 
-NT Earn lends USDC. It does not trade. The strategy vaults, such as [Neutral Autopilot](neutral-autopilot.md), run trading strategies and target a higher return with more risk.
+NT Earn lends USDC. It does not trade. The strategy vaults, such as [Neutral Autopilot](../neutral-autopilot.md), run trading strategies and target a higher return with more risk.
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._

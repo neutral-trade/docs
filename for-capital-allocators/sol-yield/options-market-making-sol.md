@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-Options Market Making (SOL) is Neutral Trade's first SOL Yield Vault. You deposit SOL, and the vault runs the same institutional options market making strategy as our [Options Market Making](../market-neutral/options-market-making.md) vault, curated by Xanthas on OKX. The strategy's returns are used to buy more SOL, so the vault aims to grow the number of SOL you hold.
+Options Market Making (SOL) is Neutral Trade's first SOL Yield Vault. You deposit SOL, and the vault runs the same institutional options market making strategy as our [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault, curated by Xanthas on OKX. The strategy's returns are used to buy more SOL, so the vault aims to grow the number of SOL you hold.
 
 The strategy targets volatility and relative-value opportunities through continuous options market making and multi-leg options trading. Its returns come from volatility and relative-value capture, not from the direction of the underlying market.
 
@@ -64,7 +64,7 @@ The [Risk Overview](../risk-overview/) covers these risks in more detail.
 
 ## Why Xanthas?
 
-Xanthas is an institutional crypto options market maker. It also curates the [Options Market Making](../market-neutral/options-market-making.md) vault on Neutral Trade, which runs the same strategy in USDC and has been live since 14 July 2026.
+Xanthas is an institutional crypto options market maker. It also curates the [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault on Neutral Trade, which runs the same strategy in USDC and has been live since 14 July 2026.
 
 {% hint style="info" %}
 Xanthas is an alias. We've excluded the curator's full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence on the team and its strategy.

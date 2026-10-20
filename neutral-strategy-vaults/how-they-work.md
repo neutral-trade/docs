@@ -60,7 +60,7 @@ Once deployed, your capital is actively managed by the strategy. Share prices up
 
 ## Withdrawing
 
-**1. Submit a withdrawal request.** You can request a withdrawal after any applicable lockup period has ended. Some vaults have their own terms. For example, [Multi-Asset Volatility Arbitrage](../for-capital-allocators/rwa/multi-asset-volatility-arbitrage.md) has quarterly redemptions with a notice period.
+**1. Submit a withdrawal request.** You can request a withdrawal after any applicable lockup period has ended. Some vaults have their own terms. For example, [Multi-Asset Volatility Arbitrage](../for-capital-allocators/usdc-yield/rwa/multi-asset-volatility-arbitrage.md) has quarterly redemptions with a notice period.
 
 > **Withdrawal requests cannot be cancelled once submitted.**
 

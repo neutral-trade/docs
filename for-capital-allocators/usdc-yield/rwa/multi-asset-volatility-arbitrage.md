@@ -43,7 +43,7 @@ _Live since March 30, 2026_
 
 ## Performance
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 134925.png" alt="Multi-Asset Volatility Arbitrage performance chart"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-03-28 134925.png" alt="Multi-Asset Volatility Arbitrage performance chart"><figcaption></figcaption></figure>
 
 | Year | Jan   | Feb   | Mar    | Apr    | May   | Jun   | Jul   | Aug   | Sep    | Oct    | Nov   | Dec   | YTD        |
 | ---- | ----- | ----- | ------ | ------ | ----- | ----- | ----- | ----- | ------ | ------ | ----- | ----- | ---------- |
@@ -96,7 +96,7 @@ For the risks that apply to every RWA strategy, see Key Risks on the [RWA](./) p
 | Redemption Gate        | Capped at 25% of the product's AUM ($200M) per quarter                                                                                              |
 | Trading Venues         | NASDAQ, NYSE, CME                                                                                                                                   |
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-03-28 021504.png" alt="Monthly subscription flow and quarterly redemption flow"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-03-28 021504.png" alt="Monthly subscription flow and quarterly redemption flow"><figcaption></figcaption></figure>
 
 ***
 

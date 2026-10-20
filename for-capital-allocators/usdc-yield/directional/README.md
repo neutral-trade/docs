@@ -30,7 +30,7 @@ Directional strategies take market exposure on purpose. Quantitative signals dec
 
 Unlike market-neutral strategies, directional strategies have returns that move with their markets to some degree. Expect higher variance and a wider range of monthly results.
 
-All strategies in this category are run by external curator teams that have passed Neutral Trade's [Curator Selection](../../curators/curator-selection.md) process, including a review of the performance track record, a Sharpe ratio assessment, and operational due diligence.
+All strategies in this category are run by external curator teams that have passed Neutral Trade's [Curator Selection](../../../curators/curator-selection.md) process, including a review of the performance track record, a Sharpe ratio assessment, and operational due diligence.
 
 ## Current Strategies
 
@@ -68,11 +68,11 @@ Directional is a broad category. Compare the strategies before you allocate.
 * **Leverage and liquidation.** Leverage amplifies gains and losses. A sharp adverse move can trigger forced liquidation.
 * **Venue and counterparty risk.** An exchange or custodian can fail while it holds deployed capital.
 
-Read [Market & Strategy Risk](../risk-overview/market-and-strategy-risk.md) and [Venue, Counterparty & Curator Risk](../risk-overview/venue-counterparty-and-curator-risk.md) for the full picture.
+Read [Market & Strategy Risk](../../risk-overview/market-and-strategy-risk.md) and [Venue, Counterparty & Curator Risk](../../risk-overview/venue-counterparty-and-curator-risk.md) for the full picture.
 
 ## Where Directional Fits
 
-Directional strategies are a higher-variance complement to a [Market Neutral](../market-neutral/) core. [Neutral Autopilot](../neutral-autopilot.md) applies the same idea: it is primarily market-neutral and limits directional strategies to 5% of its portfolio.
+Directional strategies are a higher-variance complement to a [Market Neutral](../market-neutral/) core. [Neutral Autopilot](../../neutral-autopilot.md) applies the same idea: it is primarily market-neutral and limits directional strategies to 5% of its portfolio.
 
 ## Fees and Redemptions
 
@@ -80,6 +80,6 @@ Directional strategies are a higher-variance complement to a [Market Neutral](..
 * **Performance fee.** Directional vaults also charge a performance fee. It applies only to profit above your own high-water mark.
 * **Redemptions.** Directional vaults redeem once weekly, on Friday. You can submit a request on any day.
 
-See [Fees + Redemption Period](../../additional-info/fees-+-redemption-period.md) for the fee table and the full schedule. Minimums, capacity, and fees for each vault are in its Details view in the app.
+See [Fees + Redemption Period](../../../additional-info/fees-+-redemption-period.md) for the fee table and the full schedule. Minimums, capacity, and fees for each vault are in its Details view in the app.
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. These strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. These strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../../legal/risk-warnings-and-disclaimers-statement.md)_._

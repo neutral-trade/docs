@@ -1,6 +1,6 @@
 ---
 hidden: true
-cover: ../../.gitbook/assets/123.png
+cover: ../../../.gitbook/assets/123.png
 coverY: 0
 ---
 
@@ -45,7 +45,7 @@ Managed by Neutral Trade, the strategy systematically neutralizes the directiona
      1. **Effective Leverage**
         1. The resulting structure achieves approximately **1.9× exposure**, optimizing yield while maintaining safe liquidation buffers.
 
-<figure><img src="../../.gitbook/assets/aclev.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aclev.png" alt=""><figcaption></figcaption></figure>
 
 ### **Delta Neutral Hedging**
 
@@ -63,7 +63,7 @@ JLP holds exposure to its **underlying volatile assets** **(SOL, BTC, and ETH)**
    * Market conditions
 6. Targets **net-zero delta** across all three tokens.
 
-<figure><img src="../../.gitbook/assets/alldat1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/alldat1.png" alt=""><figcaption></figcaption></figure>
 
 ## **Yield (Provide)**
 
@@ -92,14 +92,14 @@ Jupiter JLP DN operates exclusively under an institutional-grade model within a 
 
 #### NT Vault
 
-* JLP is held within a NT Vault with strict transaction policies - No single team member or entity can move funds without multiple approvals&#x20;
+* JLP is held within a NT Vault with strict transaction policies - No single team member or entity can move funds without multiple approvals
 * Withdrawal addresses are _strictly whitelisted within the NT Vault Infrastructure._
-* Token list is restricted, preventing low-liquidity manipulation - only interactions with Jupiter Perps Program are permitted.&#x20;
+* Token list is restricted, preventing low-liquidity manipulation - only interactions with Jupiter Perps Program are permitted.
 * Admin Quorum prevents single-member policy changes
 
-<figure><img src="../../.gitbook/assets/mpc graph.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/mpc graph.png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/admin quorum.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/admin quorum.png" alt="" width="563"><figcaption></figcaption></figure>
 
 #### **Ceffu Custody/Settlement**
 
@@ -137,7 +137,7 @@ To ensure fair pricing:
 4. Oracle update is only pushed after validation
 5. Any discrepancy triggers **manual verification**
 
-<figure><img src="../../.gitbook/assets/JupNeutNAV1.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/JupNeutNAV1.png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### **Vaults Audits**
 

@@ -54,7 +54,7 @@ The result is an asymmetric return profile: consistent spread income in stable c
 * Maker rebate
 * Short-term market inefficiencies
 
-<figure><img src="../../.gitbook/assets/cumulative_return_1_5x_realized.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/cumulative_return_1_5x_realized.png" alt=""><figcaption></figcaption></figure>
 
 ## Risk Management
 

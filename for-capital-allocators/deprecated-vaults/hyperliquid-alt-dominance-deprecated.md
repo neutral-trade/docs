@@ -12,7 +12,7 @@ This vault has been deprecated and is no longer active on Neutral Trade. It is n
 
 <figure><img src="https://1924233991-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6YjCIQB3ardoMeqGMIF8%2Fuploads%2FRslr3l7vMDxqJ9grYi0A%2F123.png?alt=media&#x26;token=a737723e-e5a2-42c2-bda4-b482189623dc" alt=""><figcaption></figcaption></figure>
 
-Neutral Trade is now live on Hyperliquid — starting with our [Funding Arb](../market-neutral/hyperliquid-funding-arb.md) strategy and expanding with two brand-new Dominance Vaults, built directly on Hyperliquid’s native vault infrastructure.
+Neutral Trade is now live on Hyperliquid — starting with our [Funding Arb](../usdc-yield/market-neutral/hyperliquid-funding-arb.md) strategy and expanding with two brand-new Dominance Vaults, built directly on Hyperliquid’s native vault infrastructure.
 
 {% hint style="info" %}
 Save more on Hyperliquid! Use our Referral Code:

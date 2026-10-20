@@ -53,7 +53,7 @@ The rewards and points programs are run by Ethena and Meridian. Their terms can 
 
 * **Off-exchange settlement.** Collateral for the Bitget leg is held with [Copper](https://copper.co) and mirrored to the exchange through ClearLoop. The assets stay with the custodian, not on the exchange balance sheet. Trades settle off-exchange.
 * **Trading access only.** Kappa Labs has execution permissions. It cannot withdraw vault capital to an arbitrary external address.
-* **A separate vault contract.** The four audits on the [Security](../../neutral-strategy-vaults/security.md) page cover the Solana vault program. The MLP vault uses a different contract on Robinhood Chain.
+* **A separate vault contract.** The four audits on the [Security](../../../neutral-strategy-vaults/security.md) page cover the Solana vault program. The MLP vault uses a different contract on Robinhood Chain.
 
 ## Risk Factors
 
@@ -66,7 +66,7 @@ Market making hedges market direction. It does not remove risk.
 * **Smart contract and network risk.** The vault contract, Meridian, and Robinhood Chain carry smart-contract and network risk.
 * **Liquidity risk.** Redemptions follow the vault's own terms. You stay exposed to the share price until settlement.
 
-Read [Market & Strategy Risk](../risk-overview/market-and-strategy-risk.md) and [Venue, Counterparty & Curator Risk](../risk-overview/venue-counterparty-and-curator-risk.md) for the full picture.
+Read [Market & Strategy Risk](../../risk-overview/market-and-strategy-risk.md) and [Venue, Counterparty & Curator Risk](../../risk-overview/venue-counterparty-and-curator-risk.md) for the full picture.
 
 ## Common Questions
 
@@ -86,4 +86,4 @@ USDe, on Robinhood Chain.
 
 No. The vault can lose money. Past performance does not indicate future results.
 
-_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../legal/risk-warnings-and-disclaimers-statement.md)_._
+_Products referenced are not intended for individuals in the United States, Mainland China, Hong Kong, sanctioned, or other restricted jurisdictions. This page is for informational purposes only and does not constitute an offer, solicitation, or recommendation to buy or sell any financial instrument. Digital-asset strategies involve significant risk, including possible loss of principal. See the_ [_Risk Warnings and Disclaimers Statement_](../../../legal/risk-warnings-and-disclaimers-statement.md)_._
