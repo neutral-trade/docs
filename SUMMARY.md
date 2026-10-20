@@ -31,6 +31,8 @@
   * [CTA - Momentum LongShort](for-capital-allocators/directional/cta-momentum-longshort.md)
 * [RWA](for-capital-allocators/rwa/README.md)
   * [Multi-Asset Volatility Arbitrage](for-capital-allocators/rwa/multi-asset-volatility-arbitrage.md)
+* [SOL Yield](for-capital-allocators/sol-yield/README.md)
+  * [Options Market Making (SOL)](for-capital-allocators/sol-yield/options-market-making-sol.md)
 * [NT Earn](for-capital-allocators/nt-earn.md)
 * [Risk Overview](for-capital-allocators/risk-overview/README.md)
   * [Market & Strategy Risk](for-capital-allocators/risk-overview/market-and-strategy-risk.md)
