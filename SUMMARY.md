@@ -28,7 +28,7 @@
   * [Third Eye Flagship](for-capital-allocators/directional/third-eye-flagship.md)
   * [CTA - Systematic Alpha](for-capital-allocators/directional/systematic-alpha.md)
   * [CTA - Longshort Alpha](for-capital-allocators/directional/cta-longshort-alpha.md)
-  * [Adaptive Long-Short](for-capital-allocators/directional/adaptive-long-short.md)
+  * [CTA - Momentum LongShort](for-capital-allocators/directional/cta-momentum-longshort.md)
 * [RWA](for-capital-allocators/rwa/README.md)
   * [Multi-Asset Volatility Arbitrage](for-capital-allocators/rwa/multi-asset-volatility-arbitrage.md)
 * [NT Earn](for-capital-allocators/nt-earn.md)

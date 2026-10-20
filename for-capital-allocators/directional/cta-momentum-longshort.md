@@ -1,15 +1,15 @@
 ---
 description: >-
-  Adaptive Long-Short is a systematic long-short crypto momentum strategy on
-  Binance, curated by AdverseGuard Alpha, that rebalances on an hourly cycle.
+  CTA - Momentum LongShort is a systematic long-short crypto momentum strategy
+  on Binance, curated by AdverseGuard Alpha, that rebalances on an hourly cycle.
 hidden: true
 ---
 
-# Adaptive Long-Short
+# CTA - Momentum LongShort
 
 ## Overview
 
-Adaptive Long-Short is a directional, systematic, multi-asset long-short crypto momentum strategy. It trades a diversified basket of liquid major cryptocurrencies and rebalances on an hourly cycle.
+CTA - Momentum LongShort is a directional, systematic, multi-asset long-short crypto momentum strategy. It trades a diversified basket of liquid major cryptocurrencies and rebalances on an hourly cycle.
 
 Its edge comes from combining multiple independent quantitative signals into a single, risk-aware portfolio. This lets the strategy adapt to changing market regimes and capture persistent trends across the crypto market. The strategy seeks a positive payoff asymmetry: winning positions compound, while downside risk is tightly controlled.
 
@@ -22,7 +22,7 @@ Its edge comes from combining multiple independent quantitative signals into a s
 | **Category**        | Directional                              |
 | **Curator**         | AdverseGuard Alpha                       |
 | **Deposit asset**   | USDC on Solana                           |
-| **Minimum deposit** | To be confirmed                          |
+| **Minimum deposit** | 100 USDC                                 |
 | **Management fee**  | 1% per year                              |
 | **Performance fee** | 35% of profit above your high-water mark |
 | **Redemptions**     | Once weekly, on Friday                   |
