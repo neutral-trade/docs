@@ -2,7 +2,6 @@
 description: >-
   CTA - Momentum LongShort is a systematic long-short crypto momentum strategy
   on Binance, curated by AdverseGuard Alpha, that rebalances on an hourly cycle.
-hidden: true
 ---
 
 # CTA - Momentum LongShort
