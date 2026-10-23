@@ -23,6 +23,7 @@
     * [Options Market Making](for-capital-allocators/usdc-yield/market-neutral/options-market-making.md)
     * [Jupiter JLP Delta Neutral](for-capital-allocators/usdc-yield/market-neutral/jupiter-jlp-delta-neutral.md)
     * [HFT Multi-factor](for-capital-allocators/usdc-yield/market-neutral/hft-multi-factor.md)
+    * [HFT Market Making](for-capital-allocators/usdc-yield/market-neutral/hft-market-making.md)
     * [Meridian Liquidity Provider](for-capital-allocators/usdc-yield/market-neutral/meridian-liquidity-provider.md)
   * [Directional](for-capital-allocators/usdc-yield/directional/README.md)
     * [CTA - Adaptive Alpha](for-capital-allocators/usdc-yield/directional/cta-adaptive-alpha.md)
