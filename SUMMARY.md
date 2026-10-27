@@ -114,7 +114,7 @@
 ## Additional Info
 
 * [Fees + Redemption Period](additional-info/fees-+-redemption-period.md)
-* [APY and APR Calculations](additional-info/apy-and-apr-calculations.md)
+* [Trailing APY and APR Calculations](additional-info/apy-and-apr-calculations.md)
 * [Brand Kit](additional-info/brand-kit.md)
 
 ## LEGAL

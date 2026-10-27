@@ -34,4 +34,4 @@ Every curator passes our [vetting framework](../../curators/copy-of-strategy-cur
 
 ### What Remains
 
-None of the above guarantees that a spread converges, that a hedge stays available, or that an exit completes at the expected price. Published metrics — APY, Sharpe ratio, maximum drawdown — are historical measurements, not forecasts; see [APY and APR Calculations](../../additional-info/apy-and-apr-calculations.md) for how they are computed. Past performance does not indicate future results, and a strategy with years of steady returns can still have its worst month next month.
+None of the above guarantees that a spread converges, that a hedge stays available, or that an exit completes at the expected price. Published metrics — Trailing APY, Sharpe ratio, maximum drawdown — are historical measurements, not forecasts; see [Trailing APY and APR Calculations](../../additional-info/apy-and-apr-calculations.md) for how they are computed. Past performance does not indicate future results, and a strategy with years of steady returns can still have its worst month next month.
