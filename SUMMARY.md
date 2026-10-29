@@ -14,6 +14,8 @@
 
 ## For Capital Allocators
 
+* [Neutral Curated](for-capital-allocators/neutral-curated.md)
+* [Neutral Marketplace](for-capital-allocators/neutral-marketplace.md)
 * [Neutral Autopilot](for-capital-allocators/neutral-autopilot.md)
 * [USDC Yield](for-capital-allocators/usdc-yield/README.md)
   * [Market Neutral](for-capital-allocators/usdc-yield/market-neutral/README.md)

@@ -6,6 +6,10 @@ description: >-
 
 # Meridian Liquidity Provider
 
+{% hint style="info" %}
+This strategy is listed in [Neutral Marketplace](../../neutral-marketplace.md): it passed basic due diligence and has not yet been tested with Neutral capital.
+{% endhint %}
+
 ## Overview
 
 Meridian Liquidity Provider (MLP) is a market making strategy between Meridian perpetuals and Bitget. Kappa Labs manages the strategy. It provides liquidity on one venue and manages the offsetting exposure on the other, so returns come from spread capture and not from market direction.
