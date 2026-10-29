@@ -1,16 +1,16 @@
 ---
 description: >-
-  Neutral Trade's first SOL Yield Vault: an institutional options market making
-  strategy on OKX, curated by Xanthas, whose returns are used to buy more SOL.
+  Neutral Trade's first SOL Yield Vault: a systematic Bitcoin options strategy
+  on OKX, curated by Xanthas, whose returns are used to buy more SOL.
 ---
 
 # Options Market Making (SOL)
 
 ## Overview
 
-Options Market Making (SOL) is Neutral Trade's first SOL Yield Vault. You deposit SOL, and the vault runs the same institutional options market making strategy as our [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault, curated by Xanthas on OKX. The strategy's returns are used to buy more SOL, so the vault aims to grow the number of SOL you hold.
+Options Market Making (SOL) is Neutral Trade's first SOL Yield Vault. You deposit SOL, and the vault runs the same systematic Bitcoin options strategy as our [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault, curated by Xanthas on OKX. The strategy's returns are used to buy more SOL, so the vault aims to grow the number of SOL you hold.
 
-The strategy targets volatility and relative-value opportunities through continuous options market making and multi-leg options trading. Its returns come from volatility and relative-value capture, not from the direction of the underlying market.
+The software sells short-dated BTC option structures when implied volatility is rich compared with a proprietary three-day realised-volatility forecast, and hedges directional exposure with perpetual swaps. Its returns come from the variance risk premium in crypto options markets, not from the direction of the market.
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>DEPOSIT</strong></td><td><a href="https://www.neutral.trade/strategies/options-mm-sol">https://www.neutral.trade/strategies/options-mm-sol</a></td></tr></tbody></table>
 
@@ -32,10 +32,8 @@ The vault's Details view in the app shows the current terms. See [Fees + Redempt
 ## How It Works
 
 1. **You deposit SOL.** The app accepts native SOL, wrapped SOL (wSOL), or both, and wraps native SOL for you.
-2. **The strategy trades.** Xanthas runs an automated options market making system on OKX. It quotes across the volatility surface, with a particular edge in multi-leg structures such as calendars, butterflies, verticals and risk reversals, sourced through institutional RFQ networks alongside order-book quoting. Directional exposure from the options book is hedged with perpetual futures.
+2. **The strategy trades.** Xanthas's software forecasts Bitcoin's realised volatility over the next three days. When implied volatility in the BTC options market is rich compared with that forecast, it sells short-dated BTC option structures on OKX, within pre-configured risk parameters. Directional exposure is hedged with perpetual swaps. Custom order handlers execute automatically through trade-only API credentials, so Xanthas never holds the capital.
 3. **Returns buy more SOL.** The strategy's returns are used to buy more SOL for the vault, so your share of the vault is measured, and grows, in SOL.
-
-The core engine is built around an arbitrage-free eSSVI volatility surface and a Bates-Kou jump-diffusion model calibrated to crypto's asymmetric return profile.
 
 ### Venues
 
@@ -43,28 +41,27 @@ The core engine is built around an arbitrage-free eSSVI volatility surface and a
 
 ### Yield Sources
 
-* **Variance risk premium:** captured through short-dated volatility selling.
-* **Relative-value capture:** edge from trading multi-leg options structures, sourced through institutional RFQ networks alongside order-book quoting.
+* **Variance risk premium:** implied volatility in crypto options tends to be priced above the volatility that is later realised. The strategy captures this gap by selling short-dated volatility when it is rich.
 
 ## Risk Factors
 
 **SOL price exposure:** Your position is held in SOL. The vault aims to increase the number of SOL you hold, but the USD value of your position moves with the SOL price, up and down.
 
-**Volatility and jump risk:** The options book is hedged against price direction but keeps exposure to changes in implied volatility (vega) and to large sudden price moves (gamma and jumps). A volatility spike or a sharp market move can cause mark-to-market losses, which reduce the number of SOL in the vault. Mitigations: a jump-diffusion pricing model that prices the likelihood of sharp moves, and dedicated vega management.
+**Volatility and jump risk:** The options book is hedged against price direction but keeps exposure to changes in implied volatility (vega) and to large sudden price moves (gamma and jumps). Short option positions lose money when realised volatility is higher than the volatility that was sold, so a volatility spike or a sharp market move can cause mark-to-market losses, which reduce the number of SOL in the vault. Mitigations: trades are sized and limited by pre-configured risk parameters, and positions are short-dated.
 
-**Adverse selection risk:** As a market maker, the strategy can be filled on the wrong side of an informed move. Mitigations: the jump-diffusion pricing model reduces pricing error on out-of-the-money options.
+**Model risk:** The strategy depends on its three-day realised-volatility forecast. If the forecast is wrong, the strategy can sell volatility that is not rich. Mitigations: pre-configured risk parameters limit the size of each position.
 
-**Hedging and funding risk:** Directional exposure is hedged with perpetual futures. Funding costs can be positive or negative, hedge adjustments have transaction costs, and perpetual positions are subject to exchange margin requirements and Auto-Deleveraging (ADL). Mitigations: charm-aware hedging reduces how often the hedge must be adjusted, and the risk framework includes funding rate hedging.
+**Hedging and funding risk:** Directional exposure is hedged with perpetual swaps. Funding costs can be positive or negative, hedge adjustments have transaction costs, and perpetual positions are subject to exchange margin requirements and Auto-Deleveraging (ADL).
 
 **Counterparty and exchange risk:** Trading on a centralized venue creates exposure to venue failure, insolvency, or operational disruption. Mitigations: off-exchange custody and settlement through Copper, so assets stay with the custodian and not on the exchange balance sheet.
 
-**Operational and execution risk:** The strategy runs as automated software through the exchange API and depends on connectivity and infrastructure. Mitigations: exchange-native market-maker protection, cancel-on-disconnect, and independent software circuit breakers.
+**Operational and execution risk:** The strategy runs as automated software through the exchange API and depends on connectivity and infrastructure. Mitigations: the API credentials are trade-only, so the curator can trade the account but cannot withdraw from it.
 
 The [Risk Overview](../risk-overview/) covers these risks in more detail.
 
 ## Why Xanthas?
 
-Xanthas is an institutional crypto options market maker. It also curates the [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault on Neutral Trade, which runs the same strategy in USDC and has been live since 14 July 2026.
+Xanthas is an eight-person team with experience from Societe Generale, Tower Research Capital, B2C2, Goldman Sachs and Graham Capital. Quant, engineering and trade operations are in house, with no offshore contractors. It also curates the [Options Market Making](../usdc-yield/market-neutral/options-market-making.md) vault on Neutral Trade, which runs the same strategy in USDC and has been live since 14 July 2026.
 
 {% hint style="info" %}
 Xanthas is an alias. We've excluded the curator's full name to mitigate alpha leaking. Neutral Trade has completed thorough due diligence on the team and its strategy.
