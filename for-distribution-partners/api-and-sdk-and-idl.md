@@ -93,12 +93,25 @@ constructing the final transaction where required, presenting it to the signer, 
 
 ## IDL
 
-The Anchor IDL describes the Neutral Strategy Vault program. The current artifacts include the
-referral tier schedule, referred net deposits, effective fee-rate events, builder registration, and
-claim instructions introduced for the launched rebate mechanism.
+The Anchor IDL describes the Neutral Strategy Vault program (`ntbundle`, metadata version `0.1.0`).
+These downloads contain **57 instructions, 68 events, and 9 account types**.
+
+Alongside the referral tier schedule, referred net deposits, effective fee-rate events, builder
+registration, and claim instructions, this version includes the `TokenizedBundleDepositor` account
+and the following added instructions and events. Names below use the JSON IDL spelling.
+
+| Instruction | Event |
+| ----------- | ----- |
+| `apply_fees_to_tokenized_depositor` | `ChargedFeesToTokenizedDepositor` |
+| `initialize_tokenized_bundle_depositor` | `TokenizedBundleDepositorInitialized` |
+| `instant_mint_bundle_tokens` | `InstantBundleTokensMinted` |
+| `request_token_switch` | `TokenSwitchRequested` |
+| `request_token_withdrawal` | `TokenWithdrawalRequested` |
+| `set_issuance_fee` | `IssuanceFeeSet` |
+| `set_mint_cap_per_cycle` | `MintCapPerCycleSet` |
 
 * `ntbundle.json` is the JSON IDL.
-* `ntbundle.ts` is the typed TypeScript IDL.
+* `ntbundle.ts` is the generated `Ntbundle` TypeScript type helper, with camelCase names.
 
 {% file src="../.gitbook/assets/ntbundle.json" %}
 
