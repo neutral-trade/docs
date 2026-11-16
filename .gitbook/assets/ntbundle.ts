@@ -81,6 +81,131 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "applyFeesToTokenizedDepositor",
+      "discriminator": [
+        237,
+        243,
+        229,
+        36,
+        146,
+        77,
+        86,
+        168
+      ],
+      "accounts": [
+        {
+          "name": "keeper",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "bundleAccount",
+          "writable": true
+        },
+        {
+          "name": "bundleTempData",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  84,
+                  69,
+                  77,
+                  80,
+                  95,
+                  68,
+                  65,
+                  84,
+                  65
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "oracleData",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  79,
+                  82,
+                  65,
+                  67,
+                  76,
+                  69
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenizedBundleDepositor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  68,
+                  69,
+                  80,
+                  79,
+                  83,
+                  73,
+                  84,
+                  79,
+                  82
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        }
+      ],
+      "args": []
+    },
+    {
       "name": "applyFeesToUser",
       "discriminator": [
         26,
@@ -1277,6 +1402,545 @@ export type Ntbundle = {
         }
       ],
       "args": []
+    },
+    {
+      "name": "initializeTokenizedBundleDepositor",
+      "discriminator": [
+        56,
+        137,
+        71,
+        110,
+        14,
+        153,
+        246,
+        241
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "bundleAccount"
+        },
+        {
+          "name": "assetAddress"
+        },
+        {
+          "name": "tokenizedBundleDepositor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  68,
+                  69,
+                  80,
+                  79,
+                  83,
+                  73,
+                  84,
+                  79,
+                  82
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenAuthority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  95,
+                  65,
+                  85,
+                  84,
+                  72,
+                  79,
+                  82,
+                  73,
+                  84,
+                  89
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  77,
+                  73,
+                  78,
+                  84
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "systemProgram",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "decimals",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "instantMintBundleTokens",
+      "discriminator": [
+        56,
+        192,
+        88,
+        145,
+        75,
+        250,
+        148,
+        33
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "userAssetTokenAccount",
+          "writable": true
+        },
+        {
+          "name": "bundleAssetAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "bundleAssetAuthority"
+              },
+              {
+                "kind": "const",
+                "value": [
+                  6,
+                  221,
+                  246,
+                  225,
+                  215,
+                  101,
+                  161,
+                  147,
+                  217,
+                  203,
+                  225,
+                  70,
+                  206,
+                  235,
+                  121,
+                  172,
+                  28,
+                  180,
+                  133,
+                  237,
+                  95,
+                  91,
+                  55,
+                  145,
+                  58,
+                  140,
+                  245,
+                  133,
+                  126,
+                  255,
+                  0,
+                  169
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "assetAddress"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "bundleAssetAuthority",
+          "docs": [
+            "remains the signer for the inbound transfer."
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  65,
+                  83,
+                  83,
+                  69,
+                  84,
+                  95,
+                  65,
+                  85,
+                  84,
+                  72,
+                  79,
+                  82,
+                  73,
+                  84,
+                  89
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "treasuryAccount",
+          "writable": true
+        },
+        {
+          "name": "bundleAccount",
+          "writable": true
+        },
+        {
+          "name": "bundleTempData",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  84,
+                  69,
+                  77,
+                  80,
+                  95,
+                  68,
+                  65,
+                  84,
+                  65
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "oracleData",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  79,
+                  82,
+                  65,
+                  67,
+                  76,
+                  69
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenizedBundleDepositor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  68,
+                  69,
+                  80,
+                  79,
+                  83,
+                  73,
+                  84,
+                  79,
+                  82
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "assetAddress"
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  77,
+                  73,
+                  78,
+                  84
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenAuthority",
+          "docs": [
+            "both its canonical seeds and the tokenized depositor's stored address."
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  95,
+                  65,
+                  85,
+                  84,
+                  72,
+                  79,
+                  82,
+                  73,
+                  84,
+                  89
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "destinationTokenAccount",
+          "writable": true
+        },
+        {
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amountIn",
+          "type": "u64"
+        },
+        {
+          "name": "minTokensOut",
+          "type": "u64"
+        }
+      ]
     },
     {
       "name": "managerWithdraw",
@@ -4743,6 +5407,466 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "requestTokenSwitch",
+      "discriminator": [
+        187,
+        232,
+        234,
+        24,
+        215,
+        96,
+        20,
+        53
+      ],
+      "accounts": [
+        {
+          "name": "tokenWithdrawalRequest",
+          "accounts": [
+            {
+              "name": "user",
+              "writable": true,
+              "signer": true
+            },
+            {
+              "name": "userBundleAccount",
+              "writable": true,
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      85,
+                      83,
+                      69,
+                      82,
+                      95,
+                      66,
+                      85,
+                      78,
+                      68,
+                      76,
+                      69
+                    ]
+                  },
+                  {
+                    "kind": "account",
+                    "path": "user"
+                  },
+                  {
+                    "kind": "account",
+                    "path": "bundleAccount"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "bundleAccount",
+              "writable": true
+            },
+            {
+              "name": "bundleTempData",
+              "writable": true,
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      66,
+                      85,
+                      78,
+                      68,
+                      76,
+                      69,
+                      95,
+                      84,
+                      69,
+                      77,
+                      80,
+                      95,
+                      68,
+                      65,
+                      84,
+                      65
+                    ]
+                  },
+                  {
+                    "kind": "account",
+                    "path": "bundleAccount"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "oracleData",
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      79,
+                      82,
+                      65,
+                      67,
+                      76,
+                      69
+                    ]
+                  },
+                  {
+                    "kind": "account",
+                    "path": "bundleAccount"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "tokenizedBundleDepositor",
+              "writable": true,
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      84,
+                      79,
+                      75,
+                      69,
+                      78,
+                      73,
+                      90,
+                      69,
+                      68,
+                      95,
+                      66,
+                      85,
+                      78,
+                      68,
+                      76,
+                      69,
+                      95,
+                      68,
+                      69,
+                      80,
+                      79,
+                      83,
+                      73,
+                      84,
+                      79,
+                      82
+                    ]
+                  },
+                  {
+                    "kind": "account",
+                    "path": "bundleAccount"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "mint",
+              "writable": true,
+              "pda": {
+                "seeds": [
+                  {
+                    "kind": "const",
+                    "value": [
+                      84,
+                      79,
+                      75,
+                      69,
+                      78,
+                      73,
+                      90,
+                      69,
+                      68,
+                      95,
+                      66,
+                      85,
+                      78,
+                      68,
+                      76,
+                      69,
+                      95,
+                      77,
+                      73,
+                      78,
+                      84
+                    ]
+                  },
+                  {
+                    "kind": "account",
+                    "path": "bundleAccount"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "sourceTokenAccount",
+              "writable": true
+            },
+            {
+              "name": "tokenProgram",
+              "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+            }
+          ]
+        },
+        {
+          "name": "targetBundleAccount"
+        },
+        {
+          "name": "targetUserBundleAccount",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  85,
+                  83,
+                  69,
+                  82,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "token_withdrawal_request.user",
+                "account": "requestTokenWithdrawal"
+              },
+              {
+                "kind": "account",
+                "path": "targetBundleAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "tokensToBurn",
+          "type": "u64"
+        },
+        {
+          "name": "minSharesOut",
+          "type": "u128"
+        }
+      ]
+    },
+    {
+      "name": "requestTokenWithdrawal",
+      "discriminator": [
+        138,
+        108,
+        216,
+        213,
+        7,
+        119,
+        182,
+        63
+      ],
+      "accounts": [
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "userBundleAccount",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  85,
+                  83,
+                  69,
+                  82,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "bundleAccount",
+          "writable": true
+        },
+        {
+          "name": "bundleTempData",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  84,
+                  69,
+                  77,
+                  80,
+                  95,
+                  68,
+                  65,
+                  84,
+                  65
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "oracleData",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  79,
+                  82,
+                  65,
+                  67,
+                  76,
+                  69
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tokenizedBundleDepositor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  68,
+                  69,
+                  80,
+                  79,
+                  83,
+                  73,
+                  84,
+                  79,
+                  82
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  77,
+                  73,
+                  78,
+                  84
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        },
+        {
+          "name": "sourceTokenAccount",
+          "writable": true
+        },
+        {
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "tokensToBurn",
+          "type": "u64"
+        },
+        {
+          "name": "minSharesOut",
+          "type": "u128"
+        }
+      ]
+    },
+    {
       "name": "requestWithdrawal",
       "discriminator": [
         251,
@@ -5053,6 +6177,36 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "setIssuanceFee",
+      "discriminator": [
+        44,
+        117,
+        252,
+        159,
+        144,
+        198,
+        56,
+        169
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "bundleAccount",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "issuanceFeeBps",
+          "type": "u32"
+        }
+      ]
+    },
+    {
       "name": "setKeeper",
       "discriminator": [
         102,
@@ -5138,6 +6292,78 @@ export type Ntbundle = {
       "args": [
         {
           "name": "minDepositAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "setMintCapPerCycle",
+      "discriminator": [
+        114,
+        75,
+        182,
+        13,
+        172,
+        126,
+        102,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "manager",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "bundleAccount"
+        },
+        {
+          "name": "tokenizedBundleDepositor",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  84,
+                  79,
+                  75,
+                  69,
+                  78,
+                  73,
+                  90,
+                  69,
+                  68,
+                  95,
+                  66,
+                  85,
+                  78,
+                  68,
+                  76,
+                  69,
+                  95,
+                  68,
+                  69,
+                  80,
+                  79,
+                  83,
+                  73,
+                  84,
+                  79,
+                  82
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "bundleAccount"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "mintCapPerCycle",
           "type": "u64"
         }
       ]
@@ -6066,6 +7292,19 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "tokenizedBundleDepositor",
+      "discriminator": [
+        76,
+        78,
+        8,
+        31,
+        121,
+        235,
+        87,
+        100
+      ]
+    },
+    {
       "name": "userBundleAccount",
       "discriminator": [
         32,
@@ -6250,6 +7489,19 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "chargedFeesToTokenizedDepositor",
+      "discriminator": [
+        62,
+        72,
+        194,
+        185,
+        43,
+        101,
+        140,
+        198
+      ]
+    },
+    {
       "name": "chargedFeesToUser",
       "discriminator": [
         201,
@@ -6393,6 +7645,32 @@ export type Ntbundle = {
       ]
     },
     {
+      "name": "instantBundleTokensMinted",
+      "discriminator": [
+        59,
+        53,
+        141,
+        65,
+        83,
+        199,
+        169,
+        122
+      ]
+    },
+    {
+      "name": "issuanceFeeSet",
+      "discriminator": [
+        66,
+        143,
+        59,
+        234,
+        135,
+        7,
+        123,
+        255
+      ]
+    },
+    {
       "name": "managerWithdrawal",
       "discriminator": [
         167,
@@ -6442,6 +7720,19 @@ export type Ntbundle = {
         207,
         22,
         19
+      ]
+    },
+    {
+      "name": "mintCapPerCycleSet",
+      "discriminator": [
+        6,
+        96,
+        23,
+        34,
+        16,
+        103,
+        37,
+        83
       ]
     },
     {
@@ -6741,6 +8032,45 @@ export type Ntbundle = {
         29,
         245,
         144
+      ]
+    },
+    {
+      "name": "tokenSwitchRequested",
+      "discriminator": [
+        14,
+        152,
+        212,
+        226,
+        82,
+        255,
+        201,
+        252
+      ]
+    },
+    {
+      "name": "tokenWithdrawalRequested",
+      "discriminator": [
+        132,
+        121,
+        35,
+        231,
+        122,
+        246,
+        84,
+        93
+      ]
+    },
+    {
+      "name": "tokenizedBundleDepositorInitialized",
+      "discriminator": [
+        252,
+        20,
+        151,
+        70,
+        40,
+        5,
+        175,
+        80
       ]
     },
     {
@@ -7344,6 +8674,66 @@ export type Ntbundle = {
       "code": 6093,
       "name": "invalidReferralTierConfig",
       "msg": "Invalid referral tier configuration"
+    },
+    {
+      "code": 6094,
+      "name": "invalidTokenizedBundleDepositor",
+      "msg": "Invalid tokenized bundle depositor"
+    },
+    {
+      "code": 6095,
+      "name": "invalidTokenizedBundleMint",
+      "msg": "Invalid tokenized bundle mint"
+    },
+    {
+      "code": 6096,
+      "name": "invalidTokenizedBundleTokenAuthority",
+      "msg": "Invalid tokenized bundle token authority"
+    },
+    {
+      "code": 6097,
+      "name": "tokenAmountZero",
+      "msg": "Token amount must be greater than zero"
+    },
+    {
+      "code": 6098,
+      "name": "tokenAmountTooSmall",
+      "msg": "Token amount is too small"
+    },
+    {
+      "code": 6099,
+      "name": "permissionedBundleTokenizationUnsupported",
+      "msg": "Permissioned bundle tokenization is not supported"
+    },
+    {
+      "code": 6100,
+      "name": "pendingStateActive",
+      "msg": "Pending deposit, withdrawal, or switch state is active"
+    },
+    {
+      "code": 6101,
+      "name": "tokenizedBundleStateInvalid",
+      "msg": "Tokenized bundle state is invalid"
+    },
+    {
+      "code": 6102,
+      "name": "minimumTokensOutNotMet",
+      "msg": "Minimum share tokens out was not met"
+    },
+    {
+      "code": 6103,
+      "name": "excessiveIssuanceFee",
+      "msg": "Excessive issuance fee"
+    },
+    {
+      "code": 6104,
+      "name": "minimumSharesOutNotMet",
+      "msg": "Minimum bundle shares out was not met"
+    },
+    {
+      "code": 6105,
+      "name": "instantMintCapExceeded",
+      "msg": "Instant mint cap per cycle exceeded"
     }
   ],
   "types": [
@@ -7611,11 +9001,34 @@ export type Ntbundle = {
             "type": "u8"
           },
           {
+            "name": "issuanceFeeBps",
+            "type": "u32"
+          },
+          {
+            "name": "lastManagementFeeChangeTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "managementFeeVersion",
+            "docs": [
+              "Lets an unchanged user override acknowledge a bundle change without losing accrual."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "performanceFeeVersion",
+            "docs": [
+              "Holders acknowledge a new version when they reset their performance fee basis.",
+              "A counter distinguishes changes made within the same clock timestamp."
+            ],
+            "type": "u64"
+          },
+          {
             "name": "padding",
             "type": {
               "array": [
                 "u8",
-                117
+                89
               ]
             }
           }
@@ -7982,6 +9395,54 @@ export type Ntbundle = {
       }
     },
     {
+      "name": "chargedFeesToTokenizedDepositor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "totalFeeShares",
+            "type": "u128"
+          },
+          {
+            "name": "totalFeeValue",
+            "type": "u64"
+          },
+          {
+            "name": "managementFeeShares",
+            "type": "u128"
+          },
+          {
+            "name": "performanceFeeShares",
+            "type": "u128"
+          },
+          {
+            "name": "sharePrice",
+            "type": "u128"
+          },
+          {
+            "name": "bundleAccountKey",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokenizedBundleDepositor",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokenizedDepositorSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "managerPfeeSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "managerMfeeSharesAfter",
+            "type": "u128"
+          }
+        ]
+      }
+    },
+    {
       "name": "chargedFeesToUser",
       "type": {
         "kind": "struct",
@@ -8259,6 +9720,94 @@ export type Ntbundle = {
       }
     },
     {
+      "name": "instantBundleTokensMinted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "bundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amountIn",
+            "type": "u64"
+          },
+          {
+            "name": "depositFeeAsset",
+            "type": "u64"
+          },
+          {
+            "name": "netAmount",
+            "type": "u64"
+          },
+          {
+            "name": "sharesMinted",
+            "type": "u128"
+          },
+          {
+            "name": "issuanceFeeShares",
+            "type": "u128"
+          },
+          {
+            "name": "tokensMinted",
+            "type": "u64"
+          },
+          {
+            "name": "sharePrice",
+            "type": "u128"
+          },
+          {
+            "name": "poolSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "tokenSupplyAfter",
+            "type": "u64"
+          },
+          {
+            "name": "totalSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "bundleUnderlyingBalanceAfter",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "issuanceFeeSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "oldIssuanceFeeBps",
+            "type": "u32"
+          },
+          {
+            "name": "newIssuanceFeeBps",
+            "type": "u32"
+          },
+          {
+            "name": "bundleAccountKey",
+            "type": "pubkey"
+          },
+          {
+            "name": "manager",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
       "name": "managerWithdrawal",
       "type": {
         "kind": "struct",
@@ -8361,6 +9910,34 @@ export type Ntbundle = {
           },
           {
             "name": "bundleAccountKey",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "mintCapPerCycleSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "oldMintCapPerCycle",
+            "type": "u64"
+          },
+          {
+            "name": "newMintCapPerCycle",
+            "type": "u64"
+          },
+          {
+            "name": "tokenizedBundleDepositor",
+            "type": "pubkey"
+          },
+          {
+            "name": "bundleAccountKey",
+            "type": "pubkey"
+          },
+          {
+            "name": "manager",
             "type": "pubkey"
           }
         ]
@@ -9081,6 +10658,275 @@ export type Ntbundle = {
       }
     },
     {
+      "name": "tokenSwitchRequested",
+      "docs": [
+        "Emitted by `request_token_switch` instead of `TokenWithdrawalRequested` and",
+        "`BundleSwitchRequested`, so indexers count the redemption once. The fields",
+        "through `timestamp` match `BundleSwitchRequested`."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "sourceBundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "targetBundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "sharesAmount",
+            "type": "u128"
+          },
+          {
+            "name": "estimatedGrossRedemption",
+            "type": "u64"
+          },
+          {
+            "name": "estimatedNetToDestination",
+            "type": "u64"
+          },
+          {
+            "name": "estimatedDestinationDepositFee",
+            "type": "u64"
+          },
+          {
+            "name": "estimatedDestinationPendingDeposit",
+            "type": "u64"
+          },
+          {
+            "name": "cooldownEndTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokensBurned",
+            "type": "u64"
+          },
+          {
+            "name": "exportValue",
+            "type": "u64"
+          },
+          {
+            "name": "tokenizedDepositorSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "tokenSupplyAfter",
+            "type": "u64"
+          },
+          {
+            "name": "userSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "totalShares",
+            "type": "u128"
+          },
+          {
+            "name": "referredNetDepositsAfter",
+            "type": {
+              "option": "i128"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "tokenWithdrawalRequested",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "user",
+            "type": "pubkey"
+          },
+          {
+            "name": "bundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokensBurned",
+            "type": "u64"
+          },
+          {
+            "name": "shares",
+            "type": "u128"
+          },
+          {
+            "name": "exportValue",
+            "type": "u64"
+          },
+          {
+            "name": "estimatedPendingWithdrawalValue",
+            "type": "u64"
+          },
+          {
+            "name": "withdrawalAvailableTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "tokenizedDepositorSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "tokenSupplyAfter",
+            "type": "u64"
+          },
+          {
+            "name": "userSharesAfter",
+            "type": "u128"
+          },
+          {
+            "name": "totalShares",
+            "type": "u128"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "referredNetDepositsAfter",
+            "type": {
+              "option": "i128"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "tokenizedBundleDepositor",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "bundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokenAuthority",
+            "type": "pubkey"
+          },
+          {
+            "name": "shares",
+            "type": "u128"
+          },
+          {
+            "name": "cumulativeTaxedProfit",
+            "docs": [
+              "Cumulative pool profit settled after fees or exempted, in asset minor units.",
+              "The pool fee watermark is net_deposits + cumulative_taxed_profit."
+            ],
+            "type": "u128"
+          },
+          {
+            "name": "lastManagementFeeTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "netDeposits",
+            "type": "i128"
+          },
+          {
+            "name": "totalFeeCharged",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "mintBump",
+            "type": "u8"
+          },
+          {
+            "name": "tokenAuthorityBump",
+            "type": "u8"
+          },
+          {
+            "name": "mintCapPerCycle",
+            "docs": [
+              "Maximum instant-mint net asset volume allowed per netting cycle, in minor units.",
+              "Zero leaves instant minting unlimited."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "currentCycleMinted",
+            "type": "u64"
+          },
+          {
+            "name": "managementFeeRemainder",
+            "docs": [
+              "Numerator remainder retained between management-fee charges."
+            ],
+            "type": "u128"
+          },
+          {
+            "name": "performanceFeeVersion",
+            "type": "u64"
+          },
+          {
+            "name": "currentCycleNettingTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "padding",
+            "type": {
+              "array": [
+                "u8",
+                116
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "tokenizedBundleDepositorInitialized",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "tokenizedBundleDepositor",
+            "type": "pubkey"
+          },
+          {
+            "name": "bundle",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "tokenAuthority",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
       "name": "userBundleAccount",
       "type": {
         "kind": "struct",
@@ -9194,11 +11040,23 @@ export type Ntbundle = {
             "type": "pubkey"
           },
           {
+            "name": "performanceFeeVersion",
+            "type": "u64"
+          },
+          {
+            "name": "performanceFeeResetPending",
+            "type": "bool"
+          },
+          {
+            "name": "managementFeeVersion",
+            "type": "u64"
+          },
+          {
             "name": "padding",
             "type": {
               "array": [
                 "u8",
-                145
+                128
               ]
             }
           }
