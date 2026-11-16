@@ -62,8 +62,7 @@ Use the TypeScript SDK when you need direct RPC state checks, program instructio
 ## IDL
 
 The Anchor IDL describes the Neutral Strategy Vault program (`ntbundle`, metadata version `0.1.0`).
-These downloads match `bundle-sc` commit `13379b6` on `main` and contain **57 instructions,
-68 events, and 9 account types**. They include the builder tier configuration, referred-net-deposit
+These downloads contain **57 instructions, 68 events, and 9 account types**. They include the builder tier configuration, referred-net-deposit
 state, and `TokenizedBundleDepositor` account. The [IDL reference](../for-distribution-partners/api-and-sdk-and-idl.md#idl)
 lists the added instructions and events. Use the IDL to decode accounts and events or construct
 program interactions directly.

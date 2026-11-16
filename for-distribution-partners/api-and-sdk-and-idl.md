@@ -94,8 +94,7 @@ constructing the final transaction where required, presenting it to the signer, 
 ## IDL
 
 The Anchor IDL describes the Neutral Strategy Vault program (`ntbundle`, metadata version `0.1.0`).
-These downloads match `bundle-sc` commit `13379b6` on `main` and contain **57 instructions,
-68 events, and 9 account types**.
+These downloads contain **57 instructions, 68 events, and 9 account types**.
 
 Alongside the referral tier schedule, referred net deposits, effective fee-rate events, builder
 registration, and claim instructions, this version includes the `TokenizedBundleDepositor` account
