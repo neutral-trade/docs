@@ -1,0 +1,18 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Neutral Trade
+  structure:
+    - type: space
+      key: space-1
+      title: Neutral Trade
+      path: neutral-trade
+      default: true
+      content:
+        directory: ./neutral-trade
+    - type: space
+      key: space-2
+      title: Neutral Trade (CN)
+      path: cn-neutral-trade
+      content:
+        directory: ./cn-neutral-trade
+        language: zh
