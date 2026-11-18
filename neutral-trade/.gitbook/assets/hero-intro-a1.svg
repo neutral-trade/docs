@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Baseline at y=340 - content fills y=140 to y=340 (200px band), centered on y=240 -->
+  <line x1="120" y1="340" x2="1870" y2="340" stroke="#FFFFFF" stroke-width="0.8" opacity="0.30"/>
+
+  <!-- Tick marks -->
+  <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.20">
+    <line x1="360" y1="336" x2="360" y2="344"/>
+    <line x1="600" y1="336" x2="600" y2="344"/>
+    <line x1="840" y1="336" x2="840" y2="344"/>
+    <line x1="1080" y1="336" x2="1080" y2="344"/>
+    <line x1="1320" y1="336" x2="1320" y2="344"/>
+    <line x1="1560" y1="336" x2="1560" y2="344"/>
+    <line x1="1800" y1="336" x2="1800" y2="344"/>
+  </g>
+
+  <!-- Tertiary curve: shortest amplitude, lowest opacity -->
+  <path d="M 200 340 Q 700 338, 1100 312 T 1790 270" fill="none" stroke="#FE5A19" stroke-width="1.2" opacity="0.30"/>
+
+  <!-- Secondary curve: medium amplitude, medium opacity -->
+  <path d="M 200 340 Q 700 332, 1100 274 T 1790 200" fill="none" stroke="#FE5A19" stroke-width="1.8" opacity="0.55"/>
+
+  <!-- Primary curve: full amplitude, primary opacity (peaks at y=140 — 200px above baseline) -->
+  <path d="M 200 340 Q 700 325, 1100 230 T 1790 140" fill="none" stroke="#FE5A19" stroke-width="2.5"/>
+
+  <!-- Endpoints on the primary curve only -->
+  <circle cx="200" cy="340" r="5" fill="#FE5A19"/>
+  <circle cx="1790" cy="140" r="5" fill="#FE5A19"/>
+</svg>

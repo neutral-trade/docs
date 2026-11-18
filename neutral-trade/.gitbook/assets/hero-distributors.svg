@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Spokes from NT center to each distributor node. Low opacity so nodes carry weight. -->
+  <g stroke="#FE5A19" stroke-width="0.8" opacity="0.4">
+    <line x1="995" y1="240" x2="1180" y2="88"/>
+    <line x1="995" y1="240" x2="1480" y2="146"/>
+    <line x1="995" y1="240" x2="1595" y2="240"/>
+    <line x1="995" y1="240" x2="1480" y2="334"/>
+    <line x1="995" y1="240" x2="1180" y2="392"/>
+    <line x1="995" y1="240" x2="810" y2="392"/>
+    <line x1="995" y1="240" x2="510" y2="334"/>
+    <line x1="995" y1="240" x2="395" y2="240"/>
+    <line x1="995" y1="240" x2="510" y2="146"/>
+    <line x1="995" y1="240" x2="810" y2="88"/>
+  </g>
+
+  <!-- Peripheral distributor nodes (all equal weight — no hierarchy among distributors) -->
+  <g fill="#FE5A19">
+    <circle cx="1180" cy="88" r="7"/>
+    <circle cx="1480" cy="146" r="7"/>
+    <circle cx="1595" cy="240" r="7"/>
+    <circle cx="1480" cy="334" r="7"/>
+    <circle cx="1180" cy="392" r="7"/>
+    <circle cx="810" cy="392" r="7"/>
+    <circle cx="510" cy="334" r="7"/>
+    <circle cx="395" cy="240" r="7"/>
+    <circle cx="510" cy="146" r="7"/>
+    <circle cx="810" cy="88" r="7"/>
+  </g>
+
+  <!-- NT central node — visibly larger and brighter so it clearly anchors as the source -->
+  <circle cx="995" cy="240" r="44" fill="#FE5A19" opacity="0.10"/>
+  <circle cx="995" cy="240" r="24" fill="#FE5A19" opacity="0.25"/>
+  <circle cx="995" cy="240" r="12" fill="#FE5A19"/>
+</svg>

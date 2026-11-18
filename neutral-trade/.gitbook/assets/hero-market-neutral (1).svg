@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Faint vertical centerline -->
+  <line x1="995" y1="60" x2="995" y2="420" stroke="#FFFFFF" stroke-width="0.5" opacity="0.15" stroke-dasharray="4 8"/>
+
+  <!-- Baseline at vertical center (y=240) -->
+  <line x1="120" y1="240" x2="1870" y2="240" stroke="#FFFFFF" stroke-width="0.8" opacity="0.30"/>
+
+  <!-- Tick marks along baseline -->
+  <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.20">
+    <line x1="360" y1="236" x2="360" y2="244"/>
+    <line x1="600" y1="236" x2="600" y2="244"/>
+    <line x1="840" y1="236" x2="840" y2="244"/>
+    <line x1="1080" y1="236" x2="1080" y2="244"/>
+    <line x1="1320" y1="236" x2="1320" y2="244"/>
+    <line x1="1560" y1="236" x2="1560" y2="244"/>
+    <line x1="1800" y1="236" x2="1800" y2="244"/>
+  </g>
+
+  <!-- Upper curve (long): baseline 240, peaks at ~y=135 (105px amplitude). Endpoints x=200, x=920. -->
+  <path d="M 200 240 C 380 100, 740 100, 920 240" fill="none" stroke="#FE5A19" stroke-width="2.5"/>
+  <circle cx="200" cy="240" r="5" fill="#FE5A19"/>
+  <circle cx="920" cy="240" r="5" fill="#FE5A19"/>
+
+  <!-- Lower curve (short): baseline 240, dips to ~y=345 (105px amplitude). Endpoints x=1070, x=1790. Mirror of upper. -->
+  <path d="M 1070 240 C 1250 380, 1610 380, 1790 240" fill="none" stroke="#FF9B15" stroke-width="2.5" opacity="0.85"/>
+  <circle cx="1070" cy="240" r="5" fill="#FF9B15"/>
+  <circle cx="1790" cy="240" r="5" fill="#FF9B15"/>
+</svg>

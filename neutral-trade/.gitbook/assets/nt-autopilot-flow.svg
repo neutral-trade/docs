@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="840" viewBox="0 0 2400 840" font-family="'Geist Mono',monospace">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="rgba(255,255,255,0.022)" stroke-width="1"/></pattern>
+    <marker id="arw" markerUnits="userSpaceOnUse" markerWidth="24" markerHeight="24" refX="16" refY="11" orient="auto"><path d="M0,2 L18,11 L0,20 Z" fill="#FE5A19"/></marker>
+    <clipPath id="barclip"><rect x="1378" y="560" width="480" height="40" rx="10"/></clipPath>
+  </defs>
+
+  <rect x="0" y="0" width="2400" height="840" fill="#0F1117"/>
+  <rect x="0" y="0" width="2400" height="840" fill="url(#grid)"/>
+
+  <!-- corner brackets -->
+  <g fill="none" stroke="#FE5A19" stroke-width="2">
+    <path d="M90,44 L44,44 L44,90"/>
+    <path d="M2310,44 L2356,44 L2356,90"/>
+    <path d="M90,796 L44,796 L44,750"/>
+    <path d="M2310,796 L2356,796 L2356,750"/>
+  </g>
+
+  <!-- header -->
+  <g><rect x="1904" y="98" width="392" height="64" rx="10" fill="none" stroke="rgba(255,255,255,0.10)"/>
+  <text x="2100" y="139" text-anchor="middle" font-weight="500" font-size="28" letter-spacing="2" fill="#8A8F99">NEUTRAL AUTOPILOT</text></g>
+  <text x="104" y="262" font-weight="600" font-size="52" letter-spacing="1" fill="#FFFFFF">HOW AUTOPILOT WORKS</text>
+  <text x="104" y="314" font-size="28" letter-spacing="0.5" fill="#666666">one deposit, actively allocated across market-neutral strategies</text>
+
+  <!-- flow arrows (orange spine) -->
+  <g stroke="#FE5A19" stroke-width="4" marker-end="url(#arw)">
+    <line x1="410" y1="565" x2="498" y2="565"/>
+    <line x1="808" y1="565" x2="896" y2="565"/>
+    <line x1="1246" y1="565" x2="1334" y2="565"/>
+    <line x1="1904" y1="565" x2="1990" y2="565"/>
+  </g>
+
+  <!-- A Deposit -->
+  <rect x="104" y="465" width="300" height="200" rx="14" fill="#181D27" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+  <text x="254" y="553" text-anchor="middle" fill="#FFFFFF" font-size="30" font-weight="600">DEPOSIT USDC</text>
+  <text x="254" y="593" text-anchor="middle" fill="#8A8F99" font-size="22">on Solana</text>
+
+  <!-- B Vault -->
+  <rect x="502" y="465" width="300" height="200" rx="14" fill="#181D27" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+  <text x="652" y="576" text-anchor="middle" fill="#FFFFFF" font-size="30" font-weight="600">AUTOPILOT VAULT</text>
+
+  <!-- C Allocation engine (orange) -->
+  <rect x="900" y="465" width="340" height="200" rx="14" fill="#181D27" stroke="#FE5A19" stroke-width="2"/>
+  <text x="1070" y="553" text-anchor="middle" fill="#FFFFFF" font-size="30" font-weight="600">ALLOCATION ENGINE</text>
+  <text x="1070" y="593" text-anchor="middle" fill="#8A8F99" font-size="22">diversifies for you</text>
+
+  <!-- D Strategies (abstract, no named strategies) -->
+  <rect x="1338" y="430" width="560" height="270" rx="14" fill="#181D27" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+  <text x="1618" y="490" text-anchor="middle" fill="#8A8F99" font-size="26" letter-spacing="1">MARKET-NEUTRAL STRATEGIES</text>
+  <text x="1618" y="526" text-anchor="middle" fill="#666666" font-size="22">a diversified, evolving mix</text>
+  <g clip-path="url(#barclip)">
+    <rect x="1378" y="560" width="134" height="40" fill="#FE5A19"/>
+    <rect x="1512" y="560" width="115" height="40" fill="#9AA8C8"/>
+    <rect x="1627" y="560" width="96" height="40" fill="#7C8AB0"/>
+    <rect x="1723" y="560" width="77" height="40" fill="#5E6C93"/>
+    <rect x="1800" y="560" width="58" height="40" fill="#454F73"/>
+  </g>
+  <text x="1618" y="646" text-anchor="middle" fill="#555555" font-size="20">rebalanced as conditions change</text>
+
+  <!-- E You earn -->
+  <rect x="1996" y="465" width="300" height="200" rx="14" fill="#181D27" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+  <text x="2146" y="553" text-anchor="middle" fill="#FFFFFF" font-size="30" font-weight="600">YOU EARN</text>
+  <text x="2146" y="593" text-anchor="middle" fill="#8A8F99" font-size="22">hands-free</text>
+</svg>

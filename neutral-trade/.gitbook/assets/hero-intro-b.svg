@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1990 480" preserveAspectRatio="xMidYMid slice">
+  <rect width="1990" height="480" fill="#0F1117"/>
+
+  <!-- Input nodes on the left, vertically distributed -->
+  <g fill="#888888">
+    <circle cx="180" cy="80" r="4"/>
+    <circle cx="180" cy="160" r="4"/>
+    <circle cx="180" cy="240" r="4"/>
+    <circle cx="180" cy="320" r="4"/>
+    <circle cx="180" cy="400" r="4"/>
+  </g>
+
+  <!-- Converging lines from inputs to central node (at x=1500, y=240) -->
+  <g stroke="#888888" stroke-width="0.8" opacity="0.4" fill="none">
+    <path d="M 188 80 Q 800 220, 1480 240"/>
+    <path d="M 188 160 Q 800 220, 1480 240"/>
+    <path d="M 188 240 L 1480 240"/>
+    <path d="M 188 320 Q 800 260, 1480 240"/>
+    <path d="M 188 400 Q 800 260, 1480 240"/>
+  </g>
+
+  <!-- Central convergence node (the output of the engine) -->
+  <circle cx="1500" cy="240" r="48" fill="#FE5A19" opacity="0.10"/>
+  <circle cx="1500" cy="240" r="26" fill="#FE5A19" opacity="0.25"/>
+  <circle cx="1500" cy="240" r="10" fill="#FE5A19"/>
+
+  <!-- Output flow line continuing to the right -->
+  <line x1="1530" y1="240" x2="1810" y2="240" stroke="#FE5A19" stroke-width="2.5"/>
+  <circle cx="1810" cy="240" r="5" fill="#FE5A19"/>
+</svg>

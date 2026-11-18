@@ -1,0 +1,132 @@
+# Table of contents
+
+* [APP](https://www.neutral.trade/strategies)
+* [TELEGRAM](https://t.me/neutraltrade)
+* [DISCORD](https://discord.gg/S38FBexTys)
+
+## Getting Started
+
+* [Introduction](README.md)
+* [Our Thesis](getting-started/our-thesis.md)
+* [Neutral Trade Points & Referrals](getting-started/neutral-trade-points-and-referrals.md)
+* [Referral Revenue Share](getting-started/referral-revenue-share.md)
+* [Neutral VIP Program](getting-started/neutral-vip-program.md)
+
+## For Capital Allocators
+
+* [Neutral Curated](for-capital-allocators/neutral-curated.md)
+* [Neutral Marketplace](for-capital-allocators/neutral-marketplace/README.md)
+  * [Market Neutral](for-capital-allocators/neutral-marketplace/market-neutral/README.md)
+    * [Meridian Liquidity Provider](for-capital-allocators/neutral-marketplace/market-neutral/meridian-liquidity-provider.md)
+    * [Hachiko](for-capital-allocators/neutral-marketplace/market-neutral/hachiko.md)
+  * [Directional](for-capital-allocators/neutral-marketplace/directional/README.md)
+    * [Long Only Systematic Growth](for-capital-allocators/neutral-marketplace/directional/long-only-systematic-growth.md)
+* [Neutral Autopilot](for-capital-allocators/neutral-autopilot.md)
+* [USDC Yield](for-capital-allocators/usdc-yield/README.md)
+  * [Market Neutral](for-capital-allocators/usdc-yield/market-neutral/README.md)
+    * [Mid-frequency Market Making](for-capital-allocators/usdc-yield/market-neutral/mid-frequency-market-making.md)
+    * [Delta Neutral Arbitrage](for-capital-allocators/usdc-yield/market-neutral/delta-neutral-arbitrage.md)
+    * [Hyperliquid Funding Arb](for-capital-allocators/usdc-yield/market-neutral/hyperliquid-funding-arb.md)
+    * [Options Market Making](for-capital-allocators/usdc-yield/market-neutral/options-market-making.md)
+    * [Jupiter JLP Delta Neutral](for-capital-allocators/usdc-yield/market-neutral/jupiter-jlp-delta-neutral.md)
+    * [HFT Multi-factor](for-capital-allocators/usdc-yield/market-neutral/hft-multi-factor.md)
+    * [HFT Market Making](for-capital-allocators/usdc-yield/market-neutral/hft-market-making.md)
+  * [Directional](for-capital-allocators/usdc-yield/directional/README.md)
+    * [CTA - Adaptive Alpha](for-capital-allocators/usdc-yield/directional/cta-adaptive-alpha.md)
+    * [Third Eye Flagship](for-capital-allocators/usdc-yield/directional/third-eye-flagship.md)
+    * [CTA - Systematic Alpha](for-capital-allocators/usdc-yield/directional/systematic-alpha.md)
+    * [CTA - Longshort Alpha](for-capital-allocators/usdc-yield/directional/cta-longshort-alpha.md)
+    * [CTA - Momentum LongShort](for-capital-allocators/usdc-yield/directional/cta-momentum-longshort.md)
+  * [RWA](for-capital-allocators/usdc-yield/rwa/README.md)
+    * [Multi-Asset Volatility Arbitrage](for-capital-allocators/usdc-yield/rwa/multi-asset-volatility-arbitrage.md)
+  * [NT Earn](for-capital-allocators/usdc-yield/nt-earn.md)
+* [SOL Yield](for-capital-allocators/sol-yield/README.md)
+  * [Options Market Making (SOL)](for-capital-allocators/sol-yield/options-market-making-sol.md)
+* [Risk Overview](for-capital-allocators/risk-overview/README.md)
+  * [Market & Strategy Risk](for-capital-allocators/risk-overview/market-and-strategy-risk.md)
+  * [Venue, Counterparty & Curator Risk](for-capital-allocators/risk-overview/venue-counterparty-and-curator-risk.md)
+* [Deprecated Vaults](for-capital-allocators/deprecated-vaults/README.md)
+  * [Cross-Exchange Arb \[Closed\]](for-capital-allocators/deprecated-vaults/cross-exchange-arb.md)
+  * [⚡ Indexes](for-capital-allocators/deprecated-vaults/indexes/README.md)
+    * [🌝 Moon LP](for-capital-allocators/deprecated-vaults/indexes/moon-lp.md)
+    * [🗝️ The Great Debasement](for-capital-allocators/deprecated-vaults/indexes/the-great-debasement.md)
+  * [Aster Funding Arb (USDT)](for-capital-allocators/deprecated-vaults/aster-funding-arb-usdt.md)
+  * [CTA-Momentum (R\* Research) \[Closed\]](for-capital-allocators/deprecated-vaults/cta-momentum-r-research-paused.md)
+  * [🔥 JLP Delta Neutral on Drift - \[Deprecated\]](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-on-drift-deprecated/README.md)
+    * [🧠 JLP Delta Neutral on Drift (JLP in-kind) - \[Deprecated\]](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-on-drift-deprecated/jlp-delta-neutral-on-drift-jlp-in-kind-deprecated.md)
+  * [🧑‍🌾 Yield Enhancement](for-capital-allocators/deprecated-vaults/yield-enhancement/README.md)
+    * [🟣 SOL Super Staking - \[Deprecated\]](for-capital-allocators/deprecated-vaults/yield-enhancement/sol-super-staking-deprecated.md)
+    * [ETH Super Staking - \[Deprecated\]](for-capital-allocators/deprecated-vaults/yield-enhancement/eth-super-staking-deprecated.md)
+    * [BTC Super Staking - \[Deprecated\]](for-capital-allocators/deprecated-vaults/yield-enhancement/btc-super-staking-deprecated.md)
+  * [Private Credit](for-capital-allocators/deprecated-vaults/private-credit/README.md)
+    * [TermMax (Closed)](for-capital-allocators/deprecated-vaults/private-credit/termmax-closed.md)
+    * [Neutral Trade: Lighter LLP (Closed)](for-capital-allocators/deprecated-vaults/private-credit/neutral-trade-lighter-llp-closed.md)
+  * [💥 Hyper JLP - \[Deprecated\]](for-capital-allocators/deprecated-vaults/hyper-jlp-deprecated.md)
+  * [🏎️ Drift Funding Arb (USDC) - \[Deprecated\]](for-capital-allocators/deprecated-vaults/drift-funding-arb-usdc-deprecated.md)
+  * [🧺 USDC Basis (PerpsBasket) - \[Deprecated\]](for-capital-allocators/deprecated-vaults/usdc-basis-perpsbasket-deprecated.md)
+  * [⛽ Fuel MAXI - \[Deprecated\]](for-capital-allocators/deprecated-vaults/fuel-maxi-deprecated.md)
+  * [🖨️ Traders Print Vault -\[Deprecated\]](for-capital-allocators/deprecated-vaults/traders-print-vault-deprecated.md)
+  * [📉 Inverse JLP DN - \[Deprecated\]](for-capital-allocators/deprecated-vaults/inverse-jlp-dn-deprecated.md)
+  * [💸 CTA SOL Strategy \[Deprecated\]](for-capital-allocators/deprecated-vaults/cta-sol-strategy-deprecated.md)
+  * [🐸 Memes ETF (Generational Wealth) \[Deprecated\]](for-capital-allocators/deprecated-vaults/memes-etf-generational-wealth-deprecated.md)
+  * [Flexible Savings \[Deprecated\]](for-capital-allocators/deprecated-vaults/flexible-savings-deprecated/README.md)
+    * [🛡️ USDC/SOL/BTC/ETH Savings \[Deprecated\]](for-capital-allocators/deprecated-vaults/flexible-savings-deprecated/usdc-sol-btc-eth-savings-deprecated.md)
+  * [SOL / ETH Flip \[Deprecated\]](for-capital-allocators/deprecated-vaults/sol-eth-flip-deprecated.md)
+  * [💀 Traders Rekt Vault \[Deprecated\]](for-capital-allocators/deprecated-vaults/traders-rekt-vault-deprecated.md)
+  * [💧 HYPE/SOL \[Deprecated\]](for-capital-allocators/deprecated-vaults/hype-sol-deprecated.md)
+  * [\[Hyperliquid\] BTC Dominance \[Deprecated\]](for-capital-allocators/deprecated-vaults/hyperliquid-btc-dominance-deprecated.md)
+  * [\[Hyperliquid\] ALT Dominance \[Deprecated\]](for-capital-allocators/deprecated-vaults/hyperliquid-alt-dominance-deprecated.md)
+  * [🎲 Bet](for-capital-allocators/deprecated-vaults/bet/README.md)
+    * [📉 \[Hyperliquid\] The Big Short](for-capital-allocators/deprecated-vaults/bet/hyperliquid-the-big-short.md)
+  * [JLP Delta Neutral Enhanced \[Closed\]](for-capital-allocators/deprecated-vaults/jlp-delta-neutral-enhanced.md)
+
+## Neutral Strategy Vaults
+
+* [How They Work](neutral-strategy-vaults/how-they-work.md)
+* [Vault Protections](neutral-strategy-vaults/vault-protections.md)
+* [Security](neutral-strategy-vaults/security.md)
+* [Copy of Neutral Strategy Vaults](neutral-strategy-vaults/copy-of-neutral-strategy-vaults.md)
+
+## NEUTRAL TOKENIZE
+
+* [Overview](neutral-tokenize/overview.md)
+
+## CURATORS
+
+* [Infrastructure for Trading Firms](curators/infrastructure-for-trading-firms.md)
+* [Curator Selection](curators/curator-selection.md)
+* [Curator Onboarding](curators/curator-onboarding.md)
+* [Copy of Strategy Curator Vetting Framework](curators/copy-of-strategy-curator-vetting-framework.md)
+* [Trading Firms](curators/trading-firms.md)
+
+## FOR DISTRIBUTION PARTNERS
+
+* [Distributors](for-distribution-partners/distributors.md)
+* [Builders Code Rebate](for-distribution-partners/neutral-builders-code.md)
+* [How Builder Codes Work](for-distribution-partners/how-builder-codes-work.md)
+* [Builder Dashboard](for-distribution-partners/partner-portal.md)
+* [Integration Guide](for-distribution-partners/integration-guide.md)
+* [API, SDK & IDL](for-distribution-partners/api-and-sdk-and-idl.md)
+
+## DEVELOPERS
+
+* [Developers](developers/developers.md)
+* [Access & Authentication](developers/access-and-authentication.md)
+* [API Conventions](developers/api-conventions.md)
+* [Vault & User Data](developers/vault-and-user-data.md)
+* [Builder-Code Data](developers/builder-code-data.md)
+* [Migrating from the Legacy API](developers/migrating-from-the-legacy-api.md)
+
+## Additional Info
+
+* [Fees + Redemption Period](additional-info/fees-+-redemption-period.md)
+* [Trailing APY and APR Calculations](additional-info/apy-and-apr-calculations.md)
+* [Brand Kit](additional-info/brand-kit.md)
+
+## LEGAL
+
+* [Risk Warnings and Disclaimers Statement](legal/risk-warnings-and-disclaimers-statement.md)
+* [🔎 Neutral Trade User Terms and Conditions](legal/neutral-trade-user-terms-and-conditions.md)
+* [PRIVACY POLICY](legal/privacy-policy.md)
+* [COOKIE POLICY](legal/cookie-policy.md)
+* [Regional Availability](legal/regional-availability.md)
