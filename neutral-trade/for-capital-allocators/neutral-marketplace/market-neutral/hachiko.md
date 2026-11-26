@@ -54,26 +54,26 @@ _Past performance is not necessarily indicative of future results._
 
 The figures below come from CWM's live trading record. Neutral Trade has not audited them. They are shown before Neutral Trade fees.
 
-Record period: 13 May 2025 to 31 October 2026.
+Record period: 13 May 2025 to 7 November 2026.
 
 | Metric                   | Value    |
 | ------------------------ | -------- |
-| Cumulative return        | 37.38%   |
-| Annualised return (CAGR) | 24.14%   |
-| Annualised volatility    | 1.47%    |
-| Maximum drawdown (daily) | -1.26%   |
-| Negative days            | 2 of 536 |
+| Cumulative return        | 39.26%   |
+| Annualised return (CAGR) | 24.94%   |
+| Annualised volatility    | 1.34%    |
+| Maximum drawdown (daily) | -1.13%   |
+| Negative days            | 2 of 543 |
 
 In this period, funding payments made all of the profit. Trading results from entering, exiting and hedging positions were a small net cost.
 
 #### Monthly Returns
 
-| Year | Jan    | Feb   | Mar   | Apr   | May   | Jun   | Jul   | Aug   | Sep   | Oct   | Nov   | Dec   |
-| ---- | ------ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| 2025 | –      | –     | –     | –     | 0.65% | 0.92% | 2.16% | 1.11% | 2.51% | 2.37% | 2.20% | 1.35% |
-| 2026 | -0.09% | 0.63% | 0.98% | 2.53% | 3.20% | 1.93% | 2.20% | 2.83% | 2.73% | 1.90% | –     | –     |
+| Year | Jan   | Feb   | Mar   | Apr   | May   | Jun   | Jul   | Aug   | Sep   | Oct   | Nov   | Dec   |
+| ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| 2025 | –     | –     | –     | –     | 0.67% | 0.94% | 2.16% | 1.12% | 2.51% | 2.40% | 2.20% | 1.35% |
+| 2026 | 0.04% | 0.63% | 1.14% | 2.78% | 2.88% | 2.05% | 2.33% | 3.09% | 2.87% | 1.90% | 0.43% | –     |
 
-May 2025 is a partial month (from 13 May).
+May 2025 and November 2026 are partial months (from 13 May 2025, to 7 November 2026).
 
 ## Risk Factors
 
